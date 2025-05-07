@@ -1,0 +1,319 @@
+#AboutUsSeparateContainer {
+    width: 100% !important;
+}
+
+.AboutUsSeparateGridContainer {
+    padding-top: 80px !important;
+}
+
+.AboutUsSeparateGridContainer img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.AboutUsSeparateGridContainer .ant-row .ant-col:first-child {
+    padding-right: 5rem !important;
+}
+
+
+.CompanyAchivementsCounters {
+    display: flex;
+    gap: 40px;
+}
+
+.counter {
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slide-number {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide-number span {
+    display: block;
+    height: 40px;
+    animation: slide-up 4s ease-in-out forwards;
+}
+
+.suffix {
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #555;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.counters {
+    margin: 30px 0px;
+}
+
+.counters .ant-row .ant-col:nth-child(1) {
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+}
+
+.counters .ant-row .ant-col:nth-child(2) {
+    border-top: 1px solid var(--primary-color);
+    border-left: none;
+}
+
+.AboutVideoPallateContainer {
+    background-color: var(--primary-color);
+    min-height: 700px;
+    margin: 80px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Video Container Styles */
+.VideoContainerContent {
+    padding: 4rem 2rem !important;
+}
+
+
+.VideoBackColorContainer {
+    background-color: var(--primary-color);
+    min-height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.VideoPlace {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Video Player Specific Styles */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    position: sticky;
+    z-index: 5;
+}
+
+
+/* Center play button */
+.center-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 6;
+}
+
+.center-play-button.hide {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+    visibility: hidden;
+}
+
+/* Controls overlay */
+.controls-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    z-index: 6;
+}
+
+.controls-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.control-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.control-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.status-text {
+    color: white;
+    font-size: 14px;
+}
+
+
+.VideoContainerText {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    left: 60%;
+    right: 20px;
+    /* color: white; */
+}
+
+.VideoContainerText p {
+    color: rgba(255, 255, 255, 0.585);
+}
+
+
+/* .VideoContainer::before{
+    content: "";
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+ border-radius: 40%;
+ border: 1px solid white;
+    
+} */
+
+
+.VideoDesignElement {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    right: 50%;
+    left: 20px;
+    color: white;
+}
+
+
+
+.VideoDesignElement {
+    /* position: relative; */
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* font-size: 24px;
+    font-weight: bold; */
+    color: #ffffff;
+    text-align: center;
+}
+
+.fade-slide {
+    animation: fadeSlide 2s ease-in-out;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.VideoContaienr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-right: 40px;
+}
+
+
+.CounterNumberAnimationContainer p {
+    color: white;
+}
+
+.CounterNumberAnimationContainer span {
+    color: white !important;
+}
+
+.CounterNumberAnimationContainer .counter-number {
+    padding: 0px !important;
+}
+
+.CounterNumberAnimationContainer .CounterPara {
+    padding: 0px !important;
+}
+
+@media (max-width: 768px) {
+    .VideoContainerContent {
+        padding: 2rem 0.5rem !important;
+    }
+
+    .VideoBackColorContainer {
+        background-color: var(--primary-color);
+        min-height: 400px;
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .VideoContainer {
+        width: 100%;
+        /* position: relative; */
+    }
+
+}

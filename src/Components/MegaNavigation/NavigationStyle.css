@@ -6,6 +6,7 @@
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px 30px;
+    border-bottom: 0.5px solid #ebebeb;
 }
 
 /* Flex layout for desktop */
@@ -33,7 +34,7 @@
 }
 
 .NavLink:hover {
-    color: #1890ff;
+    color: black !important;
 }
 
 .ContactUsBtn {

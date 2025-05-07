@@ -1,0 +1,11 @@
+.FooterGridContainer .ant-row .ant-col {
+    width: 100% !important;
+}
+
+.FooterGridContainer {
+    padding: 80px 0px;
+}
+.FooterGridContainer .ant-row .ant-col ul li{
+    color: black;
+}
+

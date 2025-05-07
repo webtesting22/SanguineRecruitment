@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NavigationStyle.css";
 import NavigationLinks from "./NavigationLinks";
-import { Menu, Dropdown, Button, Drawer,Collapse } from "antd";
+import { Menu, Dropdown, Button, Drawer, Collapse } from "antd";
 import { DownOutlined, MenuOutlined } from "@ant-design/icons";
 import AnimatedBtn from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
 import { IoMdContact } from "react-icons/io";
@@ -38,7 +38,7 @@ const MegaNavigation = () => {
                                     trigger={["hover"]}
                                 >
                                     <a className="NavLink DropdownLinkContainer" href={navItem.path}>
-                                        {navItem.link} <DownOutlined style={{ fontSize: "13px" }} />
+                                        {navItem.link} <img src="/images/icons/CommonArrowicon.svg" alt="" />
                                     </a>
                                 </Dropdown>
                             ) : (

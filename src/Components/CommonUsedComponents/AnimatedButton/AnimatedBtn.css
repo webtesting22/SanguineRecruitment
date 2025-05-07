@@ -166,9 +166,9 @@
 }
 
 /* Single Button Spacing */
-.slide-btn:not(.button-group .slide-btn) {
+/* .slide-btn:not(.button-group .slide-btn) {
     margin: 8px;
-}
+} */
 
 /* Consultation Button Style */
 .slide-btn.consultation {

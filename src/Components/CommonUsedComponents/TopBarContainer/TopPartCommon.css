@@ -1,0 +1,33 @@
+#TopPartCommonContainer {
+    height: 500px;
+    background-color: white;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* background-color: red; */
+    position: relative;
+    border-bottom: 0.5px solid #ebebeb;
+}
+
+.TopPartContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#TopPartCommonContainer img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.TopPartContentContainer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
