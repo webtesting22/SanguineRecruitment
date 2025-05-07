@@ -5,7 +5,7 @@ const NavigationLinks = [
         sublink: [
             {
                 link: "About Us",
-                path: ""
+                path: "/about-us"
             },
             {
                 link: "Our Team",
