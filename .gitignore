@@ -1,0 +1,86 @@
+# --- Node / Express ---
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# --- React / Frontend ---
+# Build output
+frontend/build/
+frontend/dist/
+
+# Dependency folders
+frontend/node_modules/
+
+# Vite cache
+.vite/
+frontend/.vite/
+
+# Webpack cache
+.cache/
+frontend/.cache/
+
+# Testing
+coverage/
+frontend/coverage/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Optional: PM2 logs ---
+pids/
+*.pid
+*.log
+
+# --- Ant Design / UI Libraries (safe by default) ---
+*.less
+*.sass-cache
+
+# --- Lint/Prettier cache ---
+.eslintcache
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Yarn / pnpm / lockfiles ---
+yarn.lock
+pnpm-lock.yaml
+
+# --- misc ---
+*.tgz
+*.gz
+*.zip
+
+# --- Firebase/Next.js/Other optional tools ---
+.firebase/
+.next/
+
+# --- Custom ---
+frontend/.env
+backend/.env

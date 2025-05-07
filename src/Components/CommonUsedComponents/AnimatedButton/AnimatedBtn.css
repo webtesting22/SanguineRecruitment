@@ -1,0 +1,329 @@
+.animated-btn {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Button Sizes */
+.animated-btn.small {
+    height: 32px;
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.animated-btn.medium {
+    height: 40px;
+    padding: 0 24px;
+    font-size: 16px;
+}
+
+.animated-btn.large {
+    height: 48px;
+    padding: 0 32px;
+    font-size: 18px;
+}
+
+/* Button Variants */
+.animated-btn.primary {
+    color: white;
+    background: #038BE2;
+}
+
+.animated-btn.secondary {
+    color: #038BE2;
+    background: rgba(3, 139, 226, 0.1);
+}
+
+.animated-btn.outline {
+    color: #038BE2;
+    border: 1px solid #038BE2;
+    background: transparent;
+}
+
+.animated-btn.text {
+    color: #038BE2;
+    background: transparent;
+}
+
+/* Button Content */
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-text {
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+/* Underline Animation */
+.btn-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.animated-btn:not(.disabled):hover {
+    transform: translateY(-2px);
+}
+
+.animated-btn:not(.disabled):hover .btn-underline {
+    transform: scaleX(1);
+}
+
+.animated-btn:not(.disabled):hover .btn-icon {
+    transform: translateX(4px);
+}
+
+.animated-btn:not(.disabled):hover .btn-text {
+    transform: translateX(4px);
+}
+
+/* Loading State */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Disabled State */
+.animated-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Full Width */
+.animated-btn.full-width {
+    width: 100%;
+}
+
+/* Focus State */
+.animated-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 139, 226, 0.3);
+}
+
+/* Active State */
+.animated-btn:active {
+    transform: translateY(0);
+}
+
+.slide-btn {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 50px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Single Button Spacing */
+.slide-btn:not(.button-group .slide-btn) {
+    margin: 8px;
+}
+
+/* Consultation Button Style */
+.slide-btn.consultation {
+    background: #2C4B47;
+    color: white;
+    border: 2px solid #2C4B47;
+}
+
+.slide-btn.consultation:hover {
+    background: #1a2e2b;
+    border-color: #1a2e2b;
+    box-shadow: 0 4px 12px rgba(44, 75, 71, 0.3);
+}
+
+.consultation .btn-icon {
+    color: white;
+    font-size: 20px;
+}
+
+/* Explore Button Style */
+.slide-btn.explore {
+    background: transparent;
+    color: #2C4B47;
+    border: 2px solid #2C4B47;
+}
+
+.slide-btn.explore:hover {
+    background: #2C4B47;
+    color: white;
+    box-shadow: 0 4px 12px rgba(44, 75, 71, 0.2);
+}
+
+.explore .btn-icon {
+    color: inherit;
+    font-size: 20px;
+}
+
+/* Button Content */
+.btn-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+}
+
+.btn-text-slide {
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-primary,
+.text-secondary {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.text-secondary {
+    position: absolute;
+    top: 100%;
+}
+
+/* Icon Styles */
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.slide-btn:hover {
+    transform: translateY(-2px);
+}
+
+.slide-btn:hover .text-primary {
+    transform: translateY(-100%);
+}
+
+.slide-btn:hover .text-secondary {
+    transform: translateY(-100%);
+}
+
+.slide-btn:hover .btn-icon {
+    transform: rotate(45deg);
+}
+
+/* Disabled State */
+.slide-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Active State */
+.slide-btn:active {
+    transform: translateY(0);
+}
+
+/* Focus State */
+.slide-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(44, 75, 71, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .slide-btn {
+        padding: 14px 28px;
+        font-size: 16px;
+        min-width: 180px;
+    }
+    
+    .btn-text-slide {
+        height: 20px;
+    }
+    
+    .text-primary,
+    .text-secondary {
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .button-group {
+        gap: 12px;
+    }
+
+    .btn-icon {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+        min-width: 160px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button-group .slide-btn {
+        width: 100%;
+    }
+
+    .btn-icon {
+        font-size: 16px;
+    }
+} 

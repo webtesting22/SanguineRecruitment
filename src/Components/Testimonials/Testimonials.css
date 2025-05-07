@@ -1,0 +1,191 @@
+.testimonials-section {
+    position: relative;
+    background: #f9faf9;
+    padding: 100px 0 60px 0;
+    overflow: hidden;
+  }
+  
+  .testimonials-bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .testimonials-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+
+  
+  .testimonials-subtitle {
+    color: #7a8b7f;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .testimonials-swiper {
+    margin-top: 30px;
+    position: relative;
+  }
+  
+  .testimonial-card {
+    display: flex;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(34, 88, 77, 0.07);
+    padding: 36px 32px;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-business {
+    flex: 0 0 180px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-right: 1.5px solid #e6ede7;
+    padding-right: 32px;
+  }
+  
+  .business-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #22584d;
+    margin-bottom: 18px;
+  }
+  
+  .business-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .business-pill {
+    background: #e6ede7;
+    color: #22584d;
+    border-radius: 16px;
+    padding: 6px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  
+  .testimonial-content {
+    flex: 1 1 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 32px;
+  }
+  
+  .testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  
+  .testimonial-avatar {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e6ede7;
+  }
+  
+  .testimonial-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #22584d;
+  }
+  
+  .testimonial-role {
+    font-size: 16px;
+    color: #7a8b7f;
+  }
+  
+  .testimonial-quote {
+    font-size: 22px;
+    color: #22584d;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .testimonial-arrow {
+    position: absolute;
+    top: 40%;
+    /* transform: translateY(-50%); */
+    background: #fff;
+    color: #22584d;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    box-shadow: 0 2px 8px rgba(34, 88, 77, 0.08);
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.2s;
+  }
+  
+  .testimonials-container .FirstArrow{
+    left: 0px;
+  }
+
+  .testimonials-container .SecondArrow{
+    right: 0px;
+  }
+  .testimonial-prev {
+    left: -60px;
+  }
+  
+  .testimonial-next {
+    right: -60px;
+  }
+  
+  .testimonial-arrow:hover {
+    background: #e6ede7;
+  }
+  
+  @media (max-width: 900px) {
+    .testimonial-card {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 24px 12px;
+      gap: 18px;
+    }
+    .testimonial-business {
+      border-right: none;
+      border-bottom: 1.5px solid #e6ede7;
+      padding-right: 0;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+    .testimonial-content {
+      padding-left: 0;
+    }
+    .testimonial-prev, .testimonial-next {
+      left: 10px;
+      right: 10px;
+      top: auto;
+      bottom: -60px;
+      transform: none;
+    }
+  }

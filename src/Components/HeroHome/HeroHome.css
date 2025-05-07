@@ -1,0 +1,99 @@
+.hero-home-container {
+    height: 800px;
+    overflow: hidden;
+    /* background-color: red; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+
+
+.hero-home-content .ant-row {
+    width: 100%;
+}
+
+.BackgrounCheckPatterImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.BackgroundContainerColor {
+    background-color: var(--primary-color);
+    height: 350px;
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.RightSideAnimatedContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    align-items: center;
+}
+
+.RightSideAnimatedContainer>div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.AnimatedContainerColor {
+    height: 450px;
+    width: 60%;
+    /* background-color: red; */
+    margin-right: 30px;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.AnimatedContainerColor::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    right: 10px;
+    /* width: 100%; */
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.AnimatedContainerColor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.AnimatedContentContainerColor {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 34%;
+}
+
+.AnimatedParagraphContainer {
+    position: absolute;
+    left: 10px;
+    /* top: 0px; */
+    bottom: 0px;
+    width: 34%;
+}
+
+.AnimatedParagraphContainer p {
+    color: white;
+}

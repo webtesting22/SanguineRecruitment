@@ -1,0 +1,114 @@
+/* Sticky navigation bar */
+#NavigationBarContainer {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 30px;
+}
+
+/* Flex layout for desktop */
+.NavigationInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavigationLogoContainer img {
+    height: 40px;
+}
+
+.NavigationLinksContainer {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.NavLink {
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.NavLink:hover {
+    color: #1890ff;
+}
+
+.ContactUsBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ContactUsBtn .ant-btn {
+    font-weight: 500;
+    padding: 0 20px;
+    height: 40px;
+}
+
+/* Dropdown menu style */
+#MenuEdit {
+    background-color: white !important;
+    padding: 20px 20px;
+}
+
+#MenuEdit .DropdownMenulink {
+    padding: 8px 10px;
+    color: #777272;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Desktop-only and mobile-only */
+.desktop-nav {
+    display: flex;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .NavigationLinksContainer {
+        display: none;
+    }
+}
+
+/* Mobile Drawer Styles */
+.mobile-drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.drawer-main-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.drawer-sublinks {
+    margin-top: 5px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.drawer-sublink {
+    font-size: 15px;
+    color: #666;
+    text-decoration: none;
+}
