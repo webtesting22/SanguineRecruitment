@@ -8,6 +8,8 @@ import AboutUsSeparate from './Components/AboutUsSeparate/AboutUsSeparate'
 import MegaNavigation from "./Components/MegaNavigation/MegaNavigation"
 import Footer from './Components/Footer/Footer'
 import Career from './Components/Career/Career'
+import Blogs from './Components/Blogs/Blogs'
+import SeparateBlog from './Components/Blogs/SeparateBlog/SeparateBlog'
 function App() {
   return (
     <>
@@ -17,6 +19,8 @@ function App() {
           <Route path='/' element={<AllHomeComponents />} />
           <Route path='/about-us' element={<AboutUsSeparate />} />
           <Route path='/career' element={<Career />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<SeparateBlog />} />
         </Routes>
         <Footer/>
       </Router>

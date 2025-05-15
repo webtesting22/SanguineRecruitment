@@ -4,8 +4,13 @@
 
 .FooterGridContainer {
     padding: 80px 40px;
+    padding-bottom: 20px !important;
 }
 .FooterGridContainer .ant-row .ant-col ul li{
     color: black;
 }
 
+
+.FooterContentContainer{
+    background-color: #f1f1f1;
+}

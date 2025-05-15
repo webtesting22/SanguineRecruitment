@@ -1,0 +1,21 @@
+.ContactSectionContainer {
+    background-color: var(--primary-color);
+    min-height: 400px;
+    width: 100%;
+    background-image: url("/public/images/background/WhiteLines.png");
+    background-size: cover;
+}
+.WidthSet{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.WidthSet>div{
+    width: 60%;
+}
+
+@media (max-width:900px){
+    .WidthSet>div{
+        width: 100%;
+    }
+}

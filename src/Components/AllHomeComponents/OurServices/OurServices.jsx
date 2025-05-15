@@ -1,7 +1,7 @@
 import React from "react";
 import "./OurServices.css";
 import { Tag } from "antd";
-import { AnimatedBtn } from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
+import { AnimatedBtn } from "../../CommonUsedComponents/AnimatedButton/AnimatedBtn";
 import { RiUserSmileFill } from "react-icons/ri";
 const steps = [
     {

@@ -1,22 +1,25 @@
-import React,{useState} from "react";
+import React, { useState, useEffect } from "react";
 import "./Career.css"
-import { Tag, Row, Col,Modal } from "antd";
+import { Tag, Row, Col, Modal } from "antd";
 import TopPartCommon from "../CommonUsedComponents/TopBarContainer/TopPartCommon";
 import { IoMdDoneAll } from "react-icons/io";
 const Career = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedPositionTitle, setSelectedPositionTitle] = useState("");
-    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const showModal = (title) => {
         setSelectedPositionTitle(title);
         setIsModalVisible(true);
     };
-    
+
     const handleCancel = () => {
         setIsModalVisible(false);
         setSelectedPositionTitle("");
     };
-    
+
     const ListPoints = [
         {
             title: "Comprehensive Benefits Package",
@@ -90,7 +93,7 @@ const Career = () => {
                                             <p><b>What we offer</b></p>
 
                                             {ListPoints.map((item, index) => (
-                                                <div className="ContentCardCareer">
+                                                <div className="ContentCardCareer" key={index}>
                                                     <p key={index}> <IoMdDoneAll />{item.title}</p>
                                                     <p>{item.content}</p>
                                                 </div>
@@ -120,7 +123,7 @@ const Career = () => {
                             <div>
                                 <Row>
                                     {CareerPositions.map((item, index) => (
-                                        <Col lg={12} md={12}>
+                                        <Col lg={12} md={12} key={index}>
                                             <div className="CareerCardDesign" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={index * 300}>
                                                 <div>
                                                     <h2 style={{ marginTop: "0px" }}>{item.positionTitle}</h2>
@@ -132,12 +135,12 @@ const Career = () => {
                                                     </div>
                                                     <br />
                                                     <button
-    className="slide-btn consultation"
-    style={{ minWidth: "150px", padding: "10px 15px", fontSize: "15px" }}
-    onClick={() => showModal(item.positionTitle)}
->
-    Apply now
-</button>
+                                                        className="slide-btn consultation"
+                                                        style={{ minWidth: "150px", padding: "10px 15px", fontSize: "15px" }}
+                                                        onClick={() => showModal(item.positionTitle)}
+                                                    >
+                                                        Apply now
+                                                    </button>
 
                                                 </div>
                                             </div>
@@ -145,14 +148,15 @@ const Career = () => {
                                     ))}
                                 </Row>
                                 <Modal
-    title={`Apply for: ${selectedPositionTitle}`}
-    open={isModalVisible}
-    onCancel={handleCancel}
-    footer={null}
->
-    <p>Please fill out the application form for the <b>{selectedPositionTitle}</b> role. You may attach your resume and submit your contact details.</p>
-    {/* You can add form inputs here later */}
-</Modal>
+                                    title={`Apply for: ${selectedPositionTitle}`}
+                                    open={isModalVisible}
+                                    onCancel={handleCancel}
+                                    footer={null}
+                                    width={800}
+                                >
+                                    <p>Please fill out the application form for the <b>{selectedPositionTitle}</b> role. You may attach your resume and submit your contact details.</p>
+                                    {/* You can add form inputs here later */}
+                                </Modal>
 
                             </div>
                         </div>

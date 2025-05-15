@@ -16,12 +16,12 @@ const NavigationLinks = [
                 path: "/"
             },
             {
-                link:"Awards",
-                path:"/"
+                link: "Awards",
+                path: "/"
             },
             {
-                link:"Testimonials",
-                path:"/"
+                link: "Testimonials",
+                path: "/"
             }
         ]
     },
@@ -29,24 +29,27 @@ const NavigationLinks = [
         link: "Services",
         path: "",
         sublink: [
-            
+
         ]
     },
     {
         link: "Blogs",
         path: "",
         sublink: [
-            
+
         ]
     },
     {
         link: "Career",
-        path: "",
+        path: "/career",
         sublink: [
-            
+
         ]
     },
 
 ]
 
+
+
 export default NavigationLinks
+export const LOGO_FILE = "/images/Logo/SanguineRecruitmentLogo.avif";

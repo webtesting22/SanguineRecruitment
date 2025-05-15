@@ -5,6 +5,8 @@ import { Menu, Dropdown, Button, Drawer, Collapse } from "antd";
 import { DownOutlined, MenuOutlined } from "@ant-design/icons";
 import AnimatedBtn from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
 import { IoMdContact } from "react-icons/io";
+import { LOGO_FILE } from "./NavigationLinks";
+import { Link } from "react-router-dom";
 const { Panel } = Collapse;
 const MegaNavigation = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -13,7 +15,7 @@ const MegaNavigation = () => {
         <Menu id="MenuEdit">
             {sublinks.map((item, idx) => (
                 <Menu.Item key={idx} className="DropdownMenulink">
-                    <a href={item.path}>{item.link}</a>
+                    <Link to={item.path}>{item.link}</Link>
                 </Menu.Item>
             ))}
         </Menu>
@@ -25,7 +27,7 @@ const MegaNavigation = () => {
                 <div className="NavigationInner hero-home-content">
                     {/* Logo */}
                     <div className="NavigationLogoContainer">
-                        <img src="https://via.placeholder.com/100x40" alt="Logo" />
+                        <img src={LOGO_FILE} alt="Logo" />
                     </div>
 
                     {/* Desktop Navigation */}
@@ -37,14 +39,14 @@ const MegaNavigation = () => {
                                     overlay={renderDropdownMenu(navItem.sublink)}
                                     trigger={["hover"]}
                                 >
-                                    <a className="NavLink DropdownLinkContainer" href={navItem.path}>
+                                    <Link className="NavLink DropdownLinkContainer" to={navItem.path}>
                                         {navItem.link} <img src="/images/icons/CommonArrowicon.svg" alt="" />
-                                    </a>
+                                    </Link>
                                 </Dropdown>
                             ) : (
-                                <a className="NavLink" key={index} href={navItem.path}>
+                                <Link className="NavLink" key={index} to={navItem.path}>
                                     {navItem.link}
-                                </a>
+                                </Link>
                             )
                         )}
                     </div>
@@ -79,15 +81,15 @@ const MegaNavigation = () => {
                                 <Panel header={navItem.link} key={index}>
                                     <div className="drawer-sublinks">
                                         {navItem.sublink.map((sub, idx) => (
-                                            <a key={idx} href={sub.path} className="drawer-sublink">
+                                            <Link key={idx} to={sub.path} className="drawer-sublink">
                                                 {sub.link}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </Panel>
                             ) : (
                                 <div key={index} className="drawer-main-link">
-                                    <a href={navItem.path}>{navItem.link}</a>
+                                    <Link to={navItem.path}>{navItem.link}</Link>
                                 </div>
                             )
                         )}

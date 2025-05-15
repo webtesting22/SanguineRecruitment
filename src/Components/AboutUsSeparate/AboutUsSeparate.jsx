@@ -14,6 +14,10 @@ const AboutUsSeparate = () => {
     const videoRef = useRef(null);
     const timerRef = useRef(null);
     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
+    useEffect(() => {
         const interval = setInterval(() => {
             setCurrentHeadingIndex((prevIndex) => (prevIndex + 1) % headings.length);
         }, 2000); // 2 seconds

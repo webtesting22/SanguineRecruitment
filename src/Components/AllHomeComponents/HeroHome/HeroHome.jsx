@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./HeroHome.css";
 import { Row, Col, Tag } from "antd";
-import { AnimatedBtn, ButtonGroup } from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
+import { AnimatedBtn, ButtonGroup } from "../../CommonUsedComponents/AnimatedButton/AnimatedBtn";
 import { RiUserSmileFill } from "react-icons/ri";
 import { IoChatbubble } from "react-icons/io5";
-import AboutServicesCards from "../AboutServicesCards/AboutServicesCards";
 const HeroHome = () => {
 
 

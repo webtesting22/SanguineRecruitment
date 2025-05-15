@@ -50,12 +50,12 @@
 .AnimatedContainerColor {
     height: 450px;
     width: 60%;
-    /* background-color: red; */
     margin-right: 30px;
     border-radius: 20px;
     /* overflow: hidden; */
     position: relative;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* display: none; */
 }
 
 .AnimatedContainerColor::before {
@@ -89,11 +89,17 @@
 .AnimatedParagraphContainer {
     position: absolute;
     left: 10px;
-    /* top: 0px; */
     bottom: 0px;
     width: 34%;
 }
 
 .AnimatedParagraphContainer p {
     color: white;
+}
+
+
+@media (max-width:900px){
+    .BackgroundContainerColor {
+        width: 100% ;
+    }
 }

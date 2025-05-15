@@ -1,0 +1,18 @@
+.OthersBlogShowContainer {
+    background-color: rgb(230, 230, 230);
+    min-height: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.StikyContainer {
+    position: sticky;
+    top: 15%;
+}
+
+.ExistingBlogContent {
+    margin-right: 3rem;
+    min-height: 200vh;
+    padding: 20px 0px;
+}

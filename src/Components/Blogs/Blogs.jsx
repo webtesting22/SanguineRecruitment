@@ -1,13 +1,15 @@
 import React from "react";
 import { Row, Col, Tag } from "antd";
 import { BlogsData } from "./BlogsData";
+import { useNavigate } from "react-router-dom";
 import "./Blogs.css"
+import ContactCommonSection from "../CommonUsedComponents/ContactCommonBar/ContactCommonSection";
 const Blogs = () => {
-
+    const navigate = useNavigate();
     return (
         <>
             <div id="BlogsContainer">
-                <div className="BlogContentContainer hero-home-content marginTop">
+                <div className="BlogContentContainer hero-home-content paddingSection">
                     <div>
                         <div>
                             <Tag>Blogs</Tag>
@@ -18,7 +20,7 @@ const Blogs = () => {
                         <div>
                             <Row gutter={[16, 16]}>
                                 {BlogsData.map((item, index) => (
-                                    <Col key={index} lg={index === 0 ? 12 : 6}>
+                                    <Col key={item.title} lg={index === 0 ? 12 : 6} onClick={() => navigate(`/blogs/${item.slug}`)}>
                                         <div className="BlogsContainerCard">
                                             <div>
                                                 <div className="blogImageContainer">
@@ -29,7 +31,7 @@ const Blogs = () => {
                                                     />
                                                 </div>
                                                 <div className="BlogDescriptionContainer">
-                                                   <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, dolores!</p>
+                                                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, dolores!</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -38,6 +40,7 @@ const Blogs = () => {
                             </Row>
 
                         </div>
+                        <ContactCommonSection/>
                     </div>
                 </div>
             </div>
