@@ -86,12 +86,10 @@ const Career = () => {
                                 <Col lg={12} md={24}>
                                     <div className="CareerAboutContentContainer">
                                         <div>
-
                                             <h1 className="big-title">Be part of something bigger: build <span className="span-title">your career with us</span></h1>
                                             <p>At Linkrow, we believe that our people are our greatest asset. We’re not just offering jobs; we’re building careers. Join a team where innovation meets collaboration, and every day brings new opportunities to grow and succeed.</p>
                                             <br />
                                             <p><b>What we offer</b></p>
-
                                             {ListPoints.map((item, index) => (
                                                 <div className="ContentCardCareer" key={index}>
                                                     <p key={index}> <IoMdDoneAll />{item.title}</p>
@@ -110,7 +108,7 @@ const Career = () => {
                                 </Col>
                             </Row>
                         </div>
-                        <div className="CareerPositionCard marginTop">
+                        <div className="CareerPositionCard paddingSection">
                             <div>
                                 <div className="HeaderPartCenter">
                                     <Tag>Career</Tag>

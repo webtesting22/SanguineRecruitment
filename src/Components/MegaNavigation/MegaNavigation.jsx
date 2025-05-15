@@ -27,7 +27,11 @@ const MegaNavigation = () => {
                 <div className="NavigationInner hero-home-content">
                     {/* Logo */}
                     <div className="NavigationLogoContainer">
-                        <img src={LOGO_FILE} alt="Logo" />
+                        <Link to="/" onClick={() => {
+                            setTimeout(() => {
+                                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                            }, 100); // 0.3s delay
+                        }}><img src={LOGO_FILE} alt="Logo" /></Link>
                     </div>
 
                     {/* Desktop Navigation */}
