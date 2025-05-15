@@ -61,7 +61,7 @@
   .business-title {
     font-size: 20px;
     font-weight: 600;
-    color: #22584d;
+    color: var(--primary-color);
     margin-bottom: 18px;
   }
   
@@ -73,7 +73,7 @@
   
   .business-pill {
     background: #e6ede7;
-    color: #22584d;
+    color: var(--primary-color);
     border-radius: 16px;
     padding: 6px 18px;
     font-size: 16px;
@@ -109,8 +109,9 @@
   
   .testimonial-name {
     font-size: 20px;
-    font-weight: 700;
-    color: #22584d;
+    font-weight: 500;
+    color: black;
+    /* color: var(--primary-color); */
   }
   
   .testimonial-role {
@@ -120,7 +121,7 @@
   
   .testimonial-quote {
     font-size: 22px;
-    color: #22584d;
+    color: var(--primary-color);
     font-weight: 500;
     margin-top: 10px;
     line-height: 1.5;

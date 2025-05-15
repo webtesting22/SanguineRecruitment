@@ -1,0 +1,23 @@
+.blogImageContainer{
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+.blogImageContainer img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.BlogsContainerCard{
+    padding: 10px;
+}
+
+#BlogsContainer .ant-row .ant-col:first-child .blogImageContainer{
+    height: unset;
+}

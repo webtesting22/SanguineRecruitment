@@ -7,6 +7,7 @@ import { RiUserSmileFill } from "react-icons/ri";
 import AnimatedCounter from "../CommonUsedComponents/AnimatedCounter/AnimatedCounter";
 import { Play, Pause } from 'lucide-react';
 import OurTeam from "../OurTeam/OurTeam";
+import Blogs from "../Blogs/Blogs";
 const AboutUsSeparate = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
@@ -201,6 +202,7 @@ const AboutUsSeparate = () => {
                         </div>
                     </div>
                     <OurTeam/>
+                    <Blogs/>
                 </div>
             </div>
         </>

@@ -172,9 +172,9 @@
 
 /* Consultation Button Style */
 .slide-btn.consultation {
-    background: #2C4B47;
+    background: #004675;
     color: white;
-    border: 2px solid #2C4B47;
+    border: 2px solid #004675;
 }
 
 .slide-btn.consultation:hover {
@@ -191,12 +191,12 @@
 /* Explore Button Style */
 .slide-btn.explore {
     background: transparent;
-    color: #2C4B47;
-    border: 2px solid #2C4B47;
+    color: #004675;
+    border: 2px solid #004675;
 }
 
 .slide-btn.explore:hover {
-    background: #2C4B47;
+    background: #004675;
     color: white;
     box-shadow: 0 4px 12px rgba(44, 75, 71, 0.2);
 }

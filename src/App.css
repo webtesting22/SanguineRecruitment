@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1f514c;
+    --primary-color: #005a95;
 }
 
 .big-title {
@@ -24,7 +24,7 @@
 }
 
 .small-span-title {
-    color: #aeda94;
+    color: #97d6ff;
 }
 
 .ant-tag {
@@ -43,6 +43,9 @@
     align-items: center;
 }
 
+.marginTop{
+    margin-top: 80px;
+}
 @media (min-width: 1500px) and (max-width: 4000px) {
     .hero-home-content {
         /* width: 1290px; */

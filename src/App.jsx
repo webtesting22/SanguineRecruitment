@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AboutUsSeparate from './Components/AboutUsSeparate/AboutUsSeparate'
 import MegaNavigation from "./Components/MegaNavigation/MegaNavigation"
 import Footer from './Components/Footer/Footer'
+import Career from './Components/Career/Career'
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllHomeComponents />} />
           <Route path='/about-us' element={<AboutUsSeparate />} />
+          <Route path='/career' element={<Career />} />
         </Routes>
         <Footer/>
       </Router>
