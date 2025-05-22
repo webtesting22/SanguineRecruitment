@@ -6,6 +6,7 @@ import DashboardContext from './DashboardContext/DashboardContext';
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'antd';
+import { FaUserAlt } from "react-icons/fa";
 
 const { Option } = Select;
 
@@ -282,15 +283,15 @@ const DashboardMain = () => {
                                 Filters
                             </Button>
                         )}
-                        {!isMobile && (
+                        {/* {!isMobile && (
                             <Button className="filter-toggle">
                                 <MdFilterList size={20} />
                             </Button>
-                        )}
-                        <Select defaultValue="Board" className="board-select">
+                        )} */}
+                        {/* <Select defaultValue="Board" className="board-select">
                             <Option value="Board">Board</Option>
                             <Option value="List">List</Option>
-                        </Select>
+                        </Select> */}
                     </div>
                     <Button
                         className={`grid-toggle ${viewMode === 'list' ? 'active' : ''}`}
@@ -320,7 +321,7 @@ const DashboardMain = () => {
                             )} */}
 
                                     <div className="card-header">
-                                        <img src={app.avatar} alt={app.fullName} className="avatar" />
+                                        <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" alt={app.fullName} className="avatar" />
                                         <div className="position-tag" style={{ backgroundColor: randomColor }}>
                                             {app.applyingFor}
                                         </div>
@@ -334,7 +335,7 @@ const DashboardMain = () => {
                                             <div className="resume-link">
                                                 <MdAttachment size={16} />
                                                 <a href={app.resumeUrl} download target="_blank" rel="noopener noreferrer">
-                                                    {app.resumeUrl?.split('/').pop() || "Download Resume"}
+                                                    {(app.resumeUrl?.split('/').pop()?.slice(0, 30) || "Download Resume")}
                                                 </a>
 
                                             </div>
@@ -389,7 +390,7 @@ const DashboardMain = () => {
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
                                 <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
                                     <img
-                                        src={selectedCandidate.avatar || "/api/placeholder/80/80"}
+                                        src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
                                         alt={selectedCandidate.fullName}
                                         style={{ width: '80px', height: '80px', borderRadius: '16px', objectFit: 'cover' }}
                                     />
