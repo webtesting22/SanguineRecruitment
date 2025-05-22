@@ -10,7 +10,7 @@ const DashboardState = ({ children }) => {
     useEffect(() => {
         const fetchApplications = async () => {
             try {
-                const response = await fetch(`${apibaseUrl}/sanguineRecruitment/getCareerApplications`);
+                const response = await fetch(`https://testapi.prepseed.com/sanguineRecruitment/getCareerApplications`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch data");
                 }
