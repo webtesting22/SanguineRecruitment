@@ -8,7 +8,7 @@ import Blogs from './Components/Blogs/Blogs';
 import SeparateBlog from './Components/Blogs/SeparateBlog/SeparateBlog';
 import DashboardMain from './Components/Dashboard/DashboardMain';
 import PortalLogin from './Components/Dashboard/PortalLogin';
-import "./app.css"
+import "./App.css"
 import DashboardState from './Components/Dashboard/DashboardContext/DashboardState';
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
 
