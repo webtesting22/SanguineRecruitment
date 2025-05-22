@@ -4,7 +4,7 @@ import { MdEmail, MdLock, MdVisibilityOff, MdArrowForward } from 'react-icons/md
 import { useNavigate } from 'react-router-dom';
 import './SignIn.css';
 
-const SignIn = () => {
+const PortalLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -72,4 +72,4 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;
+export default PortalLogin;
