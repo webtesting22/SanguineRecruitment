@@ -335,13 +335,13 @@ const DashboardMain = () => {
                                             <div className="resume-link">
                                                 <MdAttachment size={16} />
                                                 <a href={app.resumeUrl} download target="_blank" rel="noopener noreferrer">
-                                                    {(app.resumeUrl?.split('/').pop()?.slice(0, 30) || "Download Resume")}
+                                                    Resume
                                                 </a>
 
                                             </div>
                                             <div className="website-link">
                                                 <MdLink size={16} />
-                                                <a href={app.portfolioUrl} target='_blank'>{app.portfolioUrl}</a>
+                                                <a href={app.portfolioUrl} target='_blank'>Portfolio</a>
                                             </div>
                                         </div>
                                     </div>
@@ -532,7 +532,7 @@ const DashboardMain = () => {
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                                     <MdAttachment size={16} />
                                     <a href={selectedCandidate.resumeUrl} download target="_blank" rel="noopener noreferrer">
-                                        {selectedCandidate.resumeUrl?.split('/').pop() || "Download Resume"}
+                                        Download Resume
                                     </a>
                                 </div>
                             </div>

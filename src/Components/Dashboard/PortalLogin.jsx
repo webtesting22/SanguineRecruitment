@@ -11,7 +11,7 @@ const PortalLogin = () => {
 
     const handleLogin = () => {
         const storedEmail = "admin@example.com";
-        const storedPassword = "123456";
+        const storedPassword = "000000";
 
         if (email === storedEmail && password === storedPassword) {
             localStorage.setItem("email", email);
