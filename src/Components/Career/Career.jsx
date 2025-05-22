@@ -101,7 +101,7 @@ const Career = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    authorization: `Token <your-token>`,
+                    authorization: `Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MWJkNGM4YWQ3NzczMjc5YzVhZTM4MCIsInJvbGUiOiJtb2RlcmF0b3IiLCJleHAiOjE3MzAwMjc4MzksInBocyI6e30sImlhdCI6MTcyNDg0MzgzOH0.gNjc_Z5LD9vqtZ7V15CQhXsAdXrhbW9OEwOMEDz7MMg`,
                 },
                 body: JSON.stringify({
                     fileName: encodeURIComponent(file.name),
