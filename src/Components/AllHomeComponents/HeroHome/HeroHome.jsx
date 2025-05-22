@@ -9,7 +9,7 @@ const HeroHome = () => {
 
     return (
         <>
-            <div id="hero-home">
+            <div id="hero-home" className="sidepadding">
                 <div className="hero-home-container">
                     <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/1035mWPLp6zXWlooG2Lz/678647f276cc20015e38cae1_Background pattern.png" alt="" loading="lazy" className="BackgrounCheckPatterImage" />
                     <div className="hero-home-content">

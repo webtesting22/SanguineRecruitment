@@ -40,7 +40,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-    <section className="testimonials-section">
+    <section className="testimonials-section sidepadding">
         <img
             src="/images/background/testimonials-bg.svg"
             alt=""

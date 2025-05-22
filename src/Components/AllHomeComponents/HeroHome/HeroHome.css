@@ -97,9 +97,35 @@
     color: white;
 }
 
-
+#hero-home{
+    padding-top: 0px ;
+}
 @media (max-width:900px){
     .BackgroundContainerColor {
         width: 100% ;
+        height: 100% !important;
+        padding: 20px;
+        margin-top: 20px;
     }
+    .AnimatedContainerColor img {
+        display: none;
+    }
+    .AnimatedContainerColor {
+        display: none;
+    }
+    .AnimatedContentContainerColor {
+        position: static;
+        /* left: 10px;
+        top: 0px; */
+        width: 100%;
+    }
+    
+    .AnimatedParagraphContainer {
+        position: static;
+        /* left: 10px;
+        bottom: 0px; */
+        width: 100%;
+    }
+   
+   
 }

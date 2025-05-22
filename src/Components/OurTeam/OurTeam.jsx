@@ -52,8 +52,8 @@ const OurTeam = () => {
                                                 <img src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                                             </div>
                                             <div>
-                                                <p className="testimonial-name" style={{marginBottom:"0px"}}>{item.cardTitle}</p>
-                                                <p style={{marginTop:"5px"}}>{item.cardPosition}</p>
+                                                <p className="testimonial-name" style={{ marginBottom: "0px" }}>{item.cardTitle}</p>
+                                                <p style={{ marginTop: "5px" }}>{item.cardPosition}</p>
                                             </div>
                                         </div>
                                     </Col>

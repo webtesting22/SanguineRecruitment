@@ -21,7 +21,7 @@ const steps = [
 const OurServices = () => {
     return (
         <>
-            <section className="our-services-section ">
+            <section className="our-services-section sidepadding">
                 <div className="hero-home-content">
                     <div className="our-services-overlay" />
                     <div className="our-services-content " >

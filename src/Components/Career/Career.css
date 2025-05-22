@@ -1,3 +1,6 @@
+/* .CareerPositionCard{
+    background-image: url("/images/background/wave-bg.svg");
+} */
 .AboutCareer p {
     display: flex;
     align-items: center;
@@ -43,12 +46,242 @@
     padding-right: 5rem;
 }
 
-.CareerCardDesign{
+.CareerCardDesign {
     background-color: #f7f7f7;
     margin: 20px;
     padding: 20px 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+
+
+.sanguine-application-modal .ant-modal-header {
+    background-color: #ffffff;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 24px 24px 16px;
+}
+
+.sanguine-application-modal .ant-modal-title {
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.sanguine-application-modal .ant-modal-close-x {
+    color: #444444;
+}
+
+.sanguine-application-modal .ant-modal-content {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding-bottom: 12px;
+}
+
+.sanguine-application-modal .ant-modal-body {
+    padding: 12px 24px 24px;
+}
+
+/* Form layout and subtitle styling */
+.sanguine-application-modal .ant-form {
+    max-width: 100%;
+}
+
+.sanguine-application-modal .form-subtitle {
+    color: #666666;
+    margin-top: -6px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.sanguine-application-modal .ant-form-item-label>label {
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Input field styling */
+.sanguine-application-modal .ant-input,
+.sanguine-application-modal .ant-select-selector,
+.sanguine-application-modal .ant-input-number,
+.sanguine-application-modal .ant-input-textarea textarea {
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 12px 16px;
+    height: auto;
+    font-size: 15px;
+    transition: all 0.3s;
+    background-color: #ffffff;
+}
+
+.sanguine-application-modal .ant-input-affix-wrapper {
+    border-radius: 12px;
+    padding: 0 12px;
+}
+
+.sanguine-application-modal .ant-input-affix-wrapper .ant-input {
+    border: none;
+}
+
+.sanguine-application-modal .ant-input-prefix {
+    color: #999;
+    margin-right: 8px;
+}
+
+.sanguine-application-modal .ant-select-selector {
+    height: auto !important;
+    padding: 12px 16px !important;
+}
+
+.sanguine-application-modal .ant-select-selection-search {
+    display: flex;
+    align-items: center;
+}
+
+.sanguine-application-modal .ant-select-selection-item {
+    line-height: normal;
+}
+
+.sanguine-application-modal .ant-input:hover,
+.sanguine-application-modal .ant-select-selector:hover,
+.sanguine-application-modal .ant-input-number:hover,
+.sanguine-application-modal .ant-input-textarea textarea:hover {
+    border-color: #b3b3b3;
+}
+
+.sanguine-application-modal .ant-input:focus,
+.sanguine-application-modal .ant-select-selector:focus,
+.sanguine-application-modal .ant-input-number:focus,
+.sanguine-application-modal .ant-input-textarea textarea:focus,
+.sanguine-application-modal .ant-input-focused,
+.sanguine-application-modal .ant-select-focused .ant-select-selector,
+.sanguine-application-modal .ant-input-number-focused,
+.sanguine-application-modal .ant-input-affix-wrapper-focused {
+    border-color: #2843de;
+    box-shadow: 0 0 0 2px rgba(40, 67, 222, 0.1);
+    outline: none;
+}
+
+/* Tags styling for skills */
+.sanguine-application-modal .ant-select-selection-item {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    margin: 2px;
+    padding: 4px 8px;
+}
+
+.sanguine-application-modal .ant-select-selection-item-remove {
+    color: #999;
+    margin-left: 4px;
+}
+
+/* Button styling */
+.sanguine-application-modal .ant-btn {
+    border-radius: 12px;
+    height: auto;
+    padding: 10px 16px;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.sanguine-application-modal .ant-upload button {
+    border: 1px dashed #d9d9d9;
+    background-color: #fafafa;
+    border-radius: 12px;
+    padding: 12px 20px;
+    height: auto;
+    color: #666;
+}
+
+.sanguine-application-modal .ant-upload button:hover {
+    border-color: #2843de;
+    color: #2843de;
+}
+
+.sanguine-application-modal .ant-btn-primary {
+    background-color: #2843de;
+    border-color: #2843de;
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+.sanguine-application-modal .ant-btn-primary:hover,
+.sanguine-application-modal .ant-btn-primary:focus {
+    background-color: #3954ef;
+    border-color: #3954ef;
+    box-shadow: 0 2px 8px rgba(40, 67, 222, 0.3);
+}
+
+.sanguine-application-modal .ant-btn-primary:active {
+    background-color: #2037c7;
+    border-color: #2037c7;
+}
+
+.sanguine-application-modal .ant-btn-primary[disabled] {
+    background-color: #e6e6e6;
+    border-color: #e6e6e6;
+    color: #999999;
+}
+
+.sanguine-application-modal .ant-btn.cancel-btn {
+    background-color: transparent;
+    border: none;
+    color: #666;
+    font-weight: 500;
+}
+
+.sanguine-application-modal .ant-btn.cancel-btn:hover {
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Checkbox styling */
+.sanguine-application-modal .ant-checkbox-wrapper {
+    margin: 8px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.sanguine-application-modal .ant-checkbox {
+    top: 2px;
+}
+
+.sanguine-application-modal .ant-checkbox-inner {
+    border-radius: 4px;
+    width: 18px;
+    height: 18px;
+}
+
+.sanguine-application-modal .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.sanguine-application-modal .ant-checkbox:hover .ant-checkbox-inner {
+    border-color: #2843de;
+}
+
+.sanguine-application-modal .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #2843de;
+    border-color: #2843de;
+}
+
+.sanguine-application-modal .ant-checkbox-checked::after {
+    border-color: #2843de;
+}
+
+/* Links styling */
+.sanguine-application-modal a {
+    color: #2843de;
+    font-weight: 500;
+}
+
+.sanguine-application-modal a:hover {
+    text-decoration: underline;
+}
+
+.sanguine-application-modal .ant-select-selection-item {
+    background-color: transparent;
+    border: none;
+    padding: 12px 16px;
 }
 
 @media (max-width:900px) {

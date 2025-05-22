@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./Career.css"
-import { Tag, Row, Col, Modal } from "antd";
+import { Tag, Row, Col, Modal, Form, Input, Select, Button, message, Upload, Checkbox, notification } from "antd";
 import TopPartCommon from "../CommonUsedComponents/TopBarContainer/TopPartCommon";
 import { IoMdDoneAll } from "react-icons/io";
 const Career = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [selectedPositionTitle, setSelectedPositionTitle] = useState("");
+    const [form] = Form.useForm();
+    const [agreed, setAgreed] = useState(false);
+    const [resumeLink, setResumeLink] = useState(""); // store uploaded URL
+    const [formData, setFormData] = useState(null);
+    const [uploadKey, setUploadKey] = useState(Date.now());
+
+    const apibaseUrl = import.meta.env.VITE_BASE_URL;
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -67,6 +74,100 @@ const Career = () => {
             positionTag: ["Full Time", "Remote"]
         }
     ];
+    const handleResumeChange = async (info) => {
+        const file = info?.file?.originFileObj || info?.fileList?.[0]?.originFileObj;
+
+        if (!file) {
+            console.log("❌ No valid file found:", info);
+            return;
+        }
+
+        console.log("📁 File selected:", file.name);
+
+        const isValidType = ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"].includes(file.type);
+        const isValidSize = file.size <= 1 * 1024 * 1024;
+
+        if (!isValidType) {
+            message.error("Only PDF or DOCX files are allowed!");
+            return;
+        }
+        if (!isValidSize) {
+            message.error("File must be less than 1MB!");
+            return;
+        }
+
+        try {
+            const response = await fetch(`${apibaseUrl}/chats/uploadPolicy`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    authorization: `Token <your-token>`,
+                },
+                body: JSON.stringify({
+                    fileName: encodeURIComponent(file.name),
+                    mime: file.type,
+                    acl: "public-read",
+                }),
+            });
+
+            const data = await response.json();
+            console.log("🧾 Upload policy response:", data);
+
+            if (data?.data?.fields && data?.data?.url) {
+                const formData = new FormData();
+                Object.entries(data.data.fields).forEach(([key, value]) => formData.append(key, value));
+                formData.append("file", file);
+
+                const uploadResponse = await fetch(data.data.url, {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (uploadResponse.ok) {
+                    const finalUrl = `${data.data.url}/${encodeURIComponent(data.filePath)}`;
+                    notification.success({
+                        message: "Document Uploaded",
+                        description: `${file.name} was uploaded successfully.`,
+                        placement: "topRight",
+                    });
+                    setResumeLink(finalUrl);
+                    message.success("Resume uploaded successfully!");
+                } else {
+
+                    message.error("S3 upload failed");
+                    notification.error({
+                        message: "Upload Failed",
+                        description: "The document could not be uploaded to the server.",
+                        placement: "topRight",
+                    });
+                }
+            } else {
+                message.error("Upload policy generation failed");
+                notification.error({
+                    message: "Unexpected Error",
+                    description: "Something went wrong during the document upload.",
+                    placement: "topRight",
+                });
+            }
+        } catch (error) {
+            console.error("Upload error:", error);
+            message.error("Unexpected error during resume upload");
+        }
+    };
+
+    const handleResumeRemove = () => {
+        setResumeLink("");
+        setUploadKey(Date.now());
+        notification.info({
+            message: "Document Removed",
+            description: "Your uploaded resume has been removed.",
+            placement: "topRight",
+        });
+    };
+    // useEffect(() => {
+    //     console.log("formData",formData)
+    // }, []);
+
 
     return (
         <>
@@ -150,10 +251,134 @@ const Career = () => {
                                     open={isModalVisible}
                                     onCancel={handleCancel}
                                     footer={null}
-                                    width={800}
+                                    width={1000}
+                                    className="sanguine-application-modal"
                                 >
-                                    <p>Please fill out the application form for the <b>{selectedPositionTitle}</b> role. You may attach your resume and submit your contact details.</p>
-                                    {/* You can add form inputs here later */}
+                                    <Form
+                                        form={form}
+                                        layout="vertical"
+                                        onFinish={(values) => {
+                                            const fullData = {
+                                                ...values,
+                                                applyingFor: selectedPositionTitle,
+                                                resumeUrl: resumeLink, // pulled from state
+                                            };
+                                            setFormData(fullData);
+                                            console.log("Full submitted form data:", fullData);
+                                            message.success("Data submitted and logged.");
+                                            form.resetFields();
+                                            setAgreed(false);
+                                            setResumeLink("");
+                                        }}
+
+                                    >
+                                        <Form.Item name="fullName" label="Full Name" rules={[{ required: true, message: "Please enter your full name" }]}>
+                                            <Input placeholder="John Doe" />
+                                        </Form.Item>
+
+                                        <Form.Item name="email" label="Email" rules={[{ required: true, message: "Please enter your email" }, { type: "email", message: "Invalid email format" }]}>
+                                            <Input placeholder="example@email.com" />
+                                        </Form.Item>
+
+                                        <Form.Item name="mobileNumber" label="Mobile Number" rules={[{ required: true, message: "Please enter your mobile number" }]}>
+                                            <Input placeholder="9876543210" />
+                                        </Form.Item>
+
+                                        <Form.Item name="currentLocation" label="Current Location (City & State)" rules={[{ required: true, message: "Please enter your location" }]}>
+                                            <Input placeholder="Ahmedabad, Gujarat" />
+                                        </Form.Item>
+
+                                        <Form.Item name="willingToRelocate" label="Willing to Relocate?" rules={[{ required: true, message: "Please select an option" }]}>
+                                            <Select placeholder="Select">
+                                                <Select.Option value={true}>Yes</Select.Option>
+                                                <Select.Option value={false}>No</Select.Option>
+                                            </Select>
+                                        </Form.Item>
+
+                                        <Form.Item
+                                            key={uploadKey}
+                                            name="resume"
+                                            label="Resume (PDF or DOCX only, Max 1MB)"
+                                            rules={[{ required: true, message: "Please upload your resume!" }]}
+                                        >
+                                            <Upload
+                                                accept=".pdf,.docx"
+                                                beforeUpload={() => false}
+                                                maxCount={1}
+                                                showUploadList={true}
+                                                onChange={handleResumeChange}
+                                                onRemove={handleResumeRemove}
+                                            >
+                                                <Button>Click to Upload</Button>
+                                            </Upload>
+                                        </Form.Item>
+
+
+                                        <Form.Item name="linkedInProfileUrl" label="LinkedIn Profile URL" rules={[{ required: true, message: "Please enter LinkedIn URL" }]}>
+                                            <Input placeholder="https://linkedin.com/in/yourname" />
+                                        </Form.Item>
+
+                                        <Form.Item name="portfolioUrl" label="Portfolio URL (optional)">
+                                            <Input placeholder="https://yourportfolio.com" />
+                                        </Form.Item>
+
+                                        <Form.Item name="highestQualification" label="Highest Qualification" rules={[{ required: true, message: "Please enter your qualification" }]}>
+                                            <Input placeholder="MBA, B.Tech, etc." />
+                                        </Form.Item>
+
+                                        <Form.Item name="currentJobTitle" label="Current Job Title" rules={[{ required: true, message: "Please enter your job title" }]}>
+                                            <Input placeholder="Software Engineer" />
+                                        </Form.Item>
+
+                                        <Form.Item name="currentCompany" label="Current Company (optional)">
+                                            <Input placeholder="ABC Ltd." />
+                                        </Form.Item>
+
+                                        <Form.Item name="totalExperienceYears" label="Total Experience (Years)" rules={[{ required: true, message: "Please enter total years of experience" }]}>
+                                            <Input type="number" placeholder="4" min={0} />
+                                        </Form.Item>
+
+                                        <Form.Item name="currentCTC" label="Current CTC (in numbers)" rules={[{ required: true, message: "Please enter current CTC" }]}>
+                                            <Input type="number" placeholder="500000" min={0} />
+                                        </Form.Item>
+
+                                        <Form.Item name="expectedCTC" label="Expected CTC (in numbers)" rules={[{ required: true, message: "Please enter expected CTC" }]}>
+                                            <Input type="number" placeholder="700000" min={0} />
+                                        </Form.Item>
+
+                                        <Form.Item name="noticePeriodDays" label="Notice Period (in days)" rules={[{ required: true, message: "Please enter notice period" }]}>
+                                            <Input type="number" placeholder="30" min={0} />
+                                        </Form.Item>
+
+                                        <Form.Item name="engagementType" label="Engagement Type" rules={[{ required: true, message: "Please select engagement type" }]}>
+                                            <Select placeholder="Select type">
+                                                <Select.Option value="In-office">In-office</Select.Option>
+                                                <Select.Option value="Remote">Remote</Select.Option>
+                                                <Select.Option value="Hybrid">Hybrid</Select.Option>
+                                            </Select>
+                                        </Form.Item>
+
+                                        <Form.Item name="keySkills" label="Key Skills (comma separated)" rules={[{ required: true, message: "Please enter key skills" }]}>
+                                            <Input placeholder="JavaScript, React, Node.js" />
+                                        </Form.Item>
+
+                                        <Form.Item name="anyOtherInformation" label="Any Other Information (optional)">
+                                            <Input.TextArea rows={3} placeholder="Mention anything you'd like us to know" />
+                                        </Form.Item>
+
+                                        <Form.Item>
+                                            <Checkbox checked={agreed} onChange={(e) => setAgreed(e.target.checked)}>
+                                                I agree to share my details with Sanguine Recruitment for job opportunities.
+                                            </Checkbox>
+                                        </Form.Item>
+
+                                        <Form.Item>
+                                            <Button type="primary" htmlType="submit" disabled={!agreed} block>
+                                                Submit Application
+                                            </Button>
+                                        </Form.Item>
+
+                                    </Form>
                                 </Modal>
 
                             </div>
