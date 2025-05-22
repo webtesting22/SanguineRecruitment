@@ -97,7 +97,7 @@ const Career = () => {
         }
 
         try {
-            const response = await fetch(`${apibaseUrl}/chats/uploadPolicy`, {
+            const response = await fetch(`https://testapi.prepseed.com/chats/uploadPolicy`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
