@@ -18,7 +18,7 @@ const DashboardMain = () => {
     const [selectedCandidate, setSelectedCandidate] = useState(null);
     const [filters, setFilters] = useState({
         searchTerm: '', // ✅ Rename from jobTitle
-        categories: '',
+        categories: [],
         location: '',
         employmentTypes: [],
         salaryType: ''
@@ -99,10 +99,11 @@ const DashboardMain = () => {
                     .toLowerCase()
                     .includes(filters.searchTerm.toLowerCase());
 
-            const matchesCategory =
-                !filters.categories ||
-                app.applyingFor === filters.categories || app.currentJobTitle === filters.categories;
-
+                    const matchesCategory =
+                    !filters.categories.length ||
+                    filters.categories.includes(app.applyingFor) ||
+                    filters.categories.includes(app.currentJobTitle);
+                
             const matchesLocation =
                 !filters.location ||
                 app.currentLocation?.toLowerCase().includes(filters.location.toLowerCase());
@@ -142,20 +143,20 @@ const DashboardMain = () => {
                     {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
-                    <Select
-                        placeholder="Select"
-                        className="filter-select"
-                        allowClear
-                        value={filters.categories || undefined}
-                        onChange={(value) => setFilters({ ...filters, categories: value })}
-                    >
-
-                        {uniqueJobTitles.map((title, index) => (
-                            <Option key={index} value={title}>
-                                {title}
-                            </Option>
-                        ))}
-                    </Select>
+                <Select
+    mode="multiple" // enable multiple selection
+    placeholder="Select"
+    className="filter-select"
+    allowClear
+    value={filters.categories}
+    onChange={(value) => setFilters({ ...filters, categories: value })}
+>
+    {uniqueJobTitles.map((title, index) => (
+        <Option key={index} value={title}>
+            {title}
+        </Option>
+    ))}
+</Select>
 
                 </div>
             </div>
