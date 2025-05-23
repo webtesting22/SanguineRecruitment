@@ -257,19 +257,38 @@ const Career = () => {
                                     <Form
                                         form={form}
                                         layout="vertical"
-                                        onFinish={(values) => {
+                                        onFinish={async (values) => {
                                             const fullData = {
                                                 ...values,
                                                 applyingFor: selectedPositionTitle,
-                                                resumeUrl: resumeLink, // pulled from state
+                                                resumeUrl: resumeLink,
                                             };
                                             setFormData(fullData);
-                                            console.log("Full submitted form data:", fullData);
-                                            message.success("Data submitted and logged.");
-                                            form.resetFields();
-                                            setAgreed(false);
-                                            setResumeLink("");
+                                            try {
+                                                const response = await fetch("https://testapi.prepseed.com/sanguineRecruitment/createCareerApplication", {
+                                                    method: "POST",
+                                                    headers: {
+                                                        "Content-Type": "application/json",
+                                                    },
+                                                    body: JSON.stringify(fullData),
+                                                });
+                                        
+                                                if (response.ok) {
+                                                    message.success("Application submitted successfully!");
+                                                    form.resetFields();
+                                                    setAgreed(false);
+                                                    setResumeLink("");
+                                                    setIsModalVisible(false);
+                                                } else {
+                                                    const error = await response.json();
+                                                    message.error(error.message || "Failed to submit application.");
+                                                }
+                                            } catch (error) {
+                                                console.error("Submit error:", error);
+                                                message.error("An error occurred while submitting the application.");
+                                            }
                                         }}
+                                        
 
                                     >
                                         <Form.Item name="fullName" label="Full Name" rules={[{ required: true, message: "Please enter your full name" }]}>
