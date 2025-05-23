@@ -23,6 +23,7 @@ const Career = () => {
     };
 
     const handleCancel = () => {
+        form.resetFields();   
         setIsModalVisible(false);
         setSelectedPositionTitle("");
     };
@@ -272,7 +273,7 @@ const Career = () => {
                                                     },
                                                     body: JSON.stringify(fullData),
                                                 });
-                                        
+
                                                 if (response.ok) {
                                                     message.success("Application submitted successfully!");
                                                     form.resetFields();
@@ -288,23 +289,73 @@ const Career = () => {
                                                 message.error("An error occurred while submitting the application.");
                                             }
                                         }}
-                                        
+
 
                                     >
-                                        <Form.Item name="fullName" label="Full Name" rules={[{ required: true, message: "Please enter your full name" }]}>
-                                            <Input placeholder="John Doe" />
+                                        <Form.Item
+                                            name="fullName"
+                                            label="Full Name"
+                                            normalize={(value) => value?.trimStart()} // trim only leading spaces on input, optional
+                                            rules={[
+                                                { required: true, message: "Please enter your full name" },
+                                                {
+                                                    validator: (_, value) => {
+                                                        if (!value || !value.trim()) {
+                                                            return Promise.reject(new Error("Name cannot be empty or just spaces"));
+                                                        }
+                                                        const trimmedValue = value.trim();
+                                                        if (!/^[A-Za-z\s]+$/.test(trimmedValue)) {
+                                                            return Promise.reject(new Error("Name can only contain letters and spaces"));
+                                                        }
+                                                        return Promise.resolve();
+                                                    },
+                                                },
+                                            ]}
+                                        >
+                                            <Input placeholder="Enter your full name" />
                                         </Form.Item>
+
 
                                         <Form.Item name="email" label="Email" rules={[{ required: true, message: "Please enter your email" }, { type: "email", message: "Invalid email format" }]}>
-                                            <Input placeholder="example@email.com" />
+                                            <Input placeholder="Enter your email" />
                                         </Form.Item>
 
-                                        <Form.Item name="mobileNumber" label="Mobile Number" rules={[{ required: true, message: "Please enter your mobile number" }]}>
-                                            <Input placeholder="9876543210" />
+                                        <Form.Item
+                                            name="mobileNumber"
+                                            label="Mobile Number"
+                                            rules={[
+                                                { required: true, message: "Please enter your mobile number" },
+                                                {
+                                                    validator: (_, value) =>
+                                                        value && /^\d{10}$/.test(value)
+                                                            ? Promise.resolve()
+                                                            : Promise.reject(new Error("Mobile number must be exactly 10 digits")),
+                                                },
+                                            ]}
+                                            normalize={(value) => value?.trim()}
+                                        >
+                                            <Input
+                                                placeholder="Enter your 10-digit mobile number"
+                                                maxLength={10}
+                                                type="text" // Important: no arrows
+                                                onKeyPress={(event) => {
+                                                    if (!/[0-9]/.test(event.key)) {
+                                                        event.preventDefault();
+                                                    }
+                                                }}
+                                                onPaste={(event) => {
+                                                    // Allow only digits on paste
+                                                    const paste = (event.clipboardData || window.clipboardData).getData('text');
+                                                    if (!/^\d*$/.test(paste)) {
+                                                        event.preventDefault();
+                                                    }
+                                                }}
+                                            />
                                         </Form.Item>
+
 
                                         <Form.Item name="currentLocation" label="Current Location (City & State)" rules={[{ required: true, message: "Please enter your location" }]}>
-                                            <Input placeholder="Ahmedabad, Gujarat" />
+                                            <Input placeholder="Enter location" />
                                         </Form.Item>
 
                                         <Form.Item name="willingToRelocate" label="Willing to Relocate?" rules={[{ required: true, message: "Please select an option" }]}>
@@ -334,39 +385,39 @@ const Career = () => {
 
 
                                         <Form.Item name="linkedInProfileUrl" label="LinkedIn Profile URL" rules={[{ required: true, message: "Please enter LinkedIn URL" }]}>
-                                            <Input placeholder="https://linkedin.com/in/yourname" />
+                                            <Input placeholder="Enter URL" />
                                         </Form.Item>
 
                                         <Form.Item name="portfolioUrl" label="Portfolio URL (optional)">
-                                            <Input placeholder="https://yourportfolio.com" />
+                                            <Input placeholder="Enter URL" />
                                         </Form.Item>
 
                                         <Form.Item name="highestQualification" label="Highest Qualification" rules={[{ required: true, message: "Please enter your qualification" }]}>
-                                            <Input placeholder="MBA, B.Tech, etc." />
+                                            <Input placeholder="Enter your highest qualification" />
                                         </Form.Item>
 
                                         <Form.Item name="currentJobTitle" label="Current Job Title" rules={[{ required: true, message: "Please enter your job title" }]}>
-                                            <Input placeholder="Software Engineer" />
+                                            <Input placeholder="Enter your Job Title" />
                                         </Form.Item>
 
                                         <Form.Item name="currentCompany" label="Current Company (optional)">
-                                            <Input placeholder="ABC Ltd." />
+                                            <Input placeholder="Enter company name" />
                                         </Form.Item>
 
                                         <Form.Item name="totalExperienceYears" label="Total Experience (Years)" rules={[{ required: true, message: "Please enter total years of experience" }]}>
-                                            <Input type="number" placeholder="4" min={0} />
+                                            <Input type="number" placeholder="Enter total years of experience" min={0} />
                                         </Form.Item>
 
                                         <Form.Item name="currentCTC" label="Current CTC (in numbers)" rules={[{ required: true, message: "Please enter current CTC" }]}>
-                                            <Input type="number" placeholder="500000" min={0} />
+                                            <Input type="number" placeholder="Enter CTC" min={0} />
                                         </Form.Item>
 
                                         <Form.Item name="expectedCTC" label="Expected CTC (in numbers)" rules={[{ required: true, message: "Please enter expected CTC" }]}>
-                                            <Input type="number" placeholder="700000" min={0} />
+                                            <Input type="number" placeholder="Enter expected CTC" min={0} />
                                         </Form.Item>
 
                                         <Form.Item name="noticePeriodDays" label="Notice Period (in days)" rules={[{ required: true, message: "Please enter notice period" }]}>
-                                            <Input type="number" placeholder="30" min={0} />
+                                            <Input type="number" placeholder="Enter notice period" min={0} />
                                         </Form.Item>
 
                                         <Form.Item name="engagementType" label="Engagement Type" rules={[{ required: true, message: "Please select engagement type" }]}>
@@ -377,12 +428,12 @@ const Career = () => {
                                             </Select>
                                         </Form.Item>
 
-                                        <Form.Item name="keySkills" label="Key Skills (comma separated)" rules={[{ required: true, message: "Please enter key skills" }]}>
-                                            <Input placeholder="JavaScript, React, Node.js" />
+                                        <Form.Item name="keySkills" label="Key Skills" rules={[{ required: true, message: "Please enter key skills" }]}>
+                                            <Input placeholder="Enter your skills" />
                                         </Form.Item>
 
                                         <Form.Item name="anyOtherInformation" label="Any Other Information (optional)">
-                                            <Input.TextArea rows={3} placeholder="Mention anything you'd like us to know" />
+                                            <Input.TextArea rows={3} placeholder="Enter any other information" />
                                         </Form.Item>
 
                                         <Form.Item>

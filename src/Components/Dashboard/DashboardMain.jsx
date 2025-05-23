@@ -76,8 +76,7 @@ const DashboardMain = () => {
         : [];
 
     const TAG_COLORS = [
-        "#FFA726", "#004675", "#FF7043", "#66BB6A",
-        "#42A5F5", "#7E57C2", "#E91E63"
+        "rgb(0, 70, 117)"
     ];
     const randomColor = TAG_COLORS[Math.floor(Math.random() * TAG_COLORS.length)];
     // Filter Component
@@ -120,7 +119,7 @@ const DashboardMain = () => {
             <div className="filter-section">
                 <div className="filter-title">
                     Search
-                    <MdKeyboardArrowDown size={20} />
+                    {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
                     <Input
@@ -140,29 +139,31 @@ const DashboardMain = () => {
             <div className="filter-section">
                 <div className="filter-title">
                     Categories
-                    <MdKeyboardArrowDown size={20} />
+                    {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
                     <Select
-                        placeholder="Any Classification"
+                        placeholder="Select"
                         className="filter-select"
                         allowClear
-                        value={filters.categories}
+                        value={filters.categories || undefined}
                         onChange={(value) => setFilters({ ...filters, categories: value })}
                     >
+
                         {uniqueJobTitles.map((title, index) => (
                             <Option key={index} value={title}>
                                 {title}
                             </Option>
                         ))}
                     </Select>
+
                 </div>
             </div>
 
             <div className="filter-section">
                 <div className="filter-title">
                     Location
-                    <MdKeyboardArrowDown size={20} />
+                    {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
                     <Input
@@ -177,7 +178,7 @@ const DashboardMain = () => {
             <div className="filter-section">
                 <div className="filter-title">
                     Type of employment
-                    <MdKeyboardArrowDown size={20} />
+                    {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
                     <div className="checkbox-group">
@@ -220,7 +221,7 @@ const DashboardMain = () => {
                     </button> */}
                     <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="" style={{ width: "180px" }} />
 
-                    <h1 className="sidebar-title">Job Search Settings</h1>
+                    <h1 className="sidebar-title">Filters</h1>
 
                     {FilterContent}
 
@@ -234,7 +235,7 @@ const DashboardMain = () => {
             <Drawer
                 title={
                     <div className="drawer-header">
-                        <h2 className="drawer-title">Job Search Settings</h2>
+                        <h2 className="drawer-title">Filters</h2>
                     </div>
                 }
                 placement="left"
@@ -322,14 +323,22 @@ const DashboardMain = () => {
 
                                     <div className="card-header">
                                         <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png" alt={app.fullName} className="avatar" />
-                                        <div className="position-tag" style={{ backgroundColor: randomColor }}>
+                                        {/* <div className="position-tag" style={{ backgroundColor: randomColor }}>
                                             {app.applyingFor}
+                                        </div> */}
+                                        <div>
+                                            <h3 className="candidate-name">{app.fullName}</h3>
+                                            <p className="candidate-location">{app.currentLocation}</p>
                                         </div>
                                     </div>
 
                                     <div className="card-content">
-                                        <h3 className="candidate-name">{app.fullName}</h3>
-                                        <p className="candidate-location">{app.currentLocation}</p>
+
+                                        <div style={{ display: "flex", justifyContent: "start", marginBottom: "20px" }}>
+                                            <div className="position-tag" style={{ backgroundColor: randomColor }}>
+                                                {app.applyingFor}
+                                            </div>
+                                        </div>
 
                                         <div className="card-links">
                                             <div className="resume-link">
@@ -359,7 +368,7 @@ const DashboardMain = () => {
                                                 className="profile-btn"
                                                 onClick={() => showProfileModal(app)}
                                             >
-                                                Profile
+                                                View Profile
                                             </Button>
                                             <Button className="contact-btn" onClick={() => window.open(`tel:${app.phone}`, '_self')}
                                             >Contact</Button>
@@ -373,7 +382,7 @@ const DashboardMain = () => {
 
                 {/* Profile Modal */}
                 <Modal
-                    title="Candidate Profile"
+                    title="Profile"
                     open={profileModalVisible}
                     onCancel={closeProfileModal}
                     footer={null}
@@ -404,18 +413,18 @@ const DashboardMain = () => {
                                             <MdLocationOn size={16} />
                                             {selectedCandidate.currentLocation}
                                         </div>
-                                        <div style={{ color: '#004675', fontWeight: '600' }}>
-                                            Experience: {selectedCandidate.totalExperienceYears}+ years
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                                           <span>🗓️</span> {selectedCandidate.totalExperienceYears}+ years
                                         </div>
-                                        <div style={{ color: '#004675', fontWeight: '600' }}>
-                                            Type of employment: {selectedCandidate.engagementType}
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                                            <span>📍</span> {selectedCandidate.engagementType}
                                         </div>
                                     </div>
                                 </div>
 
-                                <Tag color={selectedCandidate.tagColor || "#004675"} style={{ fontSize: '14px', padding: '8px 16px', marginTop: "10px" }} className='OnlyPc'>
+                                {/* <Tag color={selectedCandidate.tagColor || "#004675"} style={{ fontSize: '14px', padding: '8px 16px', marginTop: "10px" }} className='OnlyPc'>
                                     {selectedCandidate.applyingFor || "Candidate"}
-                                </Tag>
+                                </Tag> */}
                             </div>
 
                             <Divider />
@@ -539,9 +548,7 @@ const DashboardMain = () => {
 
                             {/* Action Buttons */}
                             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', paddingTop: '16px' }}>
-                                <Button type="primary" style={{ background: '#004675' }} onClick={() => window.open(`mailto:${selectedCandidate.email}`)}>
-                                    Send Email
-                                </Button>
+
                                 {selectedCandidate.linkedInProfileUrl && (
                                     <Button onClick={() => window.open(selectedCandidate.linkedInProfileUrl, '_blank')}>
                                         LinkedIn
@@ -549,6 +556,9 @@ const DashboardMain = () => {
                                 )}
                                 <Button onClick={() => window.open(`tel:${selectedCandidate.mobileNumber}`, '_self')}>
                                     Contact
+                                </Button>
+                                <Button type="primary" style={{ background: '#004675' }} onClick={() => window.open(`mailto:${selectedCandidate.email}`)}>
+                                    Send Email
                                 </Button>
                             </div>
                         </div>

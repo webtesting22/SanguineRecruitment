@@ -283,7 +283,7 @@
 .application-card.list-card {
     display: flex;
     align-items: center;
-    padding: 20px 24px;
+    padding: 30px 24px;
     border-radius: 12px;
 }
 
@@ -361,8 +361,9 @@
 .card-header {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 16px;
+    gap: 30px;
 }
 
 .avatar {
@@ -391,6 +392,7 @@
     color: inherit;
     margin: 0 0 4px 0;
     line-height: 1.3;
+    text-transform: capitalize;
 }
 
 .candidate-location {
