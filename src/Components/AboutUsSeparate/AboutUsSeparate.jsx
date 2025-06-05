@@ -15,8 +15,8 @@ const AboutUsSeparate = () => {
     const timerRef = useRef(null);
     useEffect(() => {
         window.scrollTo(0, 0);
-      }, []);
-    
+    }, []);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentHeadingIndex((prevIndex) => (prevIndex + 1) % headings.length);
@@ -83,10 +83,23 @@ const AboutUsSeparate = () => {
                                             <div>
                                                 <div>
                                                     <Tag>About us</Tag>
-                                                    <h2 className="big-title">Recognized excellence in
-                                                        <span className="span-title"> recruitment services</span>
+                                                    <h2 className="big-title">Expert Recruitment for Seamless <span className="span-title">Hiring Solutions</span>
                                                     </h2>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium error nostrum quo earum, doloremque aliquam? Dicta alias sit nostrum perferendis. Repellendus similique neque magni dolorem praesentium aspernatur ut atque voluptatibus!</p>
+                                                    <p>At Sanguine Recruitment, we prioritize
+                                                        understanding our clients' unique needs to
+                                                        connect them with the right talent. By
+                                                        identifying candidates with the perfect skills
+                                                        and cultural fit, we ensure seamless
+                                                        placements that drive business success.
+                                                        With our extensive talent network, industry
+                                                        expertise, and advanced recruitment
+                                                        methods, we simplify the hiring process—
+                                                        delivering only the most qualified candidates
+                                                        to save you time and resources.
+                                                        We focus on building long-term partnerships,
+                                                        enhancing your employer brand, and
+                                                        creating a robust talent pipeline to support
+                                                        your organization’s growth and vision.</p>
                                                     <div>
                                                         <AnimatedBtn
                                                             text="Free consultation"
@@ -205,8 +218,8 @@ const AboutUsSeparate = () => {
                             </div>
                         </div>
                     </div>
-                    <OurTeam/>
-                    <Blogs/>
+                    <OurTeam />
+                    <Blogs />
                 </div>
             </div>
         </>

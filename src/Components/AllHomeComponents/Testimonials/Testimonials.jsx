@@ -10,30 +10,26 @@ const testimonials = [
     {
         businessTypes: ["Corporation", "Non-profit", "Other", "LLC"],
         avatar: "/images/avatars/daniel.jpg",
-        name: "Daniel Forden",
-        role: "Data Analyst",
-        quote: "Their tailored recruitment strategy helped us find the perfect fit for several key positions, and we were able to fill roles faster than ever before. The quality of candidates has been outstanding!",
+        name: "ASMITA GAUTAM",
+        role: "HR Business Partner",
+        Description: "Landmark Group, Dubai",
+        quote: "requirements and delivering services of veryhigh standards. Ihad the privilege to work with Sanguine during my tenureinLandmark Group andIhave always admired them for the quick responses,strong relationship building skills and lines description"
     },
     {
         businessTypes: ["Corporation", "Non-profit", "Other", "LLC"],
         avatar: "/images/avatars/daniel.jpg",
-        name: "Daniel Forden",
-        role: "Data Analyst",
-        quote: "Their tailored recruitment strategy helped us find the perfect fit for several key positions, and we were able to fill roles faster than ever before. The quality of candidates has been outstanding!",
+        name: "Karthcik Ravichandran",
+        role: "HR Business PartnerSaint Gobain India Priv",
+        Description: "Saint Gobain India Private Limited- Glass Business",
+        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect thequality at the right time. Sanguine as an organization wouldbe lucky to have Rituas their leader. She and her team earns my highest recommendation.!",
     },
     {
         businessTypes: ["Corporation", "Non-profit", "Other", "LLC"],
         avatar: "/images/avatars/daniel.jpg",
-        name: "Daniel Forden",
-        role: "Data Analyst",
-        quote: "Their tailored recruitment strategy helped us find the perfect fit for several key positions, and we were able to fill roles faster than ever before. The quality of candidates has been outstanding!",
-    },
-    {
-        businessTypes: ["Corporation", "Non-profit", "Other", "LLC"],
-        avatar: "/images/avatars/daniel.jpg",
-        name: "Daniel Forden",
-        role: "Data Analyst",
-        quote: "Their tailored recruitment strategy helped us find the perfect fit for several key positions, and we were able to fill roles faster than ever before. The quality of candidates has been outstanding!",
+        name: "SWATI MAIR",
+        role: "HR Business Partner & Talent Acquisition",
+        Description: "Zaggle, Hyderabad",
+        quote: "Sanguine possesses great technology acumen and client orientation skills andhaving a great team for recruitment especially in the technology niche hiring. Ihave greatly enjoyed working with Sanguine, as they have managed severalcrucialIT roles for us.",
     },
 
     // Add more testimonials as needed
@@ -69,14 +65,14 @@ const Testimonials = () => (
                     <SwiperSlide key={idx}
                     >
                         <div className="testimonial-card">
-                            <div className="testimonial-business">
+                            {/* <div className="testimonial-business">
                                 <div className="business-title">Business type</div>
                                 <div className="business-pills">
                                     {t.businessTypes.map((type, i) => (
                                         <span className="business-pill" key={i}>{type}</span>
                                     ))}
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="testimonial-content">
                                 <div className="testimonial-user">
                                     <img src={t.avatar} alt={t.name} className="testimonial-avatar" />

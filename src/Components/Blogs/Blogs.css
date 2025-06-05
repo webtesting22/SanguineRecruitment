@@ -15,7 +15,7 @@
     object-fit: cover;
 }
 .BlogsContainerCard{
-    padding: 10px;
+    padding: 20px 0px;
 }
 
 #BlogsContainer .ant-row .ant-col:first-child .blogImageContainer{

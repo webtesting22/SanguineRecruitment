@@ -4,6 +4,7 @@
     width: 100%;
     background-image: url("/public/images/background/WhiteLines.png");
     background-size: cover;
+    border-radius: 20px;
 }
 .WidthSet{
     width: 100%;
