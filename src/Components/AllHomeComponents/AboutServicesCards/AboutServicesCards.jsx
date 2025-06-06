@@ -8,22 +8,22 @@ const AboutServicesCards = () => {
         {
             icon: "/images/icons/services/tailored-solutions.svg",
             title: "Manufacturing/ Engineering",
-            description: "Our team excels in placing top talent across various roles, from design engineers to plant managers, ensuring the best fit for your needs."
+            description: "Our team is dedicated to identifying and placing exceptional talent in roles ranging from design engineers to plant managers, ensuring the ideal match for your company's specific needs."
         },
         {
             icon: "/images/icons/services/faster-hiring.svg",
             title: "Retail/Logistics",
-            description: "We provide efficient hiring solutions tailored to the fast-paced retail and logistics sectors, focusing on reliability and exceptional customer service."
+            description: "We offer specialized hiring solutions for the fast-moving retail and logistics sectors, focusing on efficiency, dependability, and top-tier customer service in every candidate we recommend."
         },
         {
             icon: "/images/icons/services/top-talent.svg",
             title: "Oil/Gas",
-            description: "We deliver skilled professionals, from engineers to project managers, with the certifications required to meet the high standards of the oil and gas industry."
+            description: "We connect you with highly skilled professionals, from engineers to project managers, who possess the certifications and expertise required to meet the strict standards of the oil and gas industry."
         },
         {
             icon: "/images/icons/services/integration.svg",
             title: "BFSI",
-            description: "We focus on hiring candidates with not only technical expertise but also strong analytical, problem-solving, and relationship-building skills in the BFSI sector."
+            description: "Our recruitment process identifies candidates who not only possess technical skills but also excel in critical areas like analytical thinking, problem-solving, and client relationship management in the BFSI sector."
         },
     ];
 
@@ -35,10 +35,9 @@ const AboutServicesCards = () => {
                         <img src="/images/icons/expand.svg" alt="Expand Icon" data-aos="fade-down"
                             data-aos-duration="1500" />
                         <h2 className="big-title " data-aos="fade-down"
-                            data-aos-duration="2000">Platform designed to <span className="span-title">simplify<br />and enhance</span> the hiring process.</h2>
+                            data-aos-duration="2000">Industry-Specific Expertise to <span className="span-title">simplify<br />Fuel Your Success</span></h2>
                         <p className="about-p-Container" data-aos="fade-up"
-                            data-aos-duration="1500">With personalized solutions tailored to your business needs, we connect you with the best talent
-                            quickly and efficiently, helping you build stronger, more effective teams.</p>
+                            data-aos-duration="1500">At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.</p>
                     </div>
                     <div className="about-services-grid">
                         {services.map((service, index) => (
@@ -51,7 +50,7 @@ const AboutServicesCards = () => {
                         ))}
                     </div>
                     <br /><br />
-                    <div className="about-card-button" style={{display:"flex",justifyContent:"center"}}>
+                    <div className="about-card-button" style={{ display: "flex", justifyContent: "center" }}>
                         <Link to="/AboutServicesCard"><button className="slide-btn consultation ">Learn more</button></Link>
                     </div>
                 </div>

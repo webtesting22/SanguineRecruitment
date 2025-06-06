@@ -6,7 +6,6 @@ import { RiUserSmileFill } from "react-icons/ri";
 import { IoChatbubble } from "react-icons/io5";
 const HeroHome = () => {
 
-
     return (
         <>
             <div id="hero-home" className="sidepadding">
@@ -36,7 +35,6 @@ const HeroHome = () => {
                                                 icon={<IoChatbubble />}
                                                 variant="consultation"
                                                 onClick={() => console.log('clicked')}
-
                                             />
                                         </ButtonGroup>
 
@@ -45,15 +43,15 @@ const HeroHome = () => {
                             </Col>
                             <Col lg={14} md={12} sm={24} xs={24} >
                                 <div className="RightSideAnimatedContainer" data-aos="fade-Left"
-                                data-aos-duration="1500">
+                                    data-aos-duration="1500">
                                     <div>
                                         <div className="BackgroundContainerColor">
                                             <div className="AnimatedContentContainer">
                                                 <div className="AnimatedContentContainerColor">
-                                                    <h1 className="small-title">Successfully connected over <span className="small-span-title">1,000 businesses</span> with top talent.</h1>
+                                                    <h1 className="small-title">Connecting You with the Right Talent for <span className="small-span-title">Lasting Success</span></h1>
                                                 </div>
                                                 <div className="AnimatedParagraphContainer">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, iure.</p>
+                                                    <p>At Sanguine Recruitment, we match your hiring needs with qualified candidates, ensuring placements that drive business growth.</p>
                                                 </div>
                                             </div>
                                             <div className="AnimatedContainerColor">
