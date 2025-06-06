@@ -5,18 +5,23 @@ import { AnimatedBtn } from "../../CommonUsedComponents/AnimatedButton/AnimatedB
 import { RiUserSmileFill } from "react-icons/ri";
 const steps = [
     {
-        title: "Understand Your Needs",
-        desc: "We begin by working closely with you to understand your business, culture, and specific hiring requirements.",
+        title: "Talent Acquisition Strategy",
+        desc: "Access to top-tier talent, including passive candidates",
     },
     {
-        title: "Recruitment Strategy",
-        desc: "Based on your unique needs, we craft a personalized recruitment strategy designed to attract the best talent.",
+        title: "Optimized Recruitment Process",
+        desc: "Streamlined recruitment process with cutting-edge evaluation techniques.",
     },
     {
-        title: "Seamless Hiring Process",
-        desc: "Using our platform's advanced tools, we match you with top candidates and integrate the process with your HR systems.",
+        title: "Tailored Hiring Solutions",
+        desc: "Industry insights and tailored hiring strategies.",
+    },
+    {
+        title: "Enhanced Candidate Experience",
+        desc: "Enhanced candidate experience to boost your employer reputation.",
     },
 ];
+
 
 const OurServices = () => {
     return (
@@ -25,15 +30,17 @@ const OurServices = () => {
                 <div className="hero-home-content">
                     <div className="our-services-overlay" />
                     <div className="our-services-content " >
-                        <Tag style={{ color: "white" }} data-aos="fade-down" data-aos-duration="1500">How it works</Tag>
-                        <h2 className="big-title " style={{ color: "white" }} data-aos="fade-down" data-aos-duration="2000">
-                            Efficient process to <span className="span-title" style={{ color: "white" }}> connect <br />
-                                businesses with the best talent.</span>
+                        <Tag style={{ color: "white" }} data-aos="fade-down" data-aos-duration="1500">How Our Recruitment Process Works</Tag>
+
+                        <h2 className="big-title" style={{ color: "white" }} data-aos="fade-down" data-aos-duration="2000">
+                            Seamless hiring experience to <span className="span-title" style={{ color: "white" }}> connect <br />
+                                businesses with exceptional talent.</span>
                         </h2>
                         <p style={{ color: "white" }} data-aos="fade-up" data-aos-duration="1500">
-                            We work closely with you to understand your unique needs, culture, and hiring goals.
-                            Using this insight, we tailor a recruitment strategy that targets the right candidates.
+                            We collaborate with you to understand your unique requirements, company culture, and hiring objectives.
+                            This helps us craft a recruitment strategy that attracts the best-fit candidates.
                         </p>
+
                         <div className="our-services-steps">
                             {steps.map((step, idx) => (
                                 <div className="our-services-step" key={idx} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={idx * 300}>
@@ -51,7 +58,10 @@ const OurServices = () => {
                                 {/* <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /> */}
                                 <div className="ImageContentContainer">
                                     <div>
-                                        <h2 className="small-title " style={{ color: "white" }}>Get started with Linkrow today and discover a smarter, faster way to hire.</h2>
+                                        <h2 className="small-title" style={{ color: "white" }}>
+                                            Start building your dream team with our efficient, tailored recruitment process today.
+                                        </h2>
+
                                         <div style={{ display: "flex", justifyContent: "center" }}>
                                             <AnimatedBtn
                                                 text="Free consultation"
