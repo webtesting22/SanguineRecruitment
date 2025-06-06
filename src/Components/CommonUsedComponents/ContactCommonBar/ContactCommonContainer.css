@@ -4,7 +4,7 @@
     width: 100%;
     background-image: url("/public/images/background/WhiteLines.png");
     background-size: cover;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 .WidthSet{
     width: 100%;
@@ -18,5 +18,271 @@
 @media (max-width:900px){
     .WidthSet>div{
         width: 100%;
+    }
+}
+
+.contact-section-container {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
+    min-height: 500px;
+    width: 100%;
+    position: relative;
+    padding: 80px 20px;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.element {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.element-1 {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.element-3 {
+    width: 40px;
+    height: 40px;
+    bottom: 30%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+.element-4 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.grid-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+.width-set-enhanced {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.width-set-enhanced > div {
+    width: 70%;
+    max-width: 900px;
+}
+
+.content-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 60px 40px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.professional-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 24px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.badge-text {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.big-title-enhanced {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.span-title-enhanced {
+    background: linear-gradient(45deg, #fff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.description-enhanced {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container-enhanced {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.animated-btn {
+    background: linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+    border: 2px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-btn:hover {
+    background: linear-gradient(45deg, rgba(255,255,255,0.3), rgba(255,255,255,0.2));
+    border-color: rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.indicator {
+    text-align: center;
+    opacity: 0.9;
+}
+
+.indicator-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.indicator-text {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#ContactCommonSectionContainer{
+    overflow: hidden;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+@media (max-width: 900px) {
+    .width-set-enhanced > div {
+        width: 95%;
+    }
+    
+    .content-card {
+        padding: 40px 20px;
+    }
+    
+    .big-title-enhanced {
+        font-size: 2.4rem;
+    }
+    
+    .button-container-enhanced {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .trust-indicators {
+        gap: 20px;
+    }
+    
+    .indicator-number {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .big-title-enhanced {
+        font-size: 2rem;
+    }
+    
+    .description-enhanced {
+        font-size: 1.1rem;
     }
 }

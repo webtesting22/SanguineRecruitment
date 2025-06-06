@@ -30,7 +30,10 @@ const OurServices = () => {
                 <div className="hero-home-content">
                     <div className="our-services-overlay" />
                     <div className="our-services-content " >
-                        <Tag style={{ color: "white" }} data-aos="fade-down" data-aos-duration="1500">How Our Recruitment Process Works</Tag>
+                    <Tag style={{ color: "white" }} data-aos="fade-down" data-aos-duration="1500">
+    Why Choose Sanguine? How Our Recruitment Process Works
+</Tag>
+
 
                         <h2 className="big-title" style={{ color: "white" }} data-aos="fade-down" data-aos-duration="2000">
                             Seamless hiring experience to <span className="span-title" style={{ color: "white" }}> connect <br />

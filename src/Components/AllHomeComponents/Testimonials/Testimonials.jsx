@@ -44,9 +44,13 @@ const Testimonials = () => (
             aria-hidden="true"
         />
         <div className="testimonials-container">
-            <Tag>Testimonials</Tag>
-            <h2 className="big-title " >You're in good <span className="span-title">company.</span></h2>
-            <p className="testimonials-subtitle">You don't have to trust our word</p>
+        <Tag>Client Feedback</Tag>
+    <h2 className="big-title">
+        Hear from our <span className="span-title">happy clients.</span>
+    </h2>
+    <p className="testimonials-subtitle">
+        Don’t just take our word for it—our clients say it all.
+    </p>
             <Swiper
                 modules={[Navigation, Autoplay]}
                 navigation={{
@@ -56,6 +60,7 @@ const Testimonials = () => (
                 slidesPerView={1}
                 className="testimonials-swiper"
                 loop
+                speed={600}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,
@@ -75,7 +80,7 @@ const Testimonials = () => (
                             </div> */}
                             <div className="testimonial-content">
                                 <div className="testimonial-user">
-                                    <img src={t.avatar} alt={t.name} className="testimonial-avatar" />
+                                    {/* <img src={t.avatar} alt={t.name} className="testimonial-avatar" /> */}
                                     <div>
                                         <div className="testimonial-name">{t.name}</div>
                                         <div className="testimonial-role">{t.role}</div>
