@@ -11,7 +11,7 @@ const AllHomeComponents = () => {
             <AboutServicesCards />
             <OurServices />
             <Testimonials />
-            <ContactCommonSection/>
+            {/* <ContactCommonSection/> */}
         </div>
     )
 }

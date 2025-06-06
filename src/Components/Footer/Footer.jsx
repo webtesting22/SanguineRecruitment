@@ -18,7 +18,7 @@ const Footer = () => {
         {
             title: "LinkedIn",
             icon: <RiLinkedinFill />,
-            url: "#"
+            url: "https://www.linkedin.com/company/sanguinerecruitment/"
         },
         {
             title: "Instagram",
