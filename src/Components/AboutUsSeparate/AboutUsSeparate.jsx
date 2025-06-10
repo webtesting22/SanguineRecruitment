@@ -68,10 +68,10 @@ const AboutUsSeparate = () => {
                 <div className="AboutUsSeparateContentContainer">
                     <div style={{ width: "100%" }}>
                         <TopPartCommon
-                            tag="About Us"
-                            title="You're in good"
-                            highlight="company."
-                            subtitle="You don't have to trust our word"
+                            tag="Our Expertise"
+                            title="Your Trusted"
+                            highlight="Recruitment Partner"
+                            subtitle="Connecting exceptional talent with outstanding opportunities"
                         />
                     </div>
                     <div className="AboutUsSeparateGridContainer">
@@ -85,7 +85,7 @@ const AboutUsSeparate = () => {
                                                     <Tag>About us</Tag>
                                                     <h2 className="big-title">Expert Recruitment for Seamless <span className="span-title">Hiring Solutions</span>
                                                     </h2>
-                                                    <p>At Sanguine Recruitment, we prioritize
+                                                    <p>At <b className="BlackColor">Sanguine Recruitment</b>, we prioritize
                                                         understanding our clients' unique needs to
                                                         connect them with the right talent. By
                                                         identifying candidates with the perfect skills
@@ -99,18 +99,18 @@ const AboutUsSeparate = () => {
                                                         We focus on building long-term partnerships,
                                                         enhancing your employer brand, and
                                                         creating a robust talent pipeline to support
-                                                        your organization’s growth and vision.</p>
+                                                        your organization's growth and vision.</p>
                                                     <div>
-                                                        <AnimatedBtn
+                                                        {/* <AnimatedBtn
                                                             text="Free consultation"
                                                             hoverText="Free consultation"
                                                             icon={<RiUserSmileFill />}
                                                             variant="consultation"
                                                             onClick={() => console.log('clicked')}
-                                                        />
+                                                        /> */}
                                                     </div>
                                                 </div>
-                                                <section className="counters">
+                                                {/* <section className="counters">
                                                     <Row>
                                                         <Col lg={12}>
                                                             <AnimatedCounter number="$65.3M" suffix="+" label="Helloo text text" />
@@ -119,12 +119,12 @@ const AboutUsSeparate = () => {
                                                             <AnimatedCounter number="$65.3M" suffix="+" label="Helloo text text" />
                                                         </Col>
                                                     </Row>
-                                                </section>
+                                                </section> */}
                                             </div>
                                         </div>
                                     </Col>
                                     <Col lg={12} md={24}>
-                                        <div>
+                                        <div style={{height:"100%"}}>
                                             <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                                         </div>
                                     </Col>

@@ -15,8 +15,7 @@ const DashboardState = ({ children }) => {
                     throw new Error("Failed to fetch data");
                 }
                 const data = await response.json();
-                // console.log("datatataaaaaaaaaaaa ", data)
-                setApplicationsData(data.applications); // Adjust based on your API response structure
+                setApplicationsData(data.applications); 
                 setLoading(false);
             } catch (err) {
                 setError(err.message || "Unknown error");

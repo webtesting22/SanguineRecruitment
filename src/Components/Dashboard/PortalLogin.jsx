@@ -11,7 +11,7 @@ const PortalLogin = () => {
 
     const handleLogin = () => {
         const storedEmail = "admin@example.com";
-        const storedPassword = "000000";
+        const storedPassword = "12345";
 
         if (email === storedEmail && password === storedPassword) {
             localStorage.setItem("email", email);
@@ -29,7 +29,6 @@ const PortalLogin = () => {
                 <div className="icon-wrapper">
                     <MdArrowForward size={24} />
                 </div>
-
                 <h1 className="signin-title">Sign in with email</h1>
                 <p className="signin-subtitle">
                     Make a new doc to bring your words, data,<br />
@@ -54,10 +53,7 @@ const PortalLogin = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                {/* <div className="forgot-password">
-                    <a href="#" className="forgot-link">Forgot password?</a>
-                </div> */}
-
+            
                 <Button
                     type="primary"
                     size="large"

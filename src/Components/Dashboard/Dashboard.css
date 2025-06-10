@@ -23,7 +23,7 @@
     align-items: center;
     gap: 8px;
     color: #6c757d;
-    fontSize: 16px;
+    font-Size: 16px;
     font-weight: 500;
     cursor: pointer;
     border: none;
@@ -560,7 +560,6 @@
     }
 }
 
-/* Mobile Drawer Styles */
 .mobile-filter-drawer .ant-drawer-header {
     padding: 16px 24px;
     border-bottom: none;

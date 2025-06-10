@@ -16,12 +16,15 @@ const HeroHome = () => {
                             <Col lg={10} md={12} sm={24} xs={24}>
                                 <div>
                                     <div>
-                                        <Tag data-aos="fade-up"
-                                            data-aos-duration="1500">100+ trusted partners</Tag>
-                                        <h1 className="big-title" data-aos="fade-up"
-                                            data-aos-duration="1500">Recruitment process with <span className="span-title">smart solutions</span>.</h1>
-                                        <p data-aos="fade-up"
-                                            data-aos-duration="1700">Linkrow is your trusted partner in recruitment, offering personalized HR solutions that connect top talent with the right opportunities.</p>
+                                        <Tag data-aos="fade-up" data-aos-duration="1500">
+                                            Empowering Smarter Recruitment
+                                        </Tag>
+                                        <h1 className="big-title" data-aos="fade-up" data-aos-duration="1500">
+                                            Streamlined Hiring with <span className="span-title">Smart Solutions</span>
+                                        </h1>
+                                        <p data-aos="fade-up" data-aos-duration="1700">
+                                            At Linkrow, we deliver tailored recruitment strategies that align top talent with ideal career opportunities, making us your reliable HR partner.
+                                        </p>
 
                                         <ButtonGroup>
                                             <AnimatedBtn
@@ -55,7 +58,7 @@ const HeroHome = () => {
                                                 </div>
                                             </div>
                                             <div className="AnimatedContainerColor">
-                                                <img src="https://images.unsplash.com/photo-1530036846422-afb4b7af2fd4?q=80&w=3027&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                                <img src="https://images.unsplash.com/photo-1522241112606-b5d35a468795?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
                                             </div>
                                         </div>
                                     </div>

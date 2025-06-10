@@ -99,11 +99,11 @@ const DashboardMain = () => {
                     .toLowerCase()
                     .includes(filters.searchTerm.toLowerCase());
 
-                    const matchesCategory =
-                    !filters.categories.length ||
-                    filters.categories.includes(app.applyingFor) ||
-                    filters.categories.includes(app.currentJobTitle);
-                
+            const matchesCategory =
+                !filters.categories.length ||
+                filters.categories.includes(app.applyingFor) ||
+                filters.categories.includes(app.currentJobTitle);
+
             const matchesLocation =
                 !filters.location ||
                 app.currentLocation?.toLowerCase().includes(filters.location.toLowerCase());
@@ -143,20 +143,20 @@ const DashboardMain = () => {
                     {/* <MdKeyboardArrowDown size={20} /> */}
                 </div>
                 <div className="filter-content">
-                <Select
-    mode="multiple" // enable multiple selection
-    placeholder="Select"
-    className="filter-select"
-    allowClear
-    value={filters.categories}
-    onChange={(value) => setFilters({ ...filters, categories: value })}
->
-    {uniqueJobTitles.map((title, index) => (
-        <Option key={index} value={title}>
-            {title}
-        </Option>
-    ))}
-</Select>
+                    <Select
+                        mode="multiple" // enable multiple selection
+                        placeholder="Select"
+                        className="filter-select"
+                        allowClear
+                        value={filters.categories}
+                        onChange={(value) => setFilters({ ...filters, categories: value })}
+                    >
+                        {uniqueJobTitles.map((title, index) => (
+                            <Option key={index} value={title}>
+                                {title}
+                            </Option>
+                        ))}
+                    </Select>
 
                 </div>
             </div>
@@ -415,7 +415,7 @@ const DashboardMain = () => {
                                             {selectedCandidate.currentLocation}
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                                           <span>🗓️</span> {selectedCandidate.totalExperienceYears}+ years
+                                            <span>🗓️</span> {selectedCandidate.totalExperienceYears}+ years
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
                                             <span>📍</span> {selectedCandidate.engagementType}
