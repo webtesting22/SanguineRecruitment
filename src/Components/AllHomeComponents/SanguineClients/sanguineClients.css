@@ -1,0 +1,113 @@
+.sanguine-clients-component {
+  background: #fff;
+  padding: 48px 0;
+}
+
+.sanguine-clients-component .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sanguine-clients-component .clients-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 340px;
+}
+
+.sanguine-clients-component .clients-logos-grid {
+  flex: 2 1 67%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sanguine-clients-component .clients-logos-grid.hidden {
+  opacity: 0;
+}
+
+.sanguine-clients-component .clients-logos-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.sanguine-clients-component .clients-logos-row.with-divider {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.sanguine-clients-component .client-logo-cell {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sanguine-clients-component .client-logo-link {
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sanguine-clients-component .client-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.sanguine-clients-component .client-logo-cell img {
+  width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  filter: grayscale(0%);
+}
+.ant-tooltip-inner{
+    background-color: #004675 !important;
+    color: white;
+}
+
+@media (max-width: 900px) {
+  .sanguine-clients-component .clients-content {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: unset;
+  }
+  .sanguine-clients-component .clients-title {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .sanguine-clients-component .clients-logos-grid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sanguine-clients-component .clients-logos-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    gap: 20px;
+  }
+  
+  .sanguine-clients-component .client-logo-cell {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 0;
+  }
+  
+  .sanguine-clients-component .client-logo-cell img {
+    width: 100%;
+    max-width: 120px;
+  }
+  
+  .sanguine-clients-component .clients-logos-row.with-divider {
+    border-bottom: none;
+  }
+  
+  .sanguine-clients-component .clients-logos-row:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

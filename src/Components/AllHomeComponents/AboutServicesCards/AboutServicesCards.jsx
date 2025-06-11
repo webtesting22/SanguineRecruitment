@@ -43,9 +43,12 @@ const AboutServicesCards = () => {
                         {services.map((service, index) => (
                             <div key={index} className="service-card" data-aos="fade-up"
                                 data-aos-duration="1500" data-aos-delay={index * 300}>
-                                <img src={service.icon} alt={service.title} />
-                                <h3>{service.title}</h3>
-                                <p>{service.description}</p>
+                                <div className="card-overlay"></div>
+                                <div className="card-content">
+                                    <img src={service.icon} alt={service.title} />
+                                    <h3>{service.title}</h3>
+                                    <p>{service.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>

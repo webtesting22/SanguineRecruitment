@@ -4,6 +4,7 @@ import AboutServicesCards from "./AboutServicesCards/AboutServicesCards";
 import OurServices from "./OurServices/OurServices";
 import Testimonials from "./Testimonials/Testimonials";
 import ContactCommonSection from "../CommonUsedComponents/ContactCommonBar/ContactCommonSection";
+import SanguineClients from "./SanguineClients/SanguineClients";
 const AllHomeComponents = () => {
     return (
         <div>
@@ -11,6 +12,7 @@ const AllHomeComponents = () => {
             <AboutServicesCards />
             <OurServices />
             <Testimonials />
+            <SanguineClients />
             {/* <ContactCommonSection/> */}
         </div>
     )

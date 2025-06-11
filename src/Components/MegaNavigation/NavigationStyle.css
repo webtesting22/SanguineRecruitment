@@ -31,10 +31,17 @@
     color: #000;
     font-weight: 500;
     text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 15px;
+    transition: .5s;
 }
 
 .NavLink:hover {
-    color: black !important;
+    color: white !important;
+    background-color: #004675;
+    padding: 5px 14px;
+    border-radius: 20px;
+    transition: .5s;
 }
 
 .ContactUsBtn {
@@ -83,6 +90,9 @@
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
+    #NavigationBarContainer {
+        padding: 10px 10px;
+    }
     .desktop-nav {
         display: none !important;
     }

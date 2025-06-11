@@ -68,10 +68,10 @@ const AboutUsSeparate = () => {
                 <div className="AboutUsSeparateContentContainer">
                     <div style={{ width: "100%" }}>
                         <TopPartCommon
-                            tag="Our Expertise"
-                            title="Your Trusted"
-                            highlight="Recruitment Partner"
-                            subtitle="Connecting exceptional talent with outstanding opportunities"
+                            tag="About Us"
+                            title="Building Careers,"
+                            highlight="Shaping Futures"
+                            subtitle="Your dedicated partner in talent acquisition and career development"
                         />
                     </div>
                     <div className="AboutUsSeparateGridContainer">
