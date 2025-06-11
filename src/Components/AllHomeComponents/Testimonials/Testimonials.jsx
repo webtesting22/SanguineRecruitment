@@ -7,40 +7,40 @@ const testimonialsRow1 = [
         name: "ASMITA GAUTAM",
         role: "HR Business Partner",
         Description: "Landmark Group, Dubai",
-        quote: "requirements and delivering services of very high standards. I had the privilege to work with Sanguine during my tenure in Landmark Group and I have always admired them for the quick responses, strong relationship building skills and lines description"
+        quote: "Sanguine Recruitment is a very strong consultant firm including people who are not only extremely talented but absolutely amazing at their work. They are highly efficient in understanding client's requirements and delivering services of very high standards. I had the privilege to work with Sanguine during my tenure in Landmark Group and I have always admired them for the quick responses, strong relationship building skills and qualities of profiles."
     },
     {
-        name: "Karthcik Ravichandran",
-        role: "HR Business Partner Saint Gobain India Priv",
-        Description: "Saint Gobain India Private Limited- Glass Business",
-        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect the quality at the right time. Sanguine as an organization would be lucky to have Ritu as their leader. She and her team earns my highest recommendation.!"
+        name: "Karthick Ravichandran",
+        role: "HR Business Partner",
+        Description: "Saint Gobain India Private Limited – Glass Business",
+        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect the quality at the right time. Sanguine as an organization would be lucky to have Ritu as their leader. She and her team earns my highest recommendation."
     },
     {
         name: "SWATI MAIR",
         role: "HR Business Partner & Talent Acquisition",
         Description: "Zaggle, Hyderabad",
-        quote: "Sanguine possesses great technology acumen and client orientation skills and having a great team for recruitment especially in the technology niche hiring. I have greatly enjoyed working with Sanguine, as they have managed several crucial IT roles for us."
+        quote: "Sanguine possesses great technology acumen and client orientation skills and having a great team for recruitment especially in the technology niche hiring. I have greatly enjoyed working with Sanguine, as they have managed several crucial IT roles for us. Their approach is proactive, timely, and thorough, handling increasingly hard-to-fill positions with dedication. It is clear that they care deeply about the candidate experience and ensure that both candidate and employer needs are met."
     }
 ];
 
 const testimonialsRow2 = [
     {
-        name: "RAHUL SHARMA",
-        role: "Tech Lead",
-        Description: "Microsoft, Bangalore",
-        quote: "Working with Sanguine has been an exceptional experience. Their technical expertise and understanding of our requirements made the hiring process seamless and efficient."
+        name: "SWATI MAIR",
+        role: "HR Business Partner & Talent Acquisition",
+        Description: "Zaggle, Hyderabad",
+        quote: "Sanguine possesses great technology acumen and client orientation skills and having a great team for recruitment especially in the technology niche hiring. I have greatly enjoyed working with Sanguine, as they have managed several crucial IT roles for us. Their approach is proactive, timely, and thorough, handling increasingly hard-to-fill positions with dedication. It is clear that they care deeply about the candidate experience and ensure that both candidate and employer needs are met."
     },
     {
-        name: "PRIYA SINGH",
-        role: "VP Engineering",
-        Description: "Amazon, Hyderabad",
-        quote: "Sanguine's dedication to finding the right talent is remarkable. They go beyond just matching skills and focus on cultural fit, which has resulted in excellent hires for our team."
+        name: "Karthick Ravichandran",
+        role: "HR Business Partner",
+        Description: "Saint Gobain India Private Limited – Glass Business",
+        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect the quality at the right time. Sanguine as an organization would be lucky to have Ritu as their leader. She and her team earns my highest recommendation."
     },
     {
-        name: "VIKRAM MEHTA",
-        role: "CTO",
-        Description: "Flipkart, Bangalore",
-        quote: "The level of professionalism and quality of candidates provided by Sanguine is outstanding. They understand the tech industry and deliver results consistently."
+        name: "ASMITA GAUTAM",
+        role: "HR Business Partner",
+        Description: "Landmark Group, Dubai",
+        quote: "Sanguine Recruitment is a very strong consultant firm including people who are not only extremely talented but absolutely amazing at their work. They are highly efficient in understanding client's requirements and delivering services of very high standards. I had the privilege to work with Sanguine during my tenure in Landmark Group and I have always admired them for the quick responses, strong relationship building skills and qualities of profiles."
     }
 ];
 
