@@ -54,8 +54,7 @@ const MegaNavigation = () => {
                             )
                         )}
                     </div>
-
-                    {/* Contact Button & Mobile Icon */}
+                    
                     <div className="ContactUsBtn">
                         <div className="desktop-nav">
                             <AnimatedBtn

@@ -21,7 +21,7 @@ const NavigationLinks = [
             },
             {
                 link: "Testimonials",
-                path: "/"
+                path: "/testimonials"
             }
         ]
     },

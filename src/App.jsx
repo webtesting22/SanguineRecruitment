@@ -10,6 +10,7 @@ import DashboardMain from './Components/Dashboard/DashboardMain';
 import PortalLogin from './Components/Dashboard/PortalLogin';
 import "./App.css"
 import DashboardState from './Components/Dashboard/DashboardContext/DashboardState';
+import Testimonials from './Components/AllHomeComponents/Testimonials/Testimonials';
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blogs/:slug' element={<SeparateBlog />} />
         <Route path='/sign-in' element={<PortalLogin />} />
+        <Route path='/testimonials' element={<Testimonials />} />
         {/* <Route path='/dashboardIndex' element={<DashboardIndex />} /> */}
         <Route
           path='/dashboard'
