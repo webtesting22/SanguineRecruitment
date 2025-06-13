@@ -273,7 +273,7 @@
 }
 
 .VideoContaienr {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     height: 100%;
@@ -296,6 +296,7 @@
 .CounterNumberAnimationContainer .CounterPara {
     padding: 0px !important;
 }
+
 
 @media (max-width: 768px) {
     .VideoContainerContent {

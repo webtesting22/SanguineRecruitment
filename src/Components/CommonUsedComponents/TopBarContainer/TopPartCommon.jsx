@@ -5,7 +5,7 @@ const TopPartCommon = ({ tag, title, highlight, subtitle }) => {
     return (
         <>
             <div id="TopPartCommonContainer">
-                <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/1035mWPLp6zXWlooG2Lz/678647f276cc20015e38cae1_Background pattern.png" alt="" loading="lazy" />
+                <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/inventoryManagement/1035mWPLp6zXWlooG2Lz/678647f276cc20015e38cae1_Background pattern.png" alt="" loading="lazy" className="BackgrounCheckPatterImage" />
                 <div className="TopPartContentContainer">
                     <div>
                         {tag && <Tag>{tag}</Tag>}

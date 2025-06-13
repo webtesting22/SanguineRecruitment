@@ -124,8 +124,8 @@ const AboutUsSeparate = () => {
                                         </div>
                                     </Col>
                                     <Col lg={12} md={24}>
-                                        <div style={{height:"100%"}}>
-                                            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                        <div style={{ height: "100%" }}>
+                                            <img src="/images/background/AboutmainBack.jpg" alt="" />
                                         </div>
                                     </Col>
                                 </Row>
@@ -136,7 +136,7 @@ const AboutUsSeparate = () => {
                         <div style={{ width: "100%" }}>
                             <div className="hero-home-content">
                                 <Row>
-                                    <Col lg={16}>
+                                    <Col lg={14}>
 
                                         <div className="VideoContaienr">
                                             <div className="VideoPlace">
@@ -190,13 +190,13 @@ const AboutUsSeparate = () => {
 
                                         </div>
                                     </Col>
-                                    <Col lg={8}>
-                                        <div className="hero-home-content">
+                                    <Col lg={10}>
+                                        <div className="hero-home-content ">
                                             <Row>
                                                 <Col lg={24}>
                                                     <div className="FirstContainerAdjust">
                                                         <div>
-                                                            <h2 className="big-title" style={{ color: "white" }}>Lorem ipsum dolor sit <span className="span-title" style={{ color: "white" }}>Ipsum, distinctio?</span></h2>
+                                                            <h2 className="big-title" style={{ color: "white" }}>Transforming Recruitment with <span className="span-title" style={{ color: "white" }}>Expert Solutions</span></h2>
                                                         </div>
                                                     </div>
                                                 </Col>
@@ -204,10 +204,10 @@ const AboutUsSeparate = () => {
                                                     <div>
                                                         <div className="CounterNumberAnimationContainer">
                                                             <div>
-                                                                <AnimatedCounter number="$65.3M" suffix="+" label="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, ducimus!" />
+                                                                <AnimatedCounter number="1000" suffix="+" label="Successful Placements" />
                                                             </div>
                                                             <br />
-                                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, ducimus!</p>
+                                                            <p>Our comprehensive approach combines industry expertise with personalized service, ensuring we deliver exceptional talent that perfectly aligns with your organization's needs and culture. We're committed to building lasting partnerships that drive your business forward.</p>
                                                         </div>
                                                     </div>
                                                 </Col>

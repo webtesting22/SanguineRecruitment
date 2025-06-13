@@ -40,7 +40,7 @@ const Blogs = () => {
                             </Row>
 
                         </div>
-                        <ContactCommonSection/>
+                       
                     </div>
                 </div>
             </div>
