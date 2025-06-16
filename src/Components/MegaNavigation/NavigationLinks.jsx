@@ -25,20 +25,20 @@ const NavigationLinks = [
             }
         ]
     },
-    {
-        link: "Services",
-        path: "",
-        sublink: [
+    // {
+    //     link: "Services",
+    //     path: "",
+    //     sublink: [
 
-        ]
-    },
-    {
-        link: "Blogs",
-        path: "",
-        sublink: [
+    //     ]
+    // },
+    // {
+    //     link: "Blogs",
+    //     path: "",
+    //     sublink: [
 
-        ]
-    },
+    //     ]
+    // },
     {
         link: "Career",
         path: "/career",
