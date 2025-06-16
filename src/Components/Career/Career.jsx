@@ -175,10 +175,10 @@ const Career = () => {
             <div id="CareerContainer">
                 <div>
                     <TopPartCommon
-                        tag="Career"
-                        title="Join "
-                        highlight="us"
-                        subtitle="Take the next step toward a fulfilling career with endless opportunities to grow and succeed"
+                        tag="Careers"
+                        title="Join Our Team "
+                        highlight="Careers"
+                        subtitle="Shape your future with Sanguine Recruitment—where your growth, passion, and potential are valued. Discover opportunities to thrive, innovate, and make a real impact with us."
                     />
                 </div>
                 <div className="hero-home-content">
@@ -189,7 +189,7 @@ const Career = () => {
                                     <div className="CareerAboutContentContainer">
                                         <div>
                                             <h1 className="big-title">Be part of something bigger: build <span className="span-title">your career with us</span></h1>
-                                            <p>At Linkrow, we believe that our people are our greatest asset. We’re not just offering jobs; we’re building careers. Join a team where innovation meets collaboration, and every day brings new opportunities to grow and succeed.</p>
+                                            <p>At Linkrow, we believe that our people are our greatest asset. We're not just offering jobs; we're building careers. Join a team where innovation meets collaboration, and every day brings new opportunities to grow and succeed.</p>
                                             <br />
                                             <p><b>What we offer</b></p>
                                             {ListPoints.map((item, index) => (

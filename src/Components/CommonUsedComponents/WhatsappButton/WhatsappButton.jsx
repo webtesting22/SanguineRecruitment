@@ -20,4 +20,4 @@ const WhatsappButton = () => (
     </a>
 );
 
-export default WhatsappButton; 
+export default WhatsappButton;
