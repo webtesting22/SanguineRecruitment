@@ -1,91 +1,103 @@
 import React from "react";
-import "./OurTeam.css"
-import { Tag, Row, Col } from "antd";
+import "./OurTeam.css";
+
+const teamMembers = [
+    // {
+    //     name: "Priya Bhatt",
+    //     role: "Owner",
+    //     image: "https://randomuser.me/api/portraits/women/68.jpg",
+    //     highlight: false,
+    //     color: "#008060"
+    // },
+    // {
+    //     name: "Kiran Saxena",
+    //     role: "Founder",
+    //     image: "https://randomuser.me/api/portraits/women/65.jpg",
+    //     highlight: true,
+    //     color: "#008060"
+    // },
+    // {
+    //     name: "Rajesh Dixit",
+    //     role: "HR",
+    //     image: "https://randomuser.me/api/portraits/men/75.jpg",
+    //     highlight: false,
+    //     color: "#008060"
+    // },
+    // {
+    //     name: "Rohit Sharma",
+    //     role: "Project Manager",
+    //     image: "https://randomuser.me/api/portraits/men/32.jpg",
+    //     highlight: false,
+    //     color: "#008060"
+    // },
+    // {
+    //     name: "Manish Malhotra",
+    //     role: "Developer",
+    //     image: "https://randomuser.me/api/portraits/men/41.jpg",
+    //     highlight: false,
+    //     color: "#008060"
+    // },
+    // {
+    //     name: "Vikram Reddy",
+    //     role: "Marketing Manager",
+    //     image: "https://randomuser.me/api/portraits/men/51.jpg",
+    //     highlight: false,
+    //     color: "#008060"
+    // }
+    {
+        name: "GAURAV VIJAY",
+        role: "Director & Founder",
+        Educations: "MBA - BIMM, Pune",
+        image: "https://randomuser.me/api/portraits/men/41.jpg",
+        highlight: false,
+        color: "#1A6985"
+    },
+    {
+        name: "RITU VIJAY",
+        role: "Director & Co-Founder",
+        Educations: "PhD. (Pursuing), MBA-HR, LLB,Psychology Graduate",
+        image: "https://randomuser.me/api/portraits/men/51.jpg",
+        highlight: false,
+        color: "#1A6985"
+    }
+];
 
 const OurTeam = () => {
-    const TeamCards = [
-        {
-            cardImage: (
-                <svg viewBox="0 0 100 100" className="team-avatar">
-                    <circle cx="50" cy="35" r="25" fill="#004675" />
-                    <path d="M50 65 C 30 65 15 80 15 100 L 85 100 C 85 80 70 65 50 65" fill="#004675" />
-                </svg>
-            ),
-            cardTitle: "Rajesh Patel",
-            cardDescription: "Expert in strategic HR planning with over 15 years of experience in recruitment and workforce development.",
-            cardPosition: "Chief HR Officer"
-        },
-        {
-            cardImage: (
-                <svg viewBox="0 0 100 100" className="team-avatar">
-                    <circle cx="50" cy="35" r="25" fill="#004675" />
-                    <path d="M50 65 C 30 65 15 80 15 100 L 85 100 C 85 80 70 65 50 65" fill="#004675" />
-                </svg>
-            ),
-            cardTitle: "Sneha Mehta",
-            cardDescription: "Leads talent acquisition initiatives and ensures alignment with corporate goals and culture.",
-            cardPosition: "Talent Acquisition Manager"
-        },
-        {
-            cardImage: (
-                <svg viewBox="0 0 100 100" className="team-avatar">
-                    <circle cx="50" cy="35" r="25" fill="#004675" />
-                    <path d="M50 65 C 30 65 15 80 15 100 L 85 100 C 85 80 70 65 50 65" fill="#004675" />
-                </svg>
-            ),
-            cardTitle: "Amit Shah",
-            cardDescription: "Specializes in employee engagement, retention strategies, and performance optimization.",
-            cardPosition: "Employee Relations Head"
-        },
-        {
-            cardImage: (
-                <svg viewBox="0 0 100 100" className="team-avatar">
-                    <circle cx="50" cy="35" r="25" fill="#004675" />
-                    <path d="M50 65 C 30 65 15 80 15 100 L 85 100 C 85 80 70 65 50 65" fill="#004675" />
-                </svg>
-            ),
-            cardTitle: "Pooja Sharma",
-            cardDescription: "Drives innovation in recruitment using data analytics and automation tools.",
-            cardPosition: "Recruitment Technology Lead"
-        }
-    ];
-
     return (
-        <>
-            <div id="OurTeamContainer">
-                <div className="hero-home-content">
-                    <div style={{ width: "100%" }}>
-                        <div style={{ display: "flex", justifyContent: "center" }}>
-                            <div className="HeaderPartCenter">
-                                <Tag>Our Expert Team</Tag>
-                                <h2 className="big-title" style={{ textAlign: "center", marginBottom: "0px" }}>
-                                    Meet Our Recruitment <span className="span-title">Specialists</span>
-                                </h2>
-                                <p style={{ textAlign: "center" }}>Our team of experienced professionals combines industry expertise with personalized service to deliver exceptional recruitment solutions tailored to your needs.</p>
-                            </div>
+        <section className="our-team-section">
+            <div className="our-team-header">
+                <h2 className="big-title">The Leaders Behind <span className="span-title">Sanguine Recruitment</span></h2>
+                <p>
+                    At Sanguine Recruitment Pvt. Ltd, we are dedicated to redefining what's possible in recruitment. By embracing technological advancements and nurturing a culture of continuous learning, our leadership team drives innovation and inspires our people to deliver solutions that consistently exceed client expectations.
+                </p>
+                
+            </div>
+            <div className="our-team-grid">
+                {teamMembers.map((member, idx) => (
+                    <div
+                        className="our-team-card"
+                        key={member.name}
+                    >
+                        <div className="our-team-avatar-wrapper">
+                            {/* <img src={member.image} alt={member.name} className="our-team-avatar" /> */}
                         </div>
-                        <div className="TeamCardsContainer">
-                            <Row>
-                                {TeamCards.map((item, index) => (
-                                    <Col lg={6} key={index}>
-                                        <div className="TeamCardStyle">
-                                            <div className="team-avatar-container">
-                                                {item.cardImage}
-                                            </div>
-                                            <div>
-                                                <p className="testimonial-name" style={{ marginBottom: "0px" }}>{item.cardTitle}</p>
-                                                <p style={{ marginTop: "5px" }}>{item.cardPosition}</p>
-                                            </div>
-                                        </div>
-                                    </Col>
-                                ))}
-                            </Row>
+                        <div className="our-team-info">
+                            <div className="our-team-name">{member.name}</div>
+                            <div className="our-team-role" style={{ color: member.color }}>{member.role}</div>
+                            <br />
+                            <div className="our-team-educations">{member.Educations}</div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
-        </>
-    )
-}
+            <div className="our-team-header">
+            <p>
+                    With over a decade of industry expertise, our leaders bring invaluable insight and strategic direction to every project. Their proven ability to tackle complex challenges ensures we remain at the forefront of industry trends, delivering tailored and effective solutions for our clients.
+                </p>
+            </div>
+            
+        </section>
+    );
+};
 
-export default OurTeam
+export default OurTeam;

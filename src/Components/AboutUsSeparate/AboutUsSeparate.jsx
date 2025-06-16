@@ -219,7 +219,7 @@ const AboutUsSeparate = () => {
                         </div>
                     </div>
                     <OurTeam />
-                    <Blogs />
+                    {/* <Blogs /> */}
                 </div>
             </div>
         </>

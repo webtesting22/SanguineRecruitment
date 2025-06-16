@@ -63,15 +63,15 @@ const TestimonialCard = ({ testimonial }) => (
 
 const Testimonials = () => (
     <>
-        <SectionHero
+        {/* <SectionHero
             title="Your Trusted Recruitment Partner"
             description="We specialize in connecting exceptional talent with leading organizations. Our expert team delivers personalized recruitment solutions that drive business success."
             primaryBtnText="Find Talent"
-            primaryBtnAction={() => { /* your action */ }}
+            primaryBtnAction={() => {  }}
             secondaryBtnText="Partner With Us"
-            secondaryBtnAction={() => { /* your action */ }}
+            secondaryBtnAction={() => {  }}
             imageUrl="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
+        /> */}
         <section className="testimonials-section sidepadding">
             <img
                 src="/images/background/testimonials-bg.svg"
