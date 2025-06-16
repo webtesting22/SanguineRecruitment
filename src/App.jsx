@@ -11,6 +11,7 @@ import PortalLogin from './Components/Dashboard/PortalLogin';
 import "./App.css"
 import DashboardState from './Components/Dashboard/DashboardContext/DashboardState';
 import Testimonials from './Components/AllHomeComponents/Testimonials/Testimonials';
+import WhatsappButton from './Components/CommonUsedComponents/WhatsappButton/WhatsappButton';
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       </Routes>
 
       {!isAuthPage && <Footer />}
+      {!isAuthPage && <WhatsappButton />}
     </>
   );
 }
