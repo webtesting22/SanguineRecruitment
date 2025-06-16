@@ -32,13 +32,13 @@ const HeroHome = () => {
                                                 hoverText="Free consultation"
                                                 icon={<RiUserSmileFill />}
                                             />
-                                            <AnimatedBtn
+                                            {/* <AnimatedBtn
                                                 text="Free consultation"
                                                 hoverText="Free consultation"
                                                 icon={<IoChatbubble />}
                                                 variant="consultation"
                                                 onClick={() => console.log('clicked')}
-                                            />
+                                            /> */}
                                         </ButtonGroup>
 
                                     </div>
@@ -58,7 +58,7 @@ const HeroHome = () => {
                                                 </div>
                                             </div>
                                             <div className="AnimatedContainerColor">
-                                                <img src="https://images.unsplash.com/photo-1522241112606-b5d35a468795?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                                <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/4198719.jpg" alt="" />
                                             </div>
                                         </div>
                                     </div>
