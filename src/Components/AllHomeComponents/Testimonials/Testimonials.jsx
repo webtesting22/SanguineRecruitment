@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Tag } from "antd";
 import "./Testimonials.css";
 import SectionHero from "../../CommonUsedComponents/SectionHero/SectionHero";
@@ -61,55 +61,61 @@ const TestimonialCard = ({ testimonial }) => (
     </div>
 );
 
-const Testimonials = () => (
-    <>
-        {/* <SectionHero
-            title="Your Trusted Recruitment Partner"
-            description="We specialize in connecting exceptional talent with leading organizations. Our expert team delivers personalized recruitment solutions that drive business success."
-            primaryBtnText="Find Talent"
-            primaryBtnAction={() => {  }}
-            secondaryBtnText="Partner With Us"
-            secondaryBtnAction={() => {  }}
-            imageUrl="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        /> */}
-        <section className="testimonials-section sidepadding">
-            <img
-                src="/images/background/testimonials-bg.svg"
-                alt=""
-                className="testimonials-bg"
-                aria-hidden="true"
-            />
-            <div className="testimonials-container">
-                <Tag>Client Feedback</Tag>
-                <h2 className="big-title">
-                    Hear from our <span className="span-title">happy clients.</span>
-                </h2>
-                <p className="testimonials-subtitle">
-                    Don't just take our word for it—our clients say it all.
-                </p>
+const Testimonials = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
-                <div className="testimonials-slider-container">
-                    {/* First row - Left to Right */}
-                    <div className="testimonials-row slide-left-to-right">
-                        <div className="testimonials-track">
-                            {[...testimonialsRow1, ...testimonialsRow1].map((testimonial, index) => (
-                                <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
-                            ))}
+    return (
+        <>
+            {/* <SectionHero
+                title="Your Trusted Recruitment Partner"
+                description="We specialize in connecting exceptional talent with leading organizations. Our expert team delivers personalized recruitment solutions that drive business success."
+                primaryBtnText="Find Talent"
+                primaryBtnAction={() => {  }}
+                secondaryBtnText="Partner With Us"
+                secondaryBtnAction={() => {  }}
+                imageUrl="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            /> */}
+            <section className="testimonials-section sidepadding">
+                <img
+                    src="/images/background/testimonials-bg.svg"
+                    alt=""
+                    className="testimonials-bg"
+                    aria-hidden="true"
+                />
+                <div className="testimonials-container">
+                    <Tag>Client Feedback</Tag>
+                    <h2 className="big-title">
+                        Hear from our <span className="span-title">happy clients.</span>
+                    </h2>
+                    <p className="testimonials-subtitle">
+                        Don't just take our word for it—our clients say it all.
+                    </p>
+
+                    <div className="testimonials-slider-container">
+                        {/* First row - Left to Right */}
+                        <div className="testimonials-row slide-left-to-right">
+                            <div className="testimonials-track">
+                                {[...testimonialsRow1, ...testimonialsRow1].map((testimonial, index) => (
+                                    <TestimonialCard key={`row1-${index}`} testimonial={testimonial} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                    {/* Second row - Right to Left */}
-                    <div className="testimonials-row slide-right-to-left">
-                        <div className="testimonials-track">
-                            {[...testimonialsRow2, ...testimonialsRow2].map((testimonial, index) => (
-                                <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
-                            ))}
+                        {/* Second row - Right to Left */}
+                        <div className="testimonials-row slide-right-to-left">
+                            <div className="testimonials-track">
+                                {[...testimonialsRow2, ...testimonialsRow2].map((testimonial, index) => (
+                                    <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </>
-);
+            </section>
+        </>
+    );
+};
 
 export default Testimonials;

@@ -7,18 +7,18 @@ const NavigationLinks = [
                 link: "About Us",
                 path: "/about-us"
             },
-            {
-                link: "Our Team",
-                path: "/"
-            },
-            {
-                link: "Why Choose Us",
-                path: "/"
-            },
-            {
-                link: "Awards",
-                path: "/"
-            },
+            // {
+            //     link: "Our Team",
+            //     path: "/"
+            // },
+            // {
+            //     link: "Why Choose Us",
+            //     path: "/"
+            // },
+            // {
+            //     link: "Awards",
+            //     path: "/"
+            // },
             {
                 link: "Testimonials",
                 path: "/testimonials"
