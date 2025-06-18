@@ -4,12 +4,15 @@ import NavigationLinks from "./NavigationLinks";
 import { Menu, Dropdown, Button, Drawer, Collapse } from "antd";
 import { DownOutlined, MenuOutlined } from "@ant-design/icons";
 import AnimatedBtn from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
+import CareerApplicationModal from "../CommonUsedComponents/CareerApplicationModal/CareerApplicationModal";
 import { IoMdContact } from "react-icons/io";
 import { LOGO_FILE } from "./NavigationLinks";
 import { Link } from "react-router-dom";
 const { Panel } = Collapse;
+
 const MegaNavigation = () => {
     const [openDrawer, setOpenDrawer] = useState(false);
+    const [isCareerModalVisible, setIsCareerModalVisible] = useState(false);
 
     const renderDropdownMenu = (sublinks) => (
         <Menu id="MenuEdit">
@@ -20,6 +23,14 @@ const MegaNavigation = () => {
             ))}
         </Menu>
     );
+
+    const handleContactUsClick = () => {
+        setIsCareerModalVisible(true);
+    };
+
+    const handleCareerModalCancel = () => {
+        setIsCareerModalVisible(false);
+    };
 
     return (
         <>
@@ -61,6 +72,7 @@ const MegaNavigation = () => {
                                 text="Contact Us"
                                 hoverText="Contact Us"
                                 icon={<IoMdContact />}
+                                onClick={handleContactUsClick}
                             />
                         </div>
                         <div className="mobile-menu-icon">
@@ -102,10 +114,18 @@ const MegaNavigation = () => {
                             text="Contact Us"
                             hoverText="Contact Us"
                             icon={<IoMdContact />}
+                            onClick={handleContactUsClick}
                         />
                     </div>
                 </div>
             </Drawer>
+
+            {/* Career Application Modal */}
+            <CareerApplicationModal
+                isVisible={isCareerModalVisible}
+                onCancel={handleCareerModalCancel}
+                positionTitle="General Application"
+            />
         </>
     );
 };
