@@ -204,14 +204,14 @@ const Career = () => {
                                 <Col lg={12} md={24}>
                                     <div className="CareerSectionImage">
                                         <div>
-                                            <img src="https://images.unsplash.com/photo-1575603760088-05ae2e4c0ab3?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                                            <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/businesswoman-analyzing-candidate-cv-discussing-hiring-cv-with-remote-man-online-videocall-meeting-businesspeople-working-company-strategy-discussing-partnership-startup-office.jpg" alt="" />
                                         </div>
                                     </div>
                                 </Col>
                             </Row>
                         </div>
                         <div className="CareerPositionCard paddingSection">
-                            <div>
+                            <div style={{display:"flex",justifyContent:"center"}}>
                                 <div className="HeaderPartCenter">
                                     <Tag>Career</Tag>
                                     <h2 className="big-title" style={{ textAlign: "center", marginBottom: "0px" }}>
@@ -263,7 +263,7 @@ const Career = () => {
                                                 ...values,
                                                 applyingFor: selectedPositionTitle,
                                                 resumeUrl: resumeLink,
-                                            };
+                                            };  
                                             setFormData(fullData);
                                             try {
                                                 const response = await fetch("https://testapi.prepseed.com/sanguineRecruitment/createCareerApplication", {
