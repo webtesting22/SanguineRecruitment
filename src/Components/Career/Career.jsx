@@ -87,14 +87,14 @@ const Career = () => {
                         <div className="AboutCareer marginTop">
                             <Row>
                                 <Col lg={12} md={24}>
-                                    <div className="CareerAboutContentContainer">
+                                    <div className="CareerAboutContentContainer" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                         <div>
-                                            <h1 className="big-title">Be part of something bigger: build <span className="span-title">your career with us</span></h1>
-                                            <p>At Linkrow, we believe that our people are our greatest asset. We're not just offering jobs; we're building careers. Join a team where innovation meets collaboration, and every day brings new opportunities to grow and succeed.</p>
+                                            <h1 className="big-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Be part of something bigger: build <span className="span-title">your career with us</span></h1>
+                                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">At Linkrow, we believe that our people are our greatest asset. We're not just offering jobs; we're building careers. Join a team where innovation meets collaboration, and every day brings new opportunities to grow and succeed.</p>
                                             <br />
-                                            <p><b>What we offer</b></p>
+                                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><b>What we offer</b></p>
                                             {ListPoints.map((item, index) => (
-                                                <div className="ContentCardCareer" key={index}>
+                                                <div className="ContentCardCareer" key={index} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={600 + (index * 100)}>
                                                     <p key={index}> <IoMdDoneAll />{item.title}</p>
                                                     <p>{item.content}</p>
                                                 </div>
@@ -103,7 +103,7 @@ const Career = () => {
                                     </div>
                                 </Col>
                                 <Col lg={12} md={24}>
-                                    <div className="CareerSectionImage">
+                                    <div className="CareerSectionImage" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                                         <div>
                                             <img src="https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/businesswoman-analyzing-candidate-cv-discussing-hiring-cv-with-remote-man-online-videocall-meeting-businesspeople-working-company-strategy-discussing-partnership-startup-office.jpg" alt="" />
                                         </div>
@@ -112,10 +112,10 @@ const Career = () => {
                             </Row>
                         </div>
                         <div className="CareerPositionCard paddingSection">
-                            <div style={{ display: "flex", justifyContent: "center" }}>
+                            <div style={{ display: "flex", justifyContent: "center" }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 <div className="HeaderPartCenter">
-                                    <Tag>Career</Tag>
-                                    <h2 className="big-title" style={{ textAlign: "center", marginBottom: "0px" }}>
+                                    <Tag data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Career</Tag>
+                                    <h2 className="big-title" style={{ textAlign: "center", marginBottom: "0px" }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                         Join our team and shape <br /> the <span className="span-title">future together</span>
                                     </h2>
                                 </div>
@@ -125,7 +125,7 @@ const Career = () => {
                                 <Row>
                                     {CareerPositions.map((item, index) => (
                                         <Col lg={12} md={12} key={index}>
-                                            <div className="CareerCardDesign" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={index * 300}>
+                                            <div className="CareerCardDesign" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={500 + (index * 200)}>
                                                 <div>
                                                     <h2 style={{ marginTop: "0px" }}>{item.positionTitle}</h2>
                                                     <p>{item.positionDescription}</p>

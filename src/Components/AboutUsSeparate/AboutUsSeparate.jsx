@@ -79,13 +79,13 @@ const AboutUsSeparate = () => {
                             <div>
                                 <Row>
                                     <Col lg={12} md={24}>
-                                        <div>
+                                        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                                             <div>
                                                 <div>
-                                                    <Tag>About us</Tag>
-                                                    <h2 className="big-title">Expert Recruitment for Seamless <span className="span-title">Hiring Solutions</span>
+                                                    <Tag data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">About us</Tag>
+                                                    <h2 className="big-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Expert Recruitment for Seamless <span className="span-title">Hiring Solutions</span>
                                                     </h2>
-                                                    <p>At <b className="BlackColor">Sanguine Recruitment</b>, we prioritize
+                                                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">At <b className="BlackColor">Sanguine Recruitment</b>, we prioritize
                                                         understanding our clients' unique needs to
                                                         connect them with the right talent. By
                                                         identifying candidates with the perfect skills
@@ -100,7 +100,7 @@ const AboutUsSeparate = () => {
                                                         enhancing your employer brand, and
                                                         creating a robust talent pipeline to support
                                                         your organization's growth and vision.</p>
-                                                    <div>
+                                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                                         {/* <AnimatedBtn
                                                             text="Free consultation"
                                                             hoverText="Free consultation"
@@ -124,7 +124,7 @@ const AboutUsSeparate = () => {
                                         </div>
                                     </Col>
                                     <Col lg={12} md={24}>
-                                        <div style={{ height: "100%" }}>
+                                        <div style={{ height: "100%" }} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                                             <img src="/images/background/AboutmainBack.jpg" alt="" />
                                         </div>
                                     </Col>
@@ -137,8 +137,7 @@ const AboutUsSeparate = () => {
                             <div className="hero-home-content">
                                 <Row>
                                     <Col lg={14}>
-
-                                        <div className="VideoContaienr">
+                                        <div className="VideoContaienr" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                                             <div className="VideoPlace">
                                                 <div
                                                     className="video-wrapper"
@@ -194,20 +193,20 @@ const AboutUsSeparate = () => {
                                         <div className="hero-home-content ">
                                             <Row>
                                                 <Col lg={24}>
-                                                    <div className="FirstContainerAdjust">
+                                                    <div className="FirstContainerAdjust" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                                                         <div>
-                                                            <h2 className="big-title" style={{ color: "white" }}>Transforming Recruitment with <span className="span-title" style={{ color: "white" }}>Expert Solutions</span></h2>
+                                                            <h2 className="big-title" style={{ color: "white" }} data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">Transforming Recruitment with <span className="span-title" style={{ color: "white" }}>Expert Solutions</span></h2>
                                                         </div>
                                                     </div>
                                                 </Col>
                                                 <Col lg={24}>
-                                                    <div>
+                                                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
                                                         <div className="CounterNumberAnimationContainer">
-                                                            <div>
+                                                            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
                                                                 <AnimatedCounter number="1000" suffix="+" label="Successful Placements" />
                                                             </div>
                                                             <br />
-                                                            <p>Our comprehensive approach combines industry expertise with personalized service, ensuring we deliver exceptional talent that perfectly aligns with your organization's needs and culture. We're committed to building lasting partnerships that drive your business forward.</p>
+                                                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Our comprehensive approach combines industry expertise with personalized service, ensuring we deliver exceptional talent that perfectly aligns with your organization's needs and culture. We're committed to building lasting partnerships that drive your business forward.</p>
                                                         </div>
                                                     </div>
                                                 </Col>
@@ -218,7 +217,9 @@ const AboutUsSeparate = () => {
                             </div>
                         </div>
                     </div>
-                    <OurTeam />
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <OurTeam />
+                    </div>
                     {/* <Blogs /> */}
                 </div>
             </div>
