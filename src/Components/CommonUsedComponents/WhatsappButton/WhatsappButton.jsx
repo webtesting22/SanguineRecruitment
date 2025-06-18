@@ -3,7 +3,7 @@ import "./WhatsappButton.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_NUMBER = "919999999999"; // Replace with your number
-const WHATSAPP_MESSAGE = "Hello! I would like to know more about your services.";
+const WHATSAPP_MESSAGE = "Hello! 👋 I'm interested in your recruitment services. I'm looking for talent acquisition support for my organization. Could you please share more details about your recruitment solutions and how you can help us find the right candidates? Thank you!";
 
 const WhatsappButton = () => (
     <a

@@ -13,6 +13,7 @@ import DashboardState from './Components/Dashboard/DashboardContext/DashboardSta
 import Testimonials from './Components/AllHomeComponents/Testimonials/Testimonials';
 import WhatsappButton from './Components/CommonUsedComponents/WhatsappButton/WhatsappButton';
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
+import Cookies from './Components/CommonUsedComponents/Cookies/Cookies';
 
 function App() {
   const location = useLocation();
@@ -41,7 +42,7 @@ function App() {
             </DashboardState> : <Navigate to="/sign-in" />}
         />
       </Routes>
-
+      {!isAuthPage && <Cookies />}
       {!isAuthPage && <Footer />}
       {!isAuthPage && <WhatsappButton />}
     </>
