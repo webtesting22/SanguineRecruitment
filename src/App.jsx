@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      {!isAuthPage && <MegaNavigation />}
+      {/* {!isAuthPage && <MegaNavigation />} */}
       <Routes>
         <Route path='/' element={<AllHomeComponents />} />
         <Route path='/about-us' element={<AboutUsSeparate />} />
@@ -44,7 +44,7 @@ function App() {
       </Routes>
       {!isAuthPage && <Cookies />}
       {!isAuthPage && <Footer />}
-      {!isAuthPage && <WhatsappButton />}
+      {/* {!isAuthPage && <WhatsappButton />} */}
     </>
   );
 }

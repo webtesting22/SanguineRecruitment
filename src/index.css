@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 body {
   margin: 0px;
@@ -9,29 +6,77 @@ body {
   box-sizing: border-box;
   background-color: white;
   color: black;
-  font-family: "Parkinsans", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-style: normal !important;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
 
 :root {
   --primary-font: 55px;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: "Parkinsans", sans-serif !important;
+h1 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 116%;
+  margin: 0px;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  opacity: 1;
+  filter: blur(0px);
+  transform-style: preserve-3d;
+  letter-spacing: -.03em;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0px;
+  text-transform: uppercase;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  opacity: 1;
+  filter: blur(0px);
+  transform-style: preserve-3d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
 }
- p{
-  font-family: "Parkinsans", sans-serif !important;
-  font-size: 16px;
-  line-height: 1.5em;
-  color: #777272;
- }
 
- a{
+p {
+  font-size: 18px;
+  line-height: 166%;
+  color: #777272;
+}
+
+a {
   text-decoration: none;
   color: black;
- }
+}
 
- 
+.text-center {
+  text-align: center;
+}
+
+.w-100{
+  width: 100%  !important;
+}
+
+.white{
+  color: white;
+}
+
+.h2-gradient{
+  background: linear-gradient(90deg, #9968ff, #ff524e);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

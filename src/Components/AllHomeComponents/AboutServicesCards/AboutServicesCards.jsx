@@ -1,65 +1,114 @@
 import React from "react";
 import "./AboutServicesCards.css";
-import { Link } from "react-router-dom"; // ✅ Correct import
+import { Row, Col } from "antd";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FaArrowRight } from "react-icons/fa6";
 
-
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 const AboutServicesCards = () => {
-    const services = [
+    const ServicesCardsContent = [
         {
-            icon: "/images/icons/IndustryIcons/Manufacturing Engineering.png",
+            image: "https://cdn.prod.website-files.com/68054750168231fd02a29f30/680c725249c720006ce61227_Detailed%20View%20of%20Leather%20Cardholder02.avif",
             title: "Manufacturing/ Engineering",
             description: "Our team is dedicated to identifying and placing exceptional talent in roles ranging from design engineers to plant managers, ensuring the ideal match for your company's specific needs."
         },
         {
-            icon: "/images/icons/IndustryIcons/RetailLogistics.png",
+            image: "https://cdn.prod.website-files.com/68054750168231fd02a29f30/680c725249c720006ce61227_Detailed%20View%20of%20Leather%20Cardholder02.avif",
             title: "Retail/Logistics",
             description: "We offer specialized hiring solutions for the fast-moving retail and logistics sectors, focusing on efficiency, dependability, and top-tier customer service in every candidate we recommend."
         },
         {
-            icon: "/images/icons/IndustryIcons/OilGas.png",
+            image: "https://cdn.prod.website-files.com/68054750168231fd02a29f30/680c725249c720006ce61227_Detailed%20View%20of%20Leather%20Cardholder02.avif",
             title: "Oil/Gas",
             description: "We connect you with highly skilled professionals, from engineers to project managers, who possess the certifications and expertise required to meet the strict standards of the oil and gas industry."
         },
         {
-            icon: "/images/icons/IndustryIcons/BFSI.png",
+            image: "https://cdn.prod.website-files.com/68054750168231fd02a29f30/680c725249c720006ce61227_Detailed%20View%20of%20Leather%20Cardholder02.avif",
             title: "BFSI",
             description: "Our recruitment process identifies candidates who not only possess technical skills but also excel in critical areas like analytical thinking, problem-solving, and client relationship management in the BFSI sector."
         },
         {
-            icon: "/images/icons/IndustryIcons/BFSI.png",
-            title: "IT / E-Commerce",
-            description: "We specialize in sourcing top-tier talent across the IT and e-commerce landscape — from software developers and data analysts to UI/UX designers and digital marketers — ensuring your organization stays agile, innovative, and customer-focused in the digital age."
+            image: "https://cdn.prod.website-files.com/68054750168231fd02a29f30/680c725249c720006ce61227_Detailed%20View%20of%20Leather%20Cardholder02.avif",
+            title: "BFSI",
+            description: "Our recruitment process identifies candidates who not only possess technical skills but also excel in critical areas like analytical thinking, problem-solving, and client relationship management in the BFSI sector."
         },
     ];
 
     return (
-        <section className="about-services">
+        <section className="container paddingSection">
             <div className="about-services-content hero-home-content">
                 <div style={{ width: "100%" }}>
-                    <div className="about-services-header">
-                        <img src="/images/icons/expand.svg" alt="Expand Icon" data-aos="fade-down"
-                            data-aos-duration="1500" />
-                        <h2 className="big-title " data-aos="fade-down"
-                            data-aos-duration="2000">Industry-Specific Expertise to <span className="span-title">simplify<br />Fuel Your Success</span></h2>
-                        <p className="about-p-Container" data-aos="fade-up"
-                            data-aos-duration="1500">At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.</p>
+                    <div className="Common-header">
+                        <div className="TaglineWithIcon">
+                            <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /><h2 className="text-center h2-gradient">Explore our Marketing Solutions</h2>
+                        </div>
+                        <h1 className="text-center">Industry-Specific Expertise to simplify Fuel Your Success</h1>
+                        <p className="about-p-Container text-center">At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.</p>
                     </div>
-                    <div className="about-services-grid">
-                        {services.map((service, index) => (
-                            <div key={index} className="service-card">
-                                <div className="card-overlay"></div>
-                                <div className="card-content">
-                                    <img src={service.icon} alt={service.title} />
-                                    <h3>{service.title}</h3>
-                                    <p>{service.description}</p>
-                                </div>
-                            </div>
-                        ))}
+                    <div className="ServicesCardsContainer centerContainer margin-100">
+                        <Swiper
+                            slidesPerView={4}
+                            spaceBetween={30}
+                            freeMode={true}
+                            loop={true}
+                            speed={800}
+                            autoplay={{
+                                delay: 4000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 25
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30
+                                },
+                                1200: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 30
+                                }
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[FreeMode, Pagination, Autoplay]}
+                            className="mySwiper w-100"
+                        >
+                            {ServicesCardsContent.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="AnimatedCardsHoverAnimation">
+                                        <img src={item.image} alt="" />
+                                        <div className="ContentButtonContainer">
+                                            <Row className="w-100">
+                                                <Col lg={20}>
+                                                    <div style={{ height: "100%", display: "flex", alignItems: "center" }}>
+                                                        <h2 className="white">{item.title}</h2>
+                                                    </div>
+                                                </Col>
+                                                <Col lg={4}>
+                                                    <div className="AnimatedArrowContainer">
+                                                        <FaArrowRight />
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+
                     </div>
-                    <br /><br />
-                    {/* <div className="about-card-button" style={{ display: "flex", justifyContent: "center" }}>
-                        <Link to="/AboutServicesCard"><button className="slide-btn consultation ">Learn more</button></Link>
-                    </div> */}
                 </div>
             </div>
         </section>

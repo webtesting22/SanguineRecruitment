@@ -104,13 +104,13 @@ const Testimonials = () => {
                         </div>
 
                         {/* Second row - Right to Left */}
-                        <div className="testimonials-row slide-right-to-left">
+                        {/* <div className="testimonials-row slide-right-to-left">
                             <div className="testimonials-track">
                                 {[...testimonialsRow2, ...testimonialsRow2].map((testimonial, index) => (
                                     <TestimonialCard key={`row2-${index}`} testimonial={testimonial} />
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
