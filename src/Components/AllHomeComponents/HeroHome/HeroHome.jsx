@@ -18,7 +18,7 @@ const HeroHome = () => {
         },
         {
             id: 2,
-            image: "https://cdn.prod.website-files.com/679765810ac8bcda652fca4a/67b480e236e32b30279d6bb9_Mask%20group%20(38)%20(2)-p-3200.webp",
+            image: "https://cdn.prod.website-files.com/680534957b5199127f2857e6/680ceae48021e647f307f1ee_image.avif",
             title: "Building Careers, Shaping Futures",
             subtitle: "Comprehensive recruitment services for your success",
             description: "From entry-level to executive positions, we find the perfect match"
