@@ -61,3 +61,11 @@
 .margin-top-140px {
     margin-top: 140px;
 }
+
+
+@media (max-width: 768px) {
+    .paddingSection {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

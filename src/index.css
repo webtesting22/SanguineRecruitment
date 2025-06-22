@@ -103,3 +103,18 @@ a {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 116%;
+    margin: 0px;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    filter: blur(0px);
+    transform-style: preserve-3d;
+    letter-spacing: -.03em;
+  }
+  
+}

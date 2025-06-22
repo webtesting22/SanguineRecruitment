@@ -42,98 +42,64 @@
     margin-bottom: 32px;
 }
 
-
-
 .our-services-steps {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
 }
 
 .our-services-step {
-    flex: 1 1 0;
-    min-width: 45%;
-    max-width: 350px;
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+    text-align: left;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-.step-number {
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    color: #22584d;
-    border-radius: 12px;
-    font-size: 22px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    box-shadow: 0 2px 8px rgba(34, 88, 77, 0.08);
-    position: relative;
+.our-services-step:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.step-number::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #b6e7c939;
-    border-radius: 12px;
+.step-icon-container {
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .step-divider {
     width: 100%;
     height: 1px;
-    background: #b6e7c939;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 2px;
     margin-bottom: 18px;
     position: relative;
 }
 
-.step-divider::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 70%;
-    height: 3px;
-    /* height: 100%; */
-    background: white;
-    transition: .5s;
-}
-
-.our-services-step:hover .step-divider::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    /* height: 100%; */
-    background: #b6e7c9;
-    transition: .5s;
-}
-
 .step-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
     color: #fff;
 }
 
 .step-desc {
-    font-size: 16px;
+    font-size: 15px;
     color: #e6f2ee;
     line-height: 1.6;
+}
+
+/* Responsive adjustments might be needed depending on the original full CSS */
+@media (max-width: 992px) {
+    .our-services-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .our-services-steps {
+        grid-template-columns: 1fr;
+    }
 }
 
 .OurServicesImageContainer {
@@ -169,7 +135,6 @@
     border-radius: 0 0 12px 12px;
 }
 
-
 .ImageContentContainer {
     position: absolute;
     /* top: 0px; */
@@ -192,16 +157,31 @@
 }
 
 @media (max-width: 900px) {
-    .our-services-steps {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .our-services-step {
-        max-width: 100%;
-    }
-
     .our-services-title {
         font-size: 32px;
     }
 }
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 250;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -250;
+    }
+}
+
+.accent-path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: draw 4s linear infinite;
+}
+
+/* Stagger the animations */
+.step-icon-1 .accent-path { animation-delay: 0s; }
+.step-icon-2 .accent-path { animation-delay: 1s; }
+.step-icon-3 .accent-path { animation-delay: 2s; }
+.step-icon-4 .accent-path { animation-delay: 3s; }
