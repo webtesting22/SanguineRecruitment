@@ -8,13 +8,28 @@ import AnimatedCounter from "../CommonUsedComponents/AnimatedCounter/AnimatedCou
 import { Play, Pause } from 'lucide-react';
 import OurTeam from "../OurTeam/OurTeam";
 import Blogs from "../Blogs/Blogs";
+import SanguineClients from "../AllHomeComponents/SanguineClients/SanguineClients";
+import Services from "../Services/Services";
+
 const AboutUsSeparate = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
     const videoRef = useRef(null);
     const timerRef = useRef(null);
+    const parallaxRef = useRef(null);
+
     useEffect(() => {
         window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {
@@ -24,6 +39,22 @@ const AboutUsSeparate = () => {
 
         return () => clearInterval(interval);
     }, []);
+
+    // Calculate parallax scale
+    const getParallaxScale = () => {
+        if (!parallaxRef.current) return 1;
+
+        const rect = parallaxRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementTop = rect.top;
+        const elementHeight = rect.height;
+
+        // Calculate how much the element is visible
+        const visiblePercentage = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight + elementHeight)));
+
+        // Scale from 1 to 1.3 based on scroll position
+        return 1 + (visiblePercentage * 0.1);
+    };
 
     // Toggle play/pause
     const togglePlay = () => {
@@ -62,167 +93,63 @@ const AboutUsSeparate = () => {
             }
         };
     }, []);
+
     return (
         <>
             <div id="AboutUsSeparateContainer">
                 <div className="AboutUsSeparateContentContainer">
                     <div style={{ width: "100%" }}>
                         <TopPartCommon
-                            tag="About Us"
-                            title="Building Careers,"
-                            highlight="Shaping Futures"
-                            subtitle="Your dedicated partner in talent acquisition and career development"
+                            title="About Us"
+                            highlight="Creating the marketing that drives the startup ecosystem."
+                            subtitle="Creating marketing that drives the startup ecosystem requires a strategic blend of storytelling, digital engagement, and community building."
                         />
                     </div>
-                    <div className="AboutUsSeparateGridContainer">
-                        <div className="hero-home-content">
-                            <div>
-                                <Row>
-                                    <Col lg={12} md={24}>
-                                        <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-                                            <div>
-                                                <div>
-                                                    <Tag data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">About us</Tag>
-                                                    <h2 className="big-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Expert Recruitment for Seamless <span className="span-title">Hiring Solutions</span>
-                                                    </h2>
-                                                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">At <b className="BlackColor">Sanguine Recruitment</b>, we prioritize
-                                                        understanding our clients' unique needs to
-                                                        connect them with the right talent. By
-                                                        identifying candidates with the perfect skills
-                                                        and cultural fit, we ensure seamless
-                                                        placements that drive business success.
-                                                        With our extensive talent network, industry
-                                                        expertise, and advanced recruitment
-                                                        methods, we simplify the hiring process—
-                                                        delivering only the most qualified candidates
-                                                        to save you time and resources.
-                                                        We focus on building long-term partnerships,
-                                                        enhancing your employer brand, and
-                                                        creating a robust talent pipeline to support
-                                                        your organization's growth and vision.</p>
-                                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                                        {/* <AnimatedBtn
-                                                            text="Free consultation"
-                                                            hoverText="Free consultation"
-                                                            icon={<RiUserSmileFill />}
-                                                            variant="consultation"
-                                                            onClick={() => console.log('clicked')}
-                                                        /> */}
-                                                    </div>
-                                                </div>
-                                                {/* <section className="counters">
-                                                    <Row>
-                                                        <Col lg={12}>
-                                                            <AnimatedCounter number="$65.3M" suffix="+" label="Helloo text text" />
-                                                        </Col>
-                                                        <Col lg={12}>
-                                                            <AnimatedCounter number="$65.3M" suffix="+" label="Helloo text text" />
-                                                        </Col>
-                                                    </Row>
-                                                </section> */}
-                                            </div>
-                                        </div>
-                                    </Col>
-                                    <Col lg={12} md={24}>
-                                        <div style={{ height: "100%" }} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                                            <img src="/images/background/AboutmainBack.jpg" alt="" />
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="AboutVideoPallateContainer">
-                        <div style={{ width: "100%" }}>
-                            <div className="hero-home-content">
-                                <Row>
-                                    <Col lg={14}>
-                                        <div className="VideoContaienr" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                                            <div className="VideoPlace">
-                                                <div
-                                                    className="video-wrapper"
-                                                    onMouseEnter={handleMouseEnter}
-                                                    onMouseLeave={handleMouseLeave}
-                                                >
-                                                    <video
-                                                        ref={videoRef}
-                                                        src="https://videos.pexels.com/video-files/5438934/5438934-uhd_2560_1440_25fps.mp4"
-                                                        className="video"
-                                                        loop
-                                                        muted
-                                                        preload="auto" // Preload video for smoother experience
-                                                        autoPlay={false} // Will not autoplay unless clicked
-                                                        onClick={togglePlay}
-                                                    />
 
-                                                    {/* Center play/pause button with animation */}
-                                                    <button
-                                                        className={`center-play-button ${(isPlaying && !isHovering) ? 'hide' : ''}`}
-                                                        onClick={togglePlay}
-                                                    >
-                                                        {isPlaying ?
-                                                            <Pause size={24} color="#007A33" /> :
-                                                            <Play size={24} color="#007A33" />
-                                                        }
-                                                    </button>
-
-                                                    {/* Hover controls overlay */}
-                                                    <div
-                                                        className={`controls-overlay ${isHovering ? 'show' : ''}`}
-                                                    >
-                                                        <button
-                                                            className="control-button"
-                                                            onClick={togglePlay}
-                                                        >
-                                                            {isPlaying ?
-                                                                <Pause size={18} color="white" /> :
-                                                                <Play size={18} color="white" />
-                                                            }
-                                                        </button>
-                                                        <div className="status-text">
-                                                            {isPlaying ? 'Now playing' : 'Paused'}
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </Col>
-                                    <Col lg={10}>
-                                        <div className="hero-home-content ">
-                                            <Row>
-                                                <Col lg={24}>
-                                                    <div className="FirstContainerAdjust" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-                                                        <div>
-                                                            <h2 className="big-title" style={{ color: "white" }} data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">Transforming Recruitment with <span className="span-title" style={{ color: "white" }}>Expert Solutions</span></h2>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={24}>
-                                                    <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
-                                                        <div className="CounterNumberAnimationContainer">
-                                                            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-                                                                <AnimatedCounter number="1000" suffix="+" label="Successful Placements" />
-                                                            </div>
-                                                            <br />
-                                                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Our comprehensive approach combines industry expertise with personalized service, ensuring we deliver exceptional talent that perfectly aligns with your organization's needs and culture. We're committed to building lasting partnerships that drive your business forward.</p>
-                                                        </div>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <OurTeam />
-                    </div>
-                    {/* <Blogs /> */}
+                </div>
+                <div
+                    className="margin-100 ParallaxImage"
+                    style={{
+                        overflow: 'hidden'
+                    }}
+                >
+                    <img
+                        src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68088cd9861c02a0f55415fc_senior-manager-is-sitting-boardroom-with-multiracial-colleagues-discussing-project.avif"
+                        alt=""
+                        ref={parallaxRef}
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            transform: `scale(${getParallaxScale()})`,
+                            transition: 'transform 0.1s ease-out'
+                        }}
+                    />
                 </div>
             </div>
+            <SanguineClients />
+            <div className="AboutInfoContainer">
+                <div className="paddingSection">
+                    <div className="container">
+                        <div className="Common-header">
+                            <div className="TaglineWithIcon">
+                                <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                <h2 className="text-center h2-gradient">About Brand</h2>
+                            </div>
+                            <h1 className="text-center">
+                                We are a team of <span className="black">experienced marketers</span> who are passionate about helping <span className="black">startups grow</span>.
+                            </h1>
+                            <p className="text-center">
+                                At <span className="black">Sanguine Recruitment</span>, we believe recruitment is more than just filling vacancies — it's about building <span className="black">meaningful, long-lasting partnerships</span> between businesses and <span className="black">exceptional talent</span>. Our process starts with truly understanding your unique <span className="black">business objectives</span>, <span className="black">work culture</span>, and <span className="black">future goals</span>. This enables us to deliver <span className="black">talent solutions</span> that align not only with your skill requirements but also your <span className="black">company ethos</span>.
+                            </p>
+                            <p className="text-center">With <span className="black">deep industry knowledge</span>, an <span className="black">extensive talent network</span>, and <span className="black">modern recruitment strategies</span>, we streamline hiring and ensure you spend less time screening and more time <span className="black">growing your business</span>. Whether you're scaling a startup or strengthening an enterprise team, we're committed to making every placement count.</p>
+                            <p className="text-center">Our goal goes beyond <span className="black">short-term hiring</span>. We work closely with our clients to develop strong <span className="black">employer brands</span> and <span className="black">sustainable talent pipelines</span> that support <span className="black">long-term growth</span> and <span className="black">organizational success</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <Services />
         </>
     )
 }

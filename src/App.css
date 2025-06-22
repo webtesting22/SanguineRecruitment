@@ -35,14 +35,6 @@
     }
 }
 
-.paragraph {
-    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    opacity: 1;
-    filter: blur(0px);
-    transform-style: preserve-3d;
-    color: var(--para-color);
-}
-
 .centerContainer {
     display: flex;
     justify-content: center;
@@ -63,4 +55,8 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
+}
+
+.margin-top-140px {
+    margin-top: 140px;
 }

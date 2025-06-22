@@ -11,7 +11,7 @@ const AllHomeComponents = () => {
             <HeroHome />
             <AboutServicesCards />
             <OurServices />
-            <SanguineClients />
+            {/* <SanguineClients /> */}
             <Testimonials />
             {/* <ContactCommonSection /> */}
             {/* <ContactCommonSection/> */}

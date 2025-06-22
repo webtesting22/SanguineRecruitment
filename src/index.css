@@ -56,6 +56,12 @@ p {
   font-size: 18px;
   line-height: 166%;
   color: #7b8282;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  opacity: 1;
+  filter: blur(0px);
+  transform-style: preserve-3d;
+  color: var(--para-color);
+  margin: 0px;
 }
 .para{
   color: #7b8282;
@@ -86,6 +92,10 @@ a {
 
 .white{
   color: white;
+}
+
+.black{
+  color: black;
 }
 
 .h2-gradient{

@@ -28,65 +28,23 @@ const SanguineClients = () => {
         { name: "hnak", logo: 'https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/unnamed (2).png', website: 'https://www.hnak.com' },
     ];
 
-    const [currentSet, setCurrentSet] = useState(0);
-    const [isVisible, setIsVisible] = useState(true);
-    const logosPerPage = 9;
-    const totalSets = Math.ceil(clients.length / logosPerPage);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            // First fade out
-            setIsVisible(false);
-
-            // After fade out, change the set
-            setTimeout(() => {
-                setCurrentSet((prev) => (prev + 1) % totalSets);
-                // Then fade in
-                setIsVisible(true);
-            }, 500);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    const getCurrentSetLogos = () => {
-        const startIndex = currentSet * logosPerPage;
-        return clients.slice(startIndex, startIndex + logosPerPage);
-    };
+    // Duplicate clients array to create seamless loop
+    const duplicatedClients = [...clients, ...clients, ...clients];
 
     return (
-        <div className="sanguine-clients-component">
+        <div className="sanguine-clients-component paddingSection">
             <div className="container">
-                <div className="clients-content">
-                    <div className="clients-title">
-                        <h2 className="big-title">
-                            Trusted by our <br /> <span className="span-title">customers & partners</span>
-                        </h2>
+                <div className="Common-header">
+                    <div className="TaglineWithIcon">
+                        {/* <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /> */}
+                        <h2 className="text-center">Trusted by our customers & partners</h2>
                     </div>
-                    <div className={`clients-logos-grid ${isVisible ? 'visible' : 'hidden'}`}>
-                        {Array(3).fill().map((_, rowIdx) => (
-                            <div className={`clients-logos-row${rowIdx < 2 ? ' with-divider' : ''}`} key={rowIdx}>
-                                {getCurrentSetLogos().slice(rowIdx * 3, rowIdx * 3 + 3).map((client, colIdx) => (
-                                    <div
-                                        className="client-logo-cell"
-                                        key={`${currentSet}-${rowIdx}-${colIdx}`}
-                                    >
-                                        <Tooltip title={`${client.name}`} placement="top">
-                                            <a
-                                                href={client.website}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="client-logo-link"
-                                            >
-                                                <img
-                                                    src={client.logo}
-                                                    alt={`${client.name} logo`}
-                                                    loading="lazy"
-                                                />
-                                            </a>
-                                        </Tooltip>
-                                    </div>
-                                ))}
+                </div>
+                <div className='sanguine-clients-container'>
+                    <div className='sanguine-clients-track'>
+                        {duplicatedClients.map((client, index) => (
+                            <div className='sanguine-client-item' key={index}>
+                                <img src={client.logo} alt={client.name} />
                             </div>
                         ))}
                     </div>
