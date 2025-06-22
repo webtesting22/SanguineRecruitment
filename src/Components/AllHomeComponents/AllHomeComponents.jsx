@@ -13,7 +13,7 @@ const AllHomeComponents = () => {
             <OurServices />
             <SanguineClients />
             <Testimonials />
-            <ContactCommonSection />
+            {/* <ContactCommonSection /> */}
             {/* <ContactCommonSection/> */}
         </div>
     )
