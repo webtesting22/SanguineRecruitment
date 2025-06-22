@@ -1,132 +1,103 @@
-import React, { useState } from "react";
-import "./NavigationStyle.css";
-import NavigationLinks from "./NavigationLinks";
-import { Menu, Dropdown, Button, Drawer, Collapse } from "antd";
-import { DownOutlined, MenuOutlined } from "@ant-design/icons";
-import AnimatedBtn from "../CommonUsedComponents/AnimatedButton/AnimatedBtn";
-import CareerApplicationModal from "../CommonUsedComponents/CareerApplicationModal/CareerApplicationModal";
-import { IoMdContact } from "react-icons/io";
-import { LOGO_FILE } from "./NavigationLinks";
-import { Link } from "react-router-dom";
-const { Panel } = Collapse;
-
+import React, { useState, useEffect } from 'react';
+import { Drawer, Button } from 'antd';
+import './NavigationStyle.css';
+import NavigationLinks from './NavigationLinks';
 const MegaNavigation = () => {
-    const [openDrawer, setOpenDrawer] = useState(false);
-    const [isCareerModalVisible, setIsCareerModalVisible] = useState(false);
+    const [drawerVisible, setDrawerVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
+    const [navVisible, setNavVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
-    const renderDropdownMenu = (sublinks) => (
-        <Menu id="MenuEdit">
-            {sublinks.map((item, idx) => (
-                <Menu.Item key={idx} className="DropdownMenulink">
-                    <Link to={item.path}>{item.link}</Link>
-                </Menu.Item>
-            ))}
-        </Menu>
-    );
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 992);
+        
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setNavVisible(false);
+            } else {
+                setNavVisible(true);
+            }
+            setLastScrollY(currentScrollY);
+        };
 
-    const handleContactUsClick = () => {
-        setIsCareerModalVisible(true);
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
+    const showDrawer = () => {
+        setDrawerVisible(true);
     };
 
-    const handleCareerModalCancel = () => {
-        setIsCareerModalVisible(false);
+    const onClose = () => {
+        setDrawerVisible(false);
     };
 
     return (
-        <>
-            <div id="NavigationBarContainer">
-                <div className="NavigationInner hero-home-content">
-                    {/* Logo */}
-                    <div className="NavigationLogoContainer">
-                        <Link to="/" onClick={() => {
-                            setTimeout(() => {
-                                window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                            }, 100); // 0.3s delay
-                        }}><img src={LOGO_FILE} alt="Logo" /></Link>
-                    </div>
-
-                    {/* Desktop Navigation */}
-                    <div className="NavigationLinksContainer desktop-nav">
-                        {NavigationLinks.map((navItem, index) =>
-                            navItem.sublink.length > 0 ? (
-                                <Dropdown
-                                    key={index}
-                                    overlay={renderDropdownMenu(navItem.sublink)}
-                                    trigger={["hover"]}
-                                >
-                                    <Link className="NavLink DropdownLinkContainer" to={navItem.path}>
-                                        {navItem.link} <img src="/images/icons/CommonArrowicon.svg" alt="" />
-                                    </Link>
-                                </Dropdown>
-                            ) : (
-                                <Link className="NavLink" key={index} to={navItem.path}>
-                                    {navItem.link}
-                                </Link>
-                            )
-                        )}
-                    </div>
-                    
-                    <div className="ContactUsBtn">
-                        <div className="desktop-nav">
-                            <AnimatedBtn
-                                text="Contact Us"
-                                hoverText="Contact Us"
-                                icon={<IoMdContact />}
-                                onClick={handleContactUsClick}
-                            />
-                        </div>
-                        <div className="mobile-menu-icon">
-                            <MenuOutlined onClick={() => setOpenDrawer(true)} style={{ fontSize: "24px" }} />
-                        </div>
-                    </div>
-                </div>
+        <div className={`mega-nav-container ${navVisible ? 'visible' : 'hidden'}`}>
+            <div className="nav-logo">
+                <a href="/">
+                    <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="Sanguine Logo" />
+                </a>
             </div>
 
-            {/* Mobile Drawer */}
-            <Drawer
-                title={<img src="https://via.placeholder.com/100x40" alt="Logo" style={{ height: 40 }} />}
-                placement="right"
-                onClose={() => setOpenDrawer(false)}
-                open={openDrawer}
-            >
-                <div className="mobile-drawer-links">
-                    <Collapse ghost expandIconPosition="end">
-                        {NavigationLinks.map((navItem, index) =>
-                            navItem.sublink.length > 0 ? (
-                                <Panel header={navItem.link} key={index}>
-                                    <div className="drawer-sublinks">
-                                        {navItem.sublink.map((sub, idx) => (
-                                            <Link key={idx} to={sub.path} className="drawer-sublink">
-                                                {sub.link}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </Panel>
-                            ) : (
-                                <div key={index} className="drawer-main-link">
-                                    <Link to={navItem.path}>{navItem.link}</Link>
-                                </div>
-                            )
-                        )}
-                    </Collapse>
-                    <div style={{ marginTop: 20 }}>
-                        <AnimatedBtn
-                            text="Contact Us"
-                            hoverText="Contact Us"
-                            icon={<IoMdContact />}
-                            onClick={handleContactUsClick}
-                        />
-                    </div>
+            {isMobile ? (
+                <div className={`menu-button ${drawerVisible ? 'open' : ''}`} onClick={showDrawer}>
+                    <div className="menu-bar"></div>
+                    <div className="menu-bar"></div>
+                    <div className="menu-bar"></div>
                 </div>
-            </Drawer>
-
-            {/* Career Application Modal */}
-            <CareerApplicationModal
-                isVisible={isCareerModalVisible}
-                onCancel={handleCareerModalCancel}
-                positionTitle="General Application"
-            />
-        </>
+            ) : (
+                <>
+                 <div className="desktop-nav">
+                     <div className="desktop-nav-links">
+                         {NavigationLinks.map((link, index) => (
+                             <a href={link.path} key={index} className="desktop-link">
+                                 {link.link}
+                             </a>
+                         ))}
+                     </div>
+                   
+                </div>
+                <div>
+                      <Button type="primary" className="lets-talk-btn">
+                         Let's Talk
+                     </Button>
+                 </div>
+                </>
+             )}
+            
+            {isMobile && (
+                 <Drawer
+                    placement="right"
+                    onClose={onClose}
+                    visible={drawerVisible}
+                    className="mega-nav-drawer"
+                >
+                    <div className="drawer-close-button" onClick={onClose}>
+                        <div className="menu-bar"></div>
+                        <div className="menu-bar"></div>
+                    </div>
+                    <div className="drawer-nav-links">
+                        {NavigationLinks.map((link, index) => (
+                            <a
+                                href={link.path}
+                                key={index}
+                                className="drawer-link"
+                                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+                            >
+                                {link.link}
+                            </a>
+                        ))}
+                    </div>
+                </Drawer>
+            )}
+        </div>
     );
 };
 

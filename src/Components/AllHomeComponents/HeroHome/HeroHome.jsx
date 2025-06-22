@@ -34,10 +34,10 @@ const HeroHome = () => {
                     spaceBetween={0}
                     slidesPerView={1}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 2000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
                     pagination={{
                         clickable: true,
                         dynamicBullets: true,

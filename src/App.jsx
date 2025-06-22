@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      {/* {!isAuthPage && <MegaNavigation />} */}
+      {!isAuthPage && <MegaNavigation />}
       <Routes>
       <Route path='*' element={<NotFound />} />
         <Route path='/' element={<AllHomeComponents />} />

@@ -1,135 +1,179 @@
-/* Sticky navigation bar */
-#NavigationBarContainer {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 30px;
-    border-bottom: 0.5px solid #ebebeb;
-}
-
-/* Flex layout for desktop */
-.NavigationInner {
+/* Main Navigation Container */
+.mega-nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: transform 0.4s ease-in-out;
 }
 
-.NavigationLogoContainer img {
-    height: 70px;
+.mega-nav-container.hidden {
+    transform: translateY(-100%);
 }
 
-.NavigationLinksContainer {
+.nav-logo img {
+    height: 50px;
+}
+
+/* Animated Menu Button */
+.menu-button {
+    cursor: pointer;
     display: flex;
-    gap: 40px;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    z-index: 1001;
+    /* Above drawer overlay */
 }
 
-.NavLink {
-    font-size: 16px;
-    color: #000;
+.menu-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-button.open .menu-bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+
+.menu-button.open .menu-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.open .menu-bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+
+/* Ant Design Drawer Customization */
+.mega-nav-drawer .ant-drawer-body {
+    padding: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Close button inside Drawer */
+.drawer-close-button {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+}
+
+.drawer-close-button .menu-bar {
+    background-color: white;
+}
+
+.drawer-close-button .menu-bar:nth-child(1) {
+    transform: translateY(0.5px) rotate(45deg);
+}
+
+.drawer-close-button .menu-bar:nth-child(2) {
+    transform: translateY(-0.5px) rotate(-45deg);
+}
+
+
+/* Drawer Navigation Links */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.drawer-nav-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.drawer-link {
+    color: white;
+    font-size: 3rem;
     font-weight: 500;
     text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 15px;
-    transition: .5s;
+    margin: 1rem 0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    transition: color 0.3s ease;
 }
 
-.NavLink:hover {
-    color: white !important;
-    background-color: #004675;
-    padding: 5px 14px;
-    border-radius: 20px;
-    transition: .5s;
+.drawer-link:hover {
+    color: #a7d8f9;
+    /* A lighter, hover-state blue */
 }
 
-.ContactUsBtn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Responsive */
+@media(max-width: 768px) {
+    .drawer-link {
+        font-size: 2.5rem;
+    }
 }
 
-.ContactUsBtn .ant-btn {
-    font-weight: 500;
-    padding: 0 20px;
-    height: 40px;
-}
-
-/* Dropdown menu style */
-#MenuEdit {
-    background-color: white !important;
-    padding: 20px 20px;
-}
-
-#MenuEdit .DropdownMenulink {
-    padding: 8px 10px;
-    color: #777272;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-/* Desktop-only and mobile-only */
+/* --- Desktop Navigation Styles --- */
 .desktop-nav {
     display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.mobile-menu-icon {
-    display: none;
-}
-
-.DropdownLinkContainer img {
-    transition: .5s;
-    transform: rotate(0deg);
-}
-
-.DropdownLinkContainer:hover img {
-    transform: rotate(-90deg);
-    transition: .5s;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    #NavigationBarContainer {
-        padding: 10px 10px;
-    }
-    .desktop-nav {
-        display: none !important;
-    }
-
-    .mobile-menu-icon {
-        display: block;
-    }
-
-    .NavigationLinksContainer {
-        display: none;
-    }
-}
-
-/* Mobile Drawer Styles */
-.mobile-drawer-links {
+.desktop-nav-links {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    gap: 30px;
 }
 
-.drawer-main-link {
-    font-size: 18px;
+.desktop-link {
+    color: var(--primary-black);
+    letter-spacing: var(--2);
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 14px;
     font-weight: 600;
-    color: #000;
     text-decoration: none;
+    transition: all .3s;
 }
 
-.drawer-sublinks {
-    margin-top: 5px;
-    margin-left: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.desktop-link:hover {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #9968ff, #ff524e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all .3s;
 }
 
-.drawer-sublink {
-    font-size: 15px;
-    color: #666;
-    text-decoration: none;
+.desktop-link:hover::after {
+    width: 100%;
+}
+
+.lets-talk-btn {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 30px !important;
+    font-weight: 500 !important;
+    height: 42px !important;
+    padding: 0 28px !important;
+    transition: all 0.3s ease !important;
+}
+
+.lets-talk-btn:hover {
+    background-color: #1a4a5a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
