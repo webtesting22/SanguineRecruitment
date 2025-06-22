@@ -1,84 +1,64 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "antd";
-import { CheckCircle, XCircle } from "lucide-react";
+import { Cookie } from "lucide-react";
 import "./Cookies.css";
 
 const Cookies = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [isSliding, setIsSliding] = useState(false);
 
     useEffect(() => {
-        // Check if user has already made a choice
-        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
-        
-        if (cookiesAccepted === null) {
-            // Show cookie bar after 10 seconds only if user hasn't made a choice
+        const cookieChoiceMade = localStorage.getItem("cookie_choice_made");
+        if (!cookieChoiceMade) {
             const timer = setTimeout(() => {
                 setIsVisible(true);
-            }, 6000);
-
+            }, 2000); // Show after 2 seconds
             return () => clearTimeout(timer);
         }
     }, []);
 
     const handleAccept = () => {
-        setIsSliding(true);
-        setTimeout(() => {
-            setIsVisible(false);
-            setIsSliding(false);
-            // Store user preference in localStorage
-            localStorage.setItem("cookiesAccepted", "true");
-            localStorage.setItem("cookiesTimestamp", new Date().toISOString());
-        }, 1000); // Match the CSS transition duration (1s)
+        localStorage.setItem("cookie_choice_made", "accepted");
+        setIsVisible(false);
     };
 
-    const handleReject = () => {
-        setIsSliding(true);
-        setTimeout(() => {
-            setIsVisible(false);
-            setIsSliding(false);
-            // Store user preference in localStorage
-            localStorage.setItem("cookiesAccepted", "false");
-            localStorage.setItem("cookiesTimestamp", new Date().toISOString());
-        }, 1000); // Match the CSS transition duration (1s)
+    const handleSettings = () => {
+        // For now, settings will just dismiss the banner.
+        // A full settings modal would be a separate implementation.
+        localStorage.setItem("cookie_choice_made", "settings_viewed");
+        setIsVisible(false);
     };
 
-    // Don't render if user has already made a choice or if not visible
     if (!isVisible) {
         return null;
     }
 
     return (
-        <div className={`cookie-bar ${isSliding ? 'slide-down' : ''}`}>
+    <div style={{display:"flex",justifyContent:"center",alignItems:"center",width:"100%"}}>
+        <div className="cookie-banner">
             <div className="cookie-content">
-                <div className="cookie-text">
-                    <h4>🍪 We use cookies</h4>
-                    <p>
-                        We use cookies to enhance your browsing experience, serve personalized 
-                        content, and analyze our traffic. By clicking "Accept", you consent 
-                        to our use of cookies.
-                    </p>
-                </div>
-                <div className="cookie-actions">
-                    <Button 
-                        type="default" 
-                        onClick={handleReject}
-                        className="reject-btn"
-                        icon={<XCircle size={16} />}
-                    >
-                        Reject
-                    </Button>
-                    <Button 
-                        type="primary" 
-                        onClick={handleAccept}
-                        className="accept-btn"
-                        icon={<CheckCircle size={16} />}
-                    >
-                        Accept
-                    </Button>
-                </div>
+                <Cookie className="cookie-icon" size={24} />
+                <p className="cookie-text">
+                    We use cookies to enhance your browsing experience. By clicking 'Accept all,' you agree to the use of cookies.
+                </p>
+            </div>
+            <div className="cookie-actions">
+                <Button
+                    type="primary"
+                    onClick={handleAccept}
+                    className="cookie-button accept-all-btn"
+                >
+                    Accept all
+                </Button>
+                <Button
+                    type="default"
+                    onClick={handleSettings}
+                    className="cookie-button cookie-settings-btn"
+                >
+                    Cookie Settings
+                </Button>
             </div>
         </div>
+    </div>
     );
 };
 

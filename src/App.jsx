@@ -14,7 +14,7 @@ import Testimonials from './Components/AllHomeComponents/Testimonials/Testimonia
 import WhatsappButton from './Components/CommonUsedComponents/WhatsappButton/WhatsappButton';
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
 import Cookies from './Components/CommonUsedComponents/Cookies/Cookies';
-
+import NotFound from './Components/NotFound/NotFound';
 function App() {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem("email") && localStorage.getItem("password");
@@ -26,6 +26,7 @@ function App() {
     <>
       {/* {!isAuthPage && <MegaNavigation />} */}
       <Routes>
+      <Route path='*' element={<NotFound />} />
         <Route path='/' element={<AllHomeComponents />} />
         <Route path='/about-us' element={<AboutUsSeparate />} />
         <Route path='/career' element={<Career />} />
