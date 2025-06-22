@@ -45,12 +45,13 @@ const OurServices = () => {
                             <div 
                                 className="our-services-step" 
                                 key={idx} 
-                                data-aos="blur-to-clear" 
+                               
+                            >
+                               <div  data-aos="blur-to-clear" 
                                 data-aos-delay="100"
                                 data-aos-duration="1200"
-                                data-aos-easing="ease-out"
-                            >
-                                <div className="step-icon-container">
+                                data-aos-easing="ease-out">
+                               <div className="step-icon-container">
                                     {step.icon}
                                 </div>
                                 <div className="step-divider" />
@@ -58,6 +59,7 @@ const OurServices = () => {
                                     <div className="step-title">{step.title}</div>
                                     <div className="step-desc">{step.desc}</div>
                                 </div>
+                               </div>
                             </div>
                         ))}
                     </div>
