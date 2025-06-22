@@ -15,6 +15,8 @@ import WhatsappButton from './Components/CommonUsedComponents/WhatsappButton/Wha
 // import DashboardIndex from './Components/Dashboard/DashboardContext/DashboardIndex';
 import Cookies from './Components/CommonUsedComponents/Cookies/Cookies';
 import NotFound from './Components/NotFound/NotFound';
+import SeparateServiceComponent from './Components/Services/SeparateServiceComponent';
+
 function App() {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem("email") && localStorage.getItem("password");
@@ -32,6 +34,7 @@ function App() {
         <Route path='/career' element={<Career />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/blogs/:slug' element={<SeparateBlog />} />
+        <Route path='/services/:slug' element={<SeparateServiceComponent />} />
         <Route path='/sign-in' element={<PortalLogin />} />
         <Route path='/testimonials' element={<Testimonials />} />
         {/* <Route path='/dashboardIndex' element={<DashboardIndex />} /> */}

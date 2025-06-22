@@ -2,7 +2,16 @@ import React from "react";
 import "./Services.css";
 import { FaArrowRight } from 'react-icons/fa';
 import ServicesCardsContent from "../AllHomeComponents/AboutServicesCards/ServicesData";
+import { useNavigate } from "react-router-dom";
+
 const Services = () => {
+    const navigate = useNavigate();
+
+    const handleServiceClick = (service) => {
+        // Convert service title to URL-friendly slug
+        const slug = service.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        navigate(`/services/${slug}`);
+    };
 
     return (
         <div className="services-section-container">
@@ -14,7 +23,7 @@ const Services = () => {
                             <h2 className="text-center h2-gradient">Our Services</h2>
                         </div>
                         <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-                            Our <span className="black">Recruitment</span> Services
+                            Our Recruitment Services
                         </h1>
                         <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
                             At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.
@@ -30,6 +39,8 @@ const Services = () => {
                                     data-aos-delay="200"
                                     data-aos-duration="1200"
                                     data-aos-easing="ease-out"
+                                    onClick={() => handleServiceClick(service)}
+                                    style={{ cursor: 'pointer' }}
                                 >
                                     <img src={service.image} alt={service.title} className="service-hover-image" />
                                     <div className="service-title">

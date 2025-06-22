@@ -4,12 +4,21 @@ import { Row, Col } from "antd";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaArrowRight } from "react-icons/fa6";
 import ServicesCardsContent from "./ServicesData";
+import { useNavigate } from "react-router-dom";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+
 const AboutServicesCards = () => {
+    const navigate = useNavigate();
+
+    const handleServiceClick = (service) => {
+        // Convert service title to URL-friendly slug
+        const slug = service.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        navigate(`/services/${slug}`);
+    };
    
     return (
         <section className="container paddingSection">
@@ -66,6 +75,8 @@ const AboutServicesCards = () => {
                                         data-aos-delay="100"
                                         data-aos-duration="1200"
                                         data-aos-easing="ease-out"
+                                        onClick={() => handleServiceClick(item)}
+                                        style={{ cursor: 'pointer' }}
                                     >
                                         <img src={item.image} alt="" />
                                         <div className="ContentButtonContainer">
