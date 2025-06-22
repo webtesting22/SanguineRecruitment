@@ -97,7 +97,7 @@ const AboutUsSeparate = () => {
     return (
         <>
             <div id="AboutUsSeparateContainer">
-                <div className="AboutUsSeparateContentContainer">
+                <div className="AboutUsSeparateContentContainer" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
                     <div style={{ width: "100%" }}>
                         <TopPartCommon
                             title="About Us"
@@ -127,29 +127,33 @@ const AboutUsSeparate = () => {
                     />
                 </div>
             </div>
-            <SanguineClients />
+            <div data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" data-aos-easing="ease-out">
+                <SanguineClients />
+            </div>
             <div className="AboutInfoContainer">
                 <div className="paddingSection">
                     <div className="container">
                         <div className="Common-header">
-                            <div className="TaglineWithIcon">
+                            <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" data-aos-easing="ease-out">
                                 <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
                                 <h2 className="text-center h2-gradient">About Brand</h2>
                             </div>
-                            <h1 className="text-center">
+                            <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
                                 We are a team of <span className="black">experienced marketers</span> who are passionate about helping <span className="black">startups grow</span>.
                             </h1>
-                            <p className="text-center">
+                            <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
                                 At <span className="black">Sanguine Recruitment</span>, we believe recruitment is more than just filling vacancies — it's about building <span className="black">meaningful, long-lasting partnerships</span> between businesses and <span className="black">exceptional talent</span>. Our process starts with truly understanding your unique <span className="black">business objectives</span>, <span className="black">work culture</span>, and <span className="black">future goals</span>. This enables us to deliver <span className="black">talent solutions</span> that align not only with your skill requirements but also your <span className="black">company ethos</span>.
                             </p>
-                            <p className="text-center">With <span className="black">deep industry knowledge</span>, an <span className="black">extensive talent network</span>, and <span className="black">modern recruitment strategies</span>, we streamline hiring and ensure you spend less time screening and more time <span className="black">growing your business</span>. Whether you're scaling a startup or strengthening an enterprise team, we're committed to making every placement count.</p>
-                            <p className="text-center">Our goal goes beyond <span className="black">short-term hiring</span>. We work closely with our clients to develop strong <span className="black">employer brands</span> and <span className="black">sustainable talent pipelines</span> that support <span className="black">long-term growth</span> and <span className="black">organizational success</span>.
+                            <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">With <span className="black">deep industry knowledge</span>, an <span className="black">extensive talent network</span>, and <span className="black">modern recruitment strategies</span>, we streamline hiring and ensure you spend less time screening and more time <span className="black">growing your business</span>. Whether you're scaling a startup or strengthening an enterprise team, we're committed to making every placement count.</p>
+                            <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">Our goal goes beyond <span className="black">short-term hiring</span>. We work closely with our clients to develop strong <span className="black">employer brands</span> and <span className="black">sustainable talent pipelines</span> that support <span className="black">long-term growth</span> and <span className="black">organizational success</span>.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <Services />
+            <div data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" data-aos-easing="ease-out">
+                <Services />
+            </div>
         </>
     )
 }

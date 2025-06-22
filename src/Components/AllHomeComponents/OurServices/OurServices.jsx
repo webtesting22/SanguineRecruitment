@@ -30,19 +30,26 @@ const OurServices = () => {
         <div className="our-services-section paddingSection">
             <div className="container">
                 <div className="Common-header">
-                    <div className='TaglineWithIcon'>
+                    <div className='TaglineWithIcon' data-aos="blur-to-clear" data-aos-delay="100">
                         <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
                         <h2 className='text-center h2-gradient'>How It Works</h2>
                     </div>
-                    <h1 className='text-center'>Seamless hiring experience to connect
+                    <h1 className='text-center' data-aos="blur-to-clear" data-aos-delay="100">Seamless hiring experience to connect
                         businesses with exceptional talent.</h1>
-                    <p className='text-center'>Our streamlined process simplifies hiring, delivering exceptional talent aligned with your business goals.
+                    <p className='text-center' data-aos="blur-to-clear" data-aos-delay="100">Our streamlined process simplifies hiring, delivering exceptional talent aligned with your business goals.
                     </p>
                 </div>
                 <div className="margin-100">
                     <div className="our-services-steps">
                         {steps.map((step, idx) => (
-                            <div className="our-services-step" key={idx} data-aos="fade-up" data-aos-duration="1500" data-aos-delay={idx * 300}>
+                            <div 
+                                className="our-services-step" 
+                                key={idx} 
+                                data-aos="blur-to-clear" 
+                                data-aos-delay="100"
+                                data-aos-duration="1200"
+                                data-aos-easing="ease-out"
+                            >
                                 <div className="step-icon-container">
                                     {step.icon}
                                 </div>

@@ -320,3 +320,28 @@
     }
 
 }
+
+/* Blur to Clear Animation for AOS */
+[data-aos="blur-to-clear"] {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="blur-to-clear"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom smooth fade animations */
+[data-aos="fade-up"] {
+    transition-duration: 1.5s !important;
+    transition-timing-function: ease-out !important;
+}
+
+[data-aos="fade-down"] {
+    transition-duration: 1.5s !important;
+    transition-timing-function: ease-out !important;
+}

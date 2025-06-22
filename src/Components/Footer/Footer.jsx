@@ -10,14 +10,14 @@ const Footer = () => {
                     <div className="LetsTalkContainer paddingSection containerGap">
                         <div className="container">
                             <div className="Common-header">
-                                <div className="TaglineWithIcon">
+                                <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
                                     {/* <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /> */}
                                     <h2 className="text-center h2-gradient">Let's Talk</h2>
                                 </div>
-                                <h1 className="text-center white">
+                                <h1 className="text-center white" data-aos="blur-to-clear" data-aos-delay="100">
                                     Ready to work together?
                                 </h1>
-                                <p className="text-center para">Studiolist empowers investors and innovators with the resources they need to thrive. We provide strategic insights, powerful tools, and a supportive network to turn bold..</p>
+                                <p className="text-center para" data-aos="blur-to-clear" data-aos-delay="100">Studiolist empowers investors and innovators with the resources they need to thrive. We provide strategic insights, powerful tools, and a supportive network to turn bold..</p>
                             </div>
 
                         </div>

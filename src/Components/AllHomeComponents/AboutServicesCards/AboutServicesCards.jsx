@@ -16,11 +16,11 @@ const AboutServicesCards = () => {
             <div className="about-services-content hero-home-content">
                 <div style={{ width: "100%" }}>
                     <div className="Common-header">
-                        <div className="TaglineWithIcon">
+                        <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
                             <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /><h2 className="text-center h2-gradient">Explore our Marketing Solutions</h2>
                         </div>
-                        <h1 className="text-center">Industry-Specific Expertise to simplify Fuel Your Success</h1>
-                        <p className="about-p-Container text-center">At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.</p>
+                        <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="100">Industry-Specific Expertise to simplify Fuel Your Success</h1>
+                        <p className="about-p-Container text-center" data-aos="blur-to-clear" data-aos-delay="100">At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.</p>
                     </div>
                     <div className="ServicesCardsContainer centerContainer margin-100">
                         <Swiper
@@ -60,7 +60,13 @@ const AboutServicesCards = () => {
                         >
                             {ServicesCardsContent.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="AnimatedCardsHoverAnimation">
+                                    <div 
+                                        className="AnimatedCardsHoverAnimation"
+                                        data-aos="blur-to-clear"
+                                        data-aos-delay="100"
+                                        data-aos-duration="1200"
+                                        data-aos-easing="ease-out"
+                                    >
                                         <img src={item.image} alt="" />
                                         <div className="ContentButtonContainer">
                                             <Row className="w-100">

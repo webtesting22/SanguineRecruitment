@@ -1,0 +1,21 @@
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-30%, 0, 0);
+        /* Move left by half its width */
+    }
+}
+
+.BackgrounCheckPatterImage {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+
+    object-fit: cover;
+    animation: slide 30s linear infinite;
+    z-index: -1;
+    /* Ensure it stays in the background */
+}

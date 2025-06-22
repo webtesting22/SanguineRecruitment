@@ -118,3 +118,70 @@ a {
   }
   
 }
+
+/* Global AOS Blur-to-Clear Animation */
+[data-aos="blur-to-clear"] {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="blur-to-clear"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced fade animations with blur effect */
+[data-aos="fade-up"] {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="fade-down"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-left"] {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="fade-left"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+    filter: blur(5px);
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 1.5s ease-out;
+}
+
+[data-aos="fade-right"].aos-animate {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+}
