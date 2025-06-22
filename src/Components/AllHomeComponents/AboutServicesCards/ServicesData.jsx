@@ -2,27 +2,27 @@ const ServicesCardsContent = [
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Manufacturing: Engineering.jpg",
         title: "Manufacturing/ Engineering",
-        description: "Our team is dedicated to identifying and placing exceptional talent in roles ranging from design engineers to plant managers, ensuring the ideal match for your company's specific needs."
+        description: "We connect leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector."
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Retail:Logistics.jpg",
         title: "Retail/Logistics",
-        description: "We offer specialized hiring solutions for the fast-moving retail and logistics sectors, focusing on efficiency, dependability, and top-tier customer service in every candidate we recommend."
+        description: "Our expertise lies in sourcing talent for supply chain management, retail operations, and e-commerce logistics, finding candidates who enhance efficiency and customer experience."
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Oil:Gas.jpg",
         title: "Oil/Gas",
-        description: "We connect you with highly skilled professionals, from engineers to project managers, who possess the certifications and expertise required to meet the strict standards of the oil and gas industry."
+        description: "We specialize in recruiting certified professionals for the oil and gas industry, including petroleum engineers and project managers who meet the highest standards of safety and compliance."
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Banking, Financial Services.jpg",
         title: "BFSI",
-        description: "Our recruitment process identifies candidates who not only possess technical skills but also excel in critical areas like analytical thinking, problem-solving, and client relationship management in the BFSI sector."
+        description: "We source top-tier talent for banking, financial services, and insurance, focusing on roles like financial analysts, investment bankers, and risk managers with deep market acumen."
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/WhatsApp Image 2025-06-22 at 14.39.38.jpeg",
         title: "IT /E-Commerce",
-        description: "Our recruitment process identifies candidates who not only possess technical skills but also excel in critical areas like analytical thinking, problem-solving, and client relationship management in the BFSI sector."
+        description: "We find top tech talent, from software developers to cybersecurity experts and e-commerce strategists, to help businesses innovate and thrive in the digital landscape."
     },
 ];
 

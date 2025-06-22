@@ -24,9 +24,9 @@ const Services = () => {
                         <div className="services-list">
                             {ServicesCardsContent.map((service, index) => (
                                 <div className="service-item" key={index}>
+                                    <img src={service.image} alt={service.title} className="service-hover-image" />
                                     <div className="service-title">
                                         <h1>{service.title}</h1>
-                                        {/* {service.title} */}
                                     </div>
                                     <div className="service-description">
                                         <p>{service.description}</p>
