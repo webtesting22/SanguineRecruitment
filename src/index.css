@@ -55,7 +55,20 @@ h6 {
 p {
   font-size: 18px;
   line-height: 166%;
-  color: #777272;
+  color: #7b8282;
+}
+.para{
+  color: #7b8282;
+  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    opacity: 1;
+    filter: blur(0px);
+    letter-spacing: -.02em;
+    margin-bottom: 0;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 166%;
 }
 
 a {

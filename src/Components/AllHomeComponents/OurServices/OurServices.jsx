@@ -32,7 +32,7 @@ const OurServices = () => {
                     <div className="our-services-content " >
                         <div className="Common-header">
                             <div className="TaglineWithIcon">
-                                <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /><h2 className="text-center">Why Choose Sanguine? How Our Recruitment Process Works</h2>
+                                <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" /><h2 className="text-center h2-gradient">Why Choose Sanguine? How Our Recruitment Process Works</h2>
                             </div>
                             <h1 className="text-center">
                                 Seamless hiring experience to <span className="span-title" style={{ color: "white" }}> connect <br />

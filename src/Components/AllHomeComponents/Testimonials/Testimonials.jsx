@@ -84,14 +84,14 @@ const Testimonials = () => {
                     className="testimonials-bg"
                     aria-hidden="true"
                 />
-                <div className="testimonials-container">
-                    <Tag>Client Feedback</Tag>
-                    <h2 className="big-title">
-                        Hear from our <span className="span-title">happy clients.</span>
-                    </h2>
-                    <p className="testimonials-subtitle">
-                        Don't just take our word for it—our clients say it all.
-                    </p>
+                <div className="Common-header">
+                    <div className="TaglineWithIcon">
+                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                        <h2 className="text-center h2-gradient">Customer Reviews</h2>
+                    </div>
+                    <h1 className="text-center">
+                        Hear from our happy clients.
+                    </h1>
 
                     <div className="testimonials-slider-container">
                         {/* First row - Left to Right */}

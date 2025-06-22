@@ -9,13 +9,13 @@
   padding: 0 24px;
 }
 
-.sanguine-clients-component .clients-content {
+/* .sanguine-clients-component .clients-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   min-height: 340px;
-}
+} */
 
 .sanguine-clients-component .clients-logos-grid {
   flex: 2 1 67%;
@@ -65,21 +65,20 @@
   object-fit: contain;
   filter: grayscale(0%);
 }
-.ant-tooltip-inner{
-    background-color: #004675 !important;
-    color: white;
+
+.ant-tooltip-inner {
+  background-color: #004675 !important;
+  color: white;
 }
 
 @media (max-width: 900px) {
-  .sanguine-clients-component .clients-content {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: unset;
-  }
+
+
   .sanguine-clients-component .clients-title {
     justify-content: center;
     margin-bottom: 32px;
   }
+
   .sanguine-clients-component .clients-logos-grid {
     width: 100%;
   }
@@ -92,21 +91,21 @@
     padding: 16px 0;
     gap: 20px;
   }
-  
+
   .sanguine-clients-component .client-logo-cell {
     flex: 0 0 calc(50% - 10px);
     margin-bottom: 0;
   }
-  
+
   .sanguine-clients-component .client-logo-cell img {
     width: 100%;
     max-width: 120px;
   }
-  
+
   .sanguine-clients-component .clients-logos-row.with-divider {
     border-bottom: none;
   }
-  
+
   .sanguine-clients-component .clients-logos-row:not(:last-child) {
     margin-bottom: 20px;
   }

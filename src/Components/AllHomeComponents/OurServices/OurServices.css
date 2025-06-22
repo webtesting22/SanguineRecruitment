@@ -1,6 +1,6 @@
 .our-services-section {
     position: relative;
-    background: #005a95eb;
+    background: var(--primary-color);
     color: #fff;
     overflow: hidden;
 }
@@ -47,14 +47,14 @@
 .our-services-steps {
     display: flex;
     justify-content: space-between;
-    gap: 32px;
+    gap: 40px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
 .our-services-step {
     flex: 1 1 0;
-    min-width: 260px;
+    min-width: 45%;
     max-width: 350px;
     background: transparent;
     display: flex;
