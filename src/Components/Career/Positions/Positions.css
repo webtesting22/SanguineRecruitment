@@ -1,0 +1,120 @@
+/* .position-container{
+    background-color: var(--primary-color);
+} */
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign {
+    height: 100%;
+    background-color: #f8f9fa;
+    transform: translateY(0px);
+    transition: all 0.2s ease;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign>div {
+    padding: 20px;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign h2 {
+    margin-bottom: 20px;
+}
+
+/* Even numbered cards styling */
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign {
+    background-color: var(--primary-color);
+}
+
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign h2 {
+    color: white;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign .consultation {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Common Application Section Styles */
+.common-application-section {
+    /* background: var(--primary-color); */
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.common-application-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.common-application-content {
+    position: relative;
+    z-index: 1;
+}
+
+.common-application-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.common-application-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.common-application-description p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .common-application-section {
+        padding: 40px 20px;
+        margin-top: 30px;
+    }
+
+    .common-application-header h2 {
+        font-size: 2rem;
+    }
+
+    .common-application-header p {
+        font-size: 1rem;
+    }
+
+    .common-application-description p {
+        font-size: 0.95rem;
+    }
+
+    .common-application-button .slide-btn {
+        min-width: 200px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
