@@ -8,11 +8,11 @@ const NavigationLinks = [
         link: "About Us",
         path: "/about-us",
     },
-    {
-        link: "Services",
-        path: "",
+    // {
+    //     link: "Services",
+    //     path: "",
       
-    },
+    // },
     // {
     //     link: "Blogs",
     //     path: "",

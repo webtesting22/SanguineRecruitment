@@ -11,7 +11,7 @@ const HeroHome = () => {
     const slides = [
         {
             id: 1,
-            image: "https://cdn.prod.website-files.com/679765810ac8bcda652fca4a/67b482295a27fff1499d1714_Home%20Two%20Banner%20Image-p-3200.webp",
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/HomePageBanner.jpeg",
             title: "Marketing automations that grow with your business.",
             subtitle: "Explore our Marketing Solutions",
             description: "Studiolist provides Marketing automations to the investors for assuring business growth including branding, seo management, equity and impression boosting."
@@ -35,7 +35,7 @@ const HeroHome = () => {
                     slidesPerView={1}
                     loop={true}
                     autoplay={{
-                        delay: 2000,
+                        delay: 3000,
                         disableOnInteraction: false,
                     }}
                     pagination={{

@@ -14,12 +14,12 @@ const SeparateServiceComponent = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        
+
         // Find the service based on the slug
         const foundService = ServicesCardsContent.find(
             s => s.title.toLowerCase().replace(/[^a-z0-9]/g, '-') === slug
         );
-        
+
         if (foundService) {
             setService(foundService);
         } else {
@@ -32,13 +32,13 @@ const SeparateServiceComponent = () => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             setScrollY(scrollPosition);
-            
+
             // Calculate image width based on scroll position
             // Start at 70% and go up to 100% based on scroll
             const maxScroll = 500; // Scroll distance to reach 100% width
             const scrollProgress = Math.min(scrollPosition / maxScroll, 1);
             const newWidth = 80 + (scrollProgress * 20); // 70% to 100%
-            
+
             setImageWidth(newWidth);
         };
 
@@ -58,37 +58,50 @@ const SeparateServiceComponent = () => {
                 subtitle={service.subtitle}
             />
             <div className="margin-100 ">
-                <div style={{overflow: "hidden"}}>
-                <div className="ServiceImageContainer">
-                <img 
-                    src={service.image} 
-                    alt="" 
-                    className="parallax-image-container"
-                    style={{
-                        width: `${imageWidth}%`,
-                        height: "100%",
-                        objectFit: "cover",
-                        transition: 'width 0.1s ease-out',
-                        display: 'block',
-                        margin: '0 auto'
-                    }}
-                />
-                </div>
+                <div style={{ overflow: "hidden" }}>
+                    <div className="ServiceImageContainer">
+                        <img
+                            src={service.image}
+                            alt=""
+                            className="parallax-image-container"
+                            style={{
+                                width: `${imageWidth}%`,
+                                height: "100%",
+                                objectFit: "cover",
+                                transition: 'width 0.1s ease-out',
+                                display: 'block',
+                                margin: '0 auto'
+                            }}
+                        />
+                    </div>
                 </div>
                 <div className="paddingSection">
                     <div className="container">
                         {/* Overview Section */}
                         {service.overview && (
                             <div className="service-section" data-aos="blur-to-clear" data-aos-delay="100">
-                                <h2>Overview</h2>
-                                <p>{service.overview}</p>
+                                <div className="Common-header">
+                                    <div className="TaglineWithIcon">
+                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                        <h2 className="text-center h2-gradient">Overview</h2>
+                                    </div>
+                                    <p>{service.overview}</p>
+                                </div>
+
+
                             </div>
                         )}
 
                         {/* Main Points Section */}
                         {service.mainPoints && service.mainPoints.length > 0 && (
                             <div className="service-section" data-aos="blur-to-clear" data-aos-delay="100">
-                                <h2>Our Expertise</h2>
+                                 <div className="Common-header">
+                                    <div className="TaglineWithIcon">
+                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                        <h2 className="text-center h2-gradient">Our Expertise</h2>
+                                    </div>
+                                    {/* <p>{service.overview}</p> */}
+                                </div>
                                 <div className="main-points-container">
                                     {service.mainPoints.map((point, index) => (
                                         <div key={index} className="main-point-card">
@@ -107,7 +120,7 @@ const SeparateServiceComponent = () => {
                             </div>
                         )}
 
-                       
+
                     </div>
                 </div>
             </div>
