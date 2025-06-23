@@ -248,7 +248,7 @@
     background: #f8f9fa;
 }
 
-.ServiceImageContainer{
+.ServiceImageContainer {
     height: 600px;
     max-height: 600px;
     display: flex;
@@ -262,42 +262,42 @@
     .parallax-image-container {
         min-height: 300px;
     }
-    
+
     .parallax-image-container img {
         width: 90% !important;
         border-radius: 8px;
     }
-    
- 
-    
+
+
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .benefits-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .process-timeline::before {
         left: 20px;
     }
-    
+
     .step-number {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
-    
+
     .process-step {
         gap: 20px;
     }
-    
+
     .service-cta {
         padding: 40px 20px;
     }
-    
+
     .service-cta h2 {
         font-size: 28px;
     }
@@ -324,6 +324,7 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
 /* 
 .main-point-card h3 {
     font-size: 24px;
@@ -382,20 +383,20 @@
         grid-template-columns: 1fr;
         gap: 25px;
     }
-    
+
     .main-point-card {
         padding: 25px;
     }
-    
+
     .main-point-card h3 {
         font-size: 20px;
     }
-    
+
     .main-point-card p {
         font-size: 15px;
     }
-    
+
     .sub-points-list li {
         font-size: 14px;
     }
-} 
+}

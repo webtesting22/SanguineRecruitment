@@ -18,3 +18,55 @@
 .footer-container .container {
     background-color: var(--primary-color);
 }
+
+.FooterLeftContainer {
+    max-width: 60%;
+}
+
+.FooterRightContainerLinks ul {
+    list-style: none;
+    padding: 0px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.FooterRightContainerLinks h2,
+.FooterRightContainerLinks li a {
+    color: white;
+}
+
+.FooterRightContainer {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.CopyrightContainer {
+    display: flex;
+    justify-content: end;
+    padding: 10px 0px;
+    color: white;
+}
+
+.CopyrightContainer p, .CopyrightContainer a{
+    color: white;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .FooterRightContainer {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .FooterLeftContainer{
+        width: 100%;
+        max-width: 100%;
+    }
+    .CopyrightContainer {
+        justify-content: center;
+    }
+    
+}
