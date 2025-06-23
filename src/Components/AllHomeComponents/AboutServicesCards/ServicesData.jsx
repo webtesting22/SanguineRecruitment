@@ -1,6 +1,6 @@
 const ServicesCardsContent = [
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Manufacturing: Engineering.jpg",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Manufacturing: Engineering .jpg",
         title: "Manufacturing/ Engineering",
         description: "We connect leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
         subtitle: "Connecting leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
@@ -33,7 +33,7 @@ const ServicesCardsContent = [
         ]
     },
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Retail:Logistics.jpg",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Retail:Logistics .jpg",
         title: "Retail/Logistics",
         description: "Our expertise lies in sourcing talent for supply chain management, retail operations, and e-commerce logistics, finding candidates who enhance efficiency and customer experience.",
         subtitle: "Sourcing talent for supply chain management, retail operations, and e-commerce logistics to enhance efficiency and customer experience.",
@@ -66,7 +66,7 @@ const ServicesCardsContent = [
         ]
     },
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Oil:Gas.jpg",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Oil:Gas .jpg",
         title: "Oil/Gas",
         description: "We specialize in recruiting certified professionals for the oil and gas industry, including petroleum engineers and project managers who meet the highest standards of safety and compliance.",
         subtitle: "Recruiting certified professionals for the oil and gas industry who meet the highest standards of safety, compliance, and technical expertise.",
@@ -99,7 +99,7 @@ const ServicesCardsContent = [
         ]
     },
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Banking, Financial Services.jpg",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/BFSI.jpg",
         title: "BFSI",
         description: "We source top-tier talent for banking, financial services, and insurance, focusing on roles like financial analysts, investment bankers, and risk managers with deep market acumen.",
         subtitle: "Sourcing top-tier talent for banking, financial services, and insurance with deep market acumen and regulatory knowledge.",
@@ -132,7 +132,7 @@ const ServicesCardsContent = [
         ]
     },
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/WhatsApp Image 2025-06-22 at 14.39.38.jpeg",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/IT :E-Commerce .jpg",
         title: "IT /E-Commerce",
         description: "We find top tech talent, from software developers to cybersecurity experts and e-commerce strategists, to help businesses innovate and thrive in the digital landscape.",
         subtitle: "Finding top tech talent to help businesses innovate and thrive in the digital landscape through cutting-edge technology solutions.",

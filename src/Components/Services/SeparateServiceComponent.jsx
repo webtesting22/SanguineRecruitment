@@ -59,8 +59,9 @@ const SeparateServiceComponent = () => {
             />
             <div className="margin-100 ">
                 <div style={{overflow: "hidden"}}>
+                <div className="ServiceImageContainer">
                 <img 
-                    src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68088cd9861c02a0f55415fc_senior-manager-is-sitting-boardroom-with-multiracial-colleagues-discussing-project.avif" 
+                    src={service.image} 
                     alt="" 
                     className="parallax-image-container"
                     style={{
@@ -72,6 +73,7 @@ const SeparateServiceComponent = () => {
                         margin: '0 auto'
                     }}
                 />
+                </div>
                 </div>
                 <div className="paddingSection">
                     <div className="container">

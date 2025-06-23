@@ -269,6 +269,15 @@
     background: #f8f9fa;
 }
 
+.ServiceImageContainer{
+    height: 600px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .parallax-image-container {
