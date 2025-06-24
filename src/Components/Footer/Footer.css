@@ -51,7 +51,8 @@
     color: white;
 }
 
-.CopyrightContainer p, .CopyrightContainer a{
+.CopyrightContainer p,
+.CopyrightContainer a {
     color: white;
     font-size: 14px;
 }
@@ -61,12 +62,14 @@
         flex-direction: column;
         margin-top: 20px;
     }
-    .FooterLeftContainer{
+
+    .FooterLeftContainer {
         width: 100%;
         max-width: 100%;
     }
+
     .CopyrightContainer {
         justify-content: center;
     }
-    
+
 }

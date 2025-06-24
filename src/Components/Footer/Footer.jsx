@@ -22,21 +22,24 @@ const Footer = () => {
         <>
             <div className="footer-container">
                 <div>
-                    <div className="LetsTalkContainer paddingSection containerGap">
-                        <div className="container">
-                            <div className="Common-header">
-                                <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
-                                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
-                                    <h2 className="text-center h2-gradient">Let's Talk</h2>
-                                </div>
-                                <h1 className="text-center white" data-aos="blur-to-clear" data-aos-delay="100">
-                                    Ready to work together?
-                                </h1>
-                                <p className="text-center para" data-aos="blur-to-clear" data-aos-delay="100">Studiolist empowers investors and innovators with the resources they need to thrive. We provide strategic insights, powerful tools, and a supportive network to turn bold..</p>
-                            </div>
+                <div className="LetsTalkContainer paddingSection containerGap">
+    <div className="container">
+        <div className="Common-header">
+            <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
+                <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                <h2 className="text-center h2-gradient">Let's Talk</h2>
+            </div>
+            <h1 className="text-center white" data-aos="blur-to-clear" data-aos-delay="100">
+                Ready to Hire the Right Talent?
+            </h1>
+            <p className="text-center para" data-aos="blur-to-clear" data-aos-delay="100">
+                Whether you're scaling fast or building a solid foundation, we’re here to support your hiring journey. 
+                Let’s connect and craft a recruitment strategy tailored to your business.
+            </p>
+        </div>
+    </div>
+</div>
 
-                        </div>
-                    </div>
                     <div className="container">
                         <div className="divider"></div>
                     </div>
@@ -44,13 +47,16 @@ const Footer = () => {
                         <div className="container">
                             <Row gutter={[16, 16]}>
                                 <Col lg={16} md={24} sm={24} xs={24}>
-                                    <div className="FooterLeftContainer">
-                                        <div className="footer-logo">
-                                            <h2 className="white">Sanguine Recruiters</h2>
-                                        </div>
-                                        <br />
-                                        <p>Studiolist connects investors and innovators, offering tools, insights, and support to accelerate growth.</p>
-                                    </div>
+                                <div className="FooterLeftContainer">
+    <div className="footer-logo">
+        <h2 className="white">Sanguine Recruiters</h2>
+    </div>
+    <br />
+    <p>
+        Sanguine Recruiters connects businesses with top-tier talent by delivering strategic hiring solutions, industry expertise, and a partnership-driven approach to recruitment success.
+    </p>
+</div>
+
                                 </Col>
                                 <Col lg={8} md={24} sm={24} xs={24}>
                                     <div className="FooterRightContainer">

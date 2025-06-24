@@ -23,17 +23,19 @@ const Services = () => {
                             <h2 className="text-center h2-gradient">Our Services</h2>
                         </div>
                         <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-                            Our Recruitment Services
-                        </h1>
-                        <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-                            At Sanguine Recruitment, we specialize in sourcing top talent across key industries, from Manufacturing and Logistics to Oil/Gas and BFSI. Our tailored hiring solutions ensure you get the right fit for each unique sector.
-                        </p>
+    Our Industry Expertise
+</h1>
+<p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
+    At Sanguine Recruitment, we bring deep expertise across core industries such as Manufacturing, Logistics, Oil & Gas, and BFSI. Our team understands the specific skill demands and hiring dynamics of each sector — enabling us to deliver high-impact talent with precision and speed.
+</p>
+
+
                     </div>
                     <div className="OurServicesBoxesContainer margin-100">
                         <div className="services-list">
                             {ServicesCardsContent.map((service, index) => (
-                                <div 
-                                    className="service-item" 
+                                <div
+                                    className="service-item"
                                     key={index}
                                     data-aos="blur-to-clear"
                                     data-aos-delay="200"

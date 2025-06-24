@@ -1,7 +1,7 @@
 const ServicesCardsContent = [
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Manufacturing: Engineering .jpg",
-        title: "Manufacturing/ Engineering",
+        title: "Manufacturing/Engineering",
         description: "We connect leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
         subtitle: "Connecting leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
         overview: "Our Manufacturing & Engineering recruitment division specializes in connecting leading companies with exceptional technical talent across all levels of the manufacturing sector. We understand the unique challenges and requirements of this dynamic industry, from precision engineering to large-scale production operations.",

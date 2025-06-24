@@ -7,42 +7,22 @@ const testimonialsRow1 = [
         name: "ASMITA GAUTAM",
         role: "HR Business Partner",
         Description: "Landmark Group, Dubai",
-        quote: "Sanguine Recruitment is a very strong consultant firm including people who are not only extremely talented but absolutely amazing at their work. They are highly efficient in understanding client's requirements and delivering services of very high standards. I had the privilege to work with Sanguine during my tenure in Landmark Group and I have always admired them for the quick responses, strong relationship building skills and qualities of profiles."
+        quote: "Sanguine Recruitment is a highly competent consulting firm led by an exceptional team of professionals. Their ability to deeply understand client requirements and deliver high-quality talent is truly impressive. During my time at Landmark Group, I had the pleasure of working with them and always appreciated their quick turnarounds, relationship-building skills, and the quality of candidates shared."
     },
     {
         name: "Karthick Ravichandran",
         role: "HR Business Partner",
         Description: "Saint Gobain India Private Limited – Glass Business",
-        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect the quality at the right time. Sanguine as an organization would be lucky to have Ritu as their leader. She and her team earns my highest recommendation."
+        quote: "Working with Sanguine has always been a stress-free experience. Once a requirement is shared, you can trust them to deliver top-quality profiles on time. Ritu’s leadership stands out — her dedication and the team’s professionalism make Sanguine truly dependable. They have my highest recommendation."
     },
     {
         name: "SWATI MAIR",
         role: "HR Business Partner & Talent Acquisition",
         Description: "Zaggle, Hyderabad",
-        quote: "Sanguine possesses great technology acumen and client orientation skills and having a great team for recruitment especially in the technology niche hiring. I have greatly enjoyed working with Sanguine, as they have managed several crucial IT roles for us. Their approach is proactive, timely, and thorough, handling increasingly hard-to-fill positions with dedication. It is clear that they care deeply about the candidate experience and ensure that both candidate and employer needs are met."
+        quote: "Sanguine Recruitment brings together technical expertise and a strong client-first mindset. Their team has successfully closed several critical IT roles for us with precision and care. I’ve been particularly impressed by their proactive approach, timely communication, and attention to the candidate experience. They’re a valuable partner for any tech hiring needs."
     }
 ];
 
-const testimonialsRow2 = [
-    {
-        name: "SWATI MAIR",
-        role: "HR Business Partner & Talent Acquisition",
-        Description: "Zaggle, Hyderabad",
-        quote: "Sanguine possesses great technology acumen and client orientation skills and having a great team for recruitment especially in the technology niche hiring. I have greatly enjoyed working with Sanguine, as they have managed several crucial IT roles for us. Their approach is proactive, timely, and thorough, handling increasingly hard-to-fill positions with dedication. It is clear that they care deeply about the candidate experience and ensure that both candidate and employer needs are met."
-    },
-    {
-        name: "Karthick Ravichandran",
-        role: "HR Business Partner",
-        Description: "Saint Gobain India Private Limited – Glass Business",
-        quote: "Once you drop the requirement to Sanguine, you can feel relaxed and expect the quality at the right time. Sanguine as an organization would be lucky to have Ritu as their leader. She and her team earns my highest recommendation."
-    },
-    {
-        name: "ASMITA GAUTAM",
-        role: "HR Business Partner",
-        Description: "Landmark Group, Dubai",
-        quote: "Sanguine Recruitment is a very strong consultant firm including people who are not only extremely talented but absolutely amazing at their work. They are highly efficient in understanding client's requirements and delivering services of very high standards. I had the privilege to work with Sanguine during my tenure in Landmark Group and I have always admired them for the quick responses, strong relationship building skills and qualities of profiles."
-    }
-];
 
 const TestimonialCard = ({ testimonial }) => (
     <div className="testimonial-card">

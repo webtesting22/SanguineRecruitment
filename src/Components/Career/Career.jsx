@@ -42,7 +42,7 @@ const Career = () => {
     return (
         <>
             <div id="CareerContainer">
-                <div>
+                <div  data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
                     <TopPartCommon
                         tag="Careers"
                         title="Join Our Team "

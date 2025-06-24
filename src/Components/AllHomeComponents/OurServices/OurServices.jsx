@@ -6,39 +6,43 @@ const OurServices = () => {
     const steps = [
         {
             icon: <StepOneIcon />,
-            title: "Talent Acquisition Strategy",
-            desc: "Access to top-tier talent, including passive candidates",
+            title: "Access to Elite Talent",
+            desc: "Tap into a curated network of top-tier professionals — including hard-to-reach passive candidates — to find the best fit for your team.",
         },
         {
             icon: <StepTwoIcon />,
-            title: "Optimized Recruitment Process",
-            desc: "Streamlined recruitment process with cutting-edge evaluation techniques.",
+            title: "Smart & Streamlined Hiring",
+            desc: "Our recruitment process uses advanced evaluation methods to simplify hiring, saving you time while ensuring precision.",
         },
         {
             icon: <StepThreeIcon />,
-            title: "Tailored Hiring Solutions",
-            desc: "Industry insights and tailored hiring strategies.",
+            title: "Industry-Driven Strategy",
+            desc: "We tailor hiring strategies based on real industry insights, ensuring alignment with your sector's specific needs and dynamics.",
         },
         {
             icon: <StepFourIcon />,
-            title: "Enhanced Candidate Experience",
-            desc: "Enhanced candidate experience to boost your employer reputation.",
+            title: "Exceptional Candidate Experience",
+            desc: "We create a smooth, respectful, and engaging candidate journey — enhancing your employer brand and attracting better talent.",
         }
     ];
 
     return (
         <div className="our-services-section paddingSection">
             <div className="container">
-                <div className="Common-header">
-                    <div className='TaglineWithIcon' data-aos="blur-to-clear" data-aos-delay="100">
-                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
-                        <h2 className='text-center h2-gradient'>How It Works</h2>
-                    </div>
-                    <h1 className='text-center' data-aos="blur-to-clear" data-aos-delay="100">Seamless hiring experience to connect
-                        businesses with exceptional talent.</h1>
-                    <p className='text-center' data-aos="blur-to-clear" data-aos-delay="100">Our streamlined process simplifies hiring, delivering exceptional talent aligned with your business goals.
-                    </p>
-                </div>
+            <div className="Common-header">
+    <div className='TaglineWithIcon' data-aos="blur-to-clear" data-aos-delay="100">
+        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+        <h2 className='text-center h2-gradient'>Why Choose Sanguine</h2>
+    </div>
+    <h1 className='text-center' data-aos="blur-to-clear" data-aos-delay="100">
+        Strategic Hiring That Drives Long-Term Success
+    </h1>
+    <p className='text-center' data-aos="blur-to-clear" data-aos-delay="100">
+        We go beyond job matching — we build talent partnerships rooted in your business vision. 
+        With deep industry expertise and a future-focused process, we deliver candidates who are the right fit for both the role and your culture.
+    </p>
+</div>
+
                 <div className="margin-100">
                     <div className="our-services-steps">
                         {steps.map((step, idx) => (

@@ -12,16 +12,16 @@ const HeroHome = () => {
         {
             id: 1,
             image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/HomePageBanner.jpeg",
-            title: "Marketing automations that grow with your business.",
-            subtitle: "Explore our Marketing Solutions",
-            description: "Studiolist provides Marketing automations to the investors for assuring business growth including branding, seo management, equity and impression boosting."
+            title: "Beyond Recruitment, We Build Partnerships",
+            subtitle: "",
+            description: "We dive deep into your culture, goals, and challenges. So every hire isn't just a fit — it's a long-term asset."
         },
         {
             id: 2,
             image: "https://cdn.prod.website-files.com/680534957b5199127f2857e6/680ceae48021e647f307f1ee_image.avif",
-            title: "Building Careers, Shaping Futures",
-            subtitle: "Comprehensive recruitment services for your success",
-            description: "From entry-level to executive positions, we find the perfect match"
+            title: "Hire Smarter. Grow Faster.",
+            subtitle: "",
+            description: "From startups to enterprises, we deliver aligned talent solutions. Spend less time screening, more time scaling."
         }
     ];
 
