@@ -20,37 +20,37 @@ const Positions = () => {
 
     const CareerPositions = [
         {
-          positionTitle: "Senior Recruitment Consultant",
-          positionDescription:
-            "Lead client engagements, drive top-tier placements, and mentor junior consultants. Requires strong industry insight and a proven track record in successful hires.",
-          positionTag: ["Full Time", "On-Site"],
+            positionTitle: "Senior Recruitment Consultant",
+            positionDescription:
+                "Lead client engagements, drive top-tier placements, and mentor junior consultants. Requires strong industry insight and a proven track record in successful hires.",
+            positionTag: ["Full Time", "On-Site"],
         },
         {
-          positionTitle: "Technical Recruitment Specialist",
-          positionDescription:
-            "Specialize in sourcing IT talent across development, QA, and DevOps roles. Must have solid understanding of tech stacks and developer ecosystems.",
-          positionTag: ["Full Time", "Remote"],
+            positionTitle: "Technical Recruitment Specialist",
+            positionDescription:
+                "Specialize in sourcing IT talent across development, QA, and DevOps roles. Must have solid understanding of tech stacks and developer ecosystems.",
+            positionTag: ["Full Time", "Remote"],
         },
         {
-          positionTitle: "Recruitment Consultant – BFSI Sector",
-          positionDescription:
-            "Manage end-to-end recruitment for banking, financial services, and insurance clients. Should have strong domain knowledge and talent pipeline building skills.",
-          positionTag: ["Full Time", "Hybrid"],
+            positionTitle: "Recruitment Consultant – BFSI Sector",
+            positionDescription:
+                "Manage end-to-end recruitment for banking, financial services, and insurance clients. Should have strong domain knowledge and talent pipeline building skills.",
+            positionTag: ["Full Time", "Hybrid"],
         },
         {
-          positionTitle: "Executive Search Consultant",
-          positionDescription:
-            "Focus on CXO and leadership hiring. Strong relationship management, discretion, and experience with retained search models preferred.",
-          positionTag: ["Full Time", "On-Site"],
+            positionTitle: "Executive Search Consultant",
+            positionDescription:
+                "Focus on CXO and leadership hiring. Strong relationship management, discretion, and experience with retained search models preferred.",
+            positionTag: ["Full Time", "On-Site"],
         },
         {
-          positionTitle: "Junior Recruitment Consultant",
-          positionDescription:
-            "Support sourcing, screening, and interview coordination. Ideal for fresh graduates or candidates with 1–2 years of HR or recruitment experience.",
-          positionTag: ["Full Time", "Remote"],
+            positionTitle: "Junior Recruitment Consultant",
+            positionDescription:
+                "Support sourcing, screening, and interview coordination. Ideal for fresh graduates or candidates with 1–2 years of HR or recruitment experience.",
+            positionTag: ["Full Time", "Remote"],
         },
-      ];
-      
+    ];
+
     return (
         <div className="position-container margin-100">
             <div className="paddingSection">
@@ -109,27 +109,27 @@ const Positions = () => {
                     </div>
                 </div>
             </div>
-            <div className="paddingSection" style={{background:"#f8f9fa"}}>
+            <div className="paddingSection" style={{ background: "#f8f9fa" }}>
                 <div className="container">
                     <div className="common-application-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         <div className="common-application-content">
-                        <div className="Common-header">
-    <div className="TaglineWithIcon aos-init aos-animate" data-aos-delay="100" data-aos="blur-to-clear">
-        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
-        <h2 className="text-center h2-gradient">Career</h2>
-    </div>
-    <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-        Don’t See a Role That Fits?
-    </h1>
-    <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-        We're always on the lookout for passionate, driven individuals. If there’s no current opening that suits your skills, we still want to hear from you.
-    </p>
-    <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-        Submit a general application — our team regularly reviews profiles and will reach out when a relevant opportunity comes up.
-    </p>
-</div>
+                            <div className="Common-header">
+                                <div className="TaglineWithIcon aos-init aos-animate" data-aos-delay="100" data-aos="blur-to-clear">
+                                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                    <h2 className="text-center h2-gradient">Career</h2>
+                                </div>
+                                <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
+                                    Don’t See a Role That Fits?
+                                </h1>
+                                <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
+                                    We're always on the lookout for passionate, driven individuals. If there’s no current opening that suits your skills, we still want to hear from you.
+                                </p>
+                                <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
+                                    Submit a general application — our team regularly reviews profiles and will reach out when a relevant opportunity comes up.
+                                </p>
+                            </div>
 
-                                    <br /><br />
+                            <br /><br />
                             <div className="common-application-button">
                                 <button
                                     className="slide-btn consultation"
