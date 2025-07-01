@@ -31,7 +31,7 @@ const AboutServicesCards = () => {
     </div>
     <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="100">Expertise That Understands Your Domain</h1>
     <p className="about-p-Container text-center" data-aos="blur-to-clear" data-aos-delay="100">
-        From Manufacturing and Logistics to Oil & Gas and BFSI, we bring deep sector knowledge and a vast talent network. Our industry-aligned recruitment ensures every hire matches your technical needs and cultural goals.
+        From Manufacturing, Automotive, Construction to Fashion Retail and Luxury, we bring deep sector knowledge and a vast talent network. Our industry-aligned recruitment ensures every hire matches your technical needs and cultural goals.
     </p>
 </div>
 

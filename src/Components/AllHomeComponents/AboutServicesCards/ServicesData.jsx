@@ -1,7 +1,7 @@
 const ServicesCardsContent = [
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Manufacturing: Engineering .jpg",
-        title: "Manufacturing/Engineering",
+        title: "Manufacturing / Engineering",
         description: "We connect leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
         subtitle: "Connecting leading companies with skilled engineers, production managers, and technical specialists who drive innovation and operational excellence in the manufacturing sector.",
         overview: "Our Manufacturing & Engineering recruitment division specializes in connecting leading companies with exceptional technical talent across all levels of the manufacturing sector. We understand the unique challenges and requirements of this dynamic industry, from precision engineering to large-scale production operations.",
@@ -34,7 +34,7 @@ const ServicesCardsContent = [
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Retail:Logistics .jpg",
-        title: "Retail/Logistics",
+        title: "Retail / Logistics",
         description: "Our expertise lies in sourcing talent for supply chain management, retail operations, and e-commerce logistics, finding candidates who enhance efficiency and customer experience.",
         subtitle: "Sourcing talent for supply chain management, retail operations, and e-commerce logistics to enhance efficiency and customer experience.",
         overview: "We excel in sourcing talent for retail operations, supply chain management, and e-commerce logistics, helping businesses optimize their operations and enhance customer experience. Our comprehensive understanding of the retail and logistics landscape enables us to identify professionals who can drive operational excellence.",
@@ -61,39 +61,6 @@ const ServicesCardsContent = [
                     "Retail technology implementation",
                     "Omnichannel retail strategies",
                     "Merchandising and visual merchandising"
-                ]
-            }
-        ]
-    },
-    {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/Oil:Gas .jpg",
-        title: "Oil/Gas",
-        description: "We specialize in recruiting certified professionals for the oil and gas industry, including petroleum engineers and project managers who meet the highest standards of safety and compliance.",
-        subtitle: "Recruiting certified professionals for the oil and gas industry who meet the highest standards of safety, compliance, and technical expertise.",
-        overview: "Our Oil & Gas recruitment team specializes in placing certified professionals who meet the highest standards of safety, compliance, and technical expertise in this critical industry. We understand the complex regulatory environment and technical requirements that define success in this sector.",
-        mainPoints: [
-            {
-                title: "Safety & Compliance Excellence",
-                description: "We prioritize candidates with strong safety records and compliance knowledge, ensuring they meet the rigorous standards required in the oil and gas industry.",
-                subPoints: [
-                    "HSE (Health, Safety & Environment) compliance",
-                    "Risk assessment and management",
-                    "Emergency response planning",
-                    "Regulatory compliance and reporting",
-                    "Safety training and certification",
-                    "Environmental protection and sustainability"
-                ]
-            },
-            {
-                title: "Technical Expertise & Project Management",
-                description: "Our recruitment process identifies professionals with deep technical knowledge and proven project management capabilities in oil and gas operations.",
-                subPoints: [
-                    "Petroleum engineering and reservoir management",
-                    "Drilling operations and well completion",
-                    "Production optimization and maintenance",
-                    "Project planning and execution",
-                    "Cost control and budget management",
-                    "Stakeholder communication and coordination"
                 ]
             }
         ]
@@ -133,7 +100,7 @@ const ServicesCardsContent = [
     },
     {
         image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/IT :E-Commerce .jpg",
-        title: "IT /E-Commerce",
+        title: "IT / E-Commerce",
         description: "We find top tech talent, from software developers to cybersecurity experts and e-commerce strategists, to help businesses innovate and thrive in the digital landscape.",
         subtitle: "Finding top tech talent to help businesses innovate and thrive in the digital landscape through cutting-edge technology solutions.",
         overview: "We find top tech talent, from software developers to cybersecurity experts and e-commerce strategists, to help businesses innovate and thrive in the digital landscape. Our expertise covers the full spectrum of technology roles needed for digital transformation.",
