@@ -8,10 +8,14 @@ const NavigationLinks = [
         link: "About Us",
         path: "/about-us",
     },
+    {
+        link: "SanguineLife",
+        path: "/sanguine-life",
+    },
     // {
     //     link: "Services",
     //     path: "",
-      
+
     // },
     // {
     //     link: "Blogs",

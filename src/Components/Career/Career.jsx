@@ -42,16 +42,16 @@ const Career = () => {
     return (
         <>
             <div id="CareerContainer">
-                <div  data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
-                <TopPartCommon
-    tag="Careers"
-    title="Join Our Team"
-    highlight="Grow With Sanguine"
-    subtitle="At Sanguine Recruitment, we value passion, purpose, and potential. Explore career opportunities where you can thrive, innovate, and make a meaningful impact every day."
-/>
+                <div data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">
+                    <TopPartCommon
+                        tag="Careers"
+                        title="Join Our Team"
+                        highlight="Grow With Sanguine"
+                        subtitle="At Sanguine Recruitment, we value passion, purpose, and potential. Explore career opportunities where you can thrive, innovate, and make a meaningful impact every day."
+                    />
 
                 </div>
-               
+
             </div>
             <Positions />
         </>

@@ -1,0 +1,599 @@
+/* SanguineLife Main Container */
+.sanguine-life-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.sanguine-life-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgb(12 31 36 / 93%) 0%, rgb(12 31 36 / 88%) 50%, rgba(12, 31, 36, 0.8) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.h2-gradient {
+    background: linear-gradient(45deg, var(--primary-color), #1a6985);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.h2-gradient-white {
+    background: linear-gradient(45deg, #ffffff, #e2e8f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Culture Section */
+.culture-section {
+    background: #f8f9fa;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.culture-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(12, 31, 36, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), #1a6985);
+    transition: left 0.5s ease;
+}
+
+.culture-card:hover::before {
+    left: 0;
+}
+
+.culture-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(12, 31, 36, 0.15);
+    border-color: var(--primary-color);
+}
+
+.culture-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--primary-color), #1a6985);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.culture-card:hover .culture-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, #1a6985, var(--primary-color));
+}
+
+.culture-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.culture-card p {
+    color: var(--para-color);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Work Life Section */
+.work-life-section {
+    background: white;
+}
+
+.work-life-grid {
+    margin-top: 60px;
+}
+
+.work-life-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(12, 31, 36, 0.1);
+}
+
+.work-life-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(12, 31, 36, 0.2);
+}
+
+.work-life-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.work-life-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.work-life-card:hover .work-life-image img {
+    transform: scale(1.08);
+    filter: brightness(1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,
+            rgba(12, 31, 36, 0.1) 0%,
+            rgba(12, 31, 36, 0.3) 30%,
+            rgba(12, 31, 36, 0.7) 70%,
+            rgba(12, 31, 36, 0.95) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.work-life-card:hover .image-overlay {
+    background: linear-gradient(to bottom,
+            rgba(12, 31, 36, 0.05) 0%,
+            rgba(12, 31, 36, 0.2) 30%,
+            rgba(12, 31, 36, 0.6) 70%,
+            rgba(12, 31, 36, 0.9) 100%);
+}
+
+.overlay-content {
+    color: white;
+    text-align: left;
+    width: 100%;
+}
+
+.overlay-content h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Environment Section */
+.team-environment-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-environment-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
+    z-index: 1;
+}
+
+.team-environment-section .paddingSection {
+    position: relative;
+    z-index: 2;
+}
+
+.environment-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.environment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.environment-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Growth Section */
+.growth-section {
+    background: #f8f9fa;
+}
+
+.benefits-container {
+    margin-top: 60px;
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(12, 31, 36, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+    /* height: 100%; */
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(12, 31, 36, 0.15);
+    border-color: var(--primary-color);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, var(--primary-color), #1a6985);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #1a6985, var(--primary-color));
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.benefit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.benefit-card li {
+    color: var(--para-color);
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.benefit-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cta-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(12, 31, 36, 0.8) 0%,
+            rgba(12, 31, 36, 0.6) 50%,
+            rgba(12, 31, 36, 0.8) 100%);
+    z-index: 2;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.cta-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .culture-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .culture-card {
+        padding: 30px 20px;
+    }
+
+    .work-life-card {
+        height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .work-life-grid .ant-row {
+        --bs-gutter-x: 20px;
+    }
+
+    .environment-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .environment-content p {
+        font-size: 1rem;
+    }
+
+    .benefit-card {
+        padding: 30px 20px;
+    }
+
+    .cta-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta-content p {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .culture-card {
+        padding: 25px 15px;
+    }
+
+    .work-life-card {
+        height: 320px;
+        margin-bottom: 15px;
+    }
+
+    .image-overlay {
+        padding: 20px;
+    }
+
+    .overlay-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .overlay-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .environment-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .benefit-card {
+        padding: 25px 15px;
+    }
+
+    .cta-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-content {
+        padding: 40px 15px;
+    }
+}
+
+/* Animation Enhancements */
+.culture-card,
+.work-life-card,
+.benefit-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover animations for interactive elements */
+.culture-icon,
+.benefit-icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.culture-icon::after,
+.benefit-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.culture-card:hover .culture-icon::after,
+.benefit-card:hover .benefit-icon::after {
+    width: 100%;
+    height: 100%;
+}
+
+/* Floating animation for icons */
+.culture-icon,
+.benefit-icon {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Stagger the floating animations */
+.culture-card:nth-child(1) .culture-icon,
+.benefit-card:nth-child(1) .benefit-icon {
+    animation-delay: 0s;
+}
+
+.culture-card:nth-child(2) .culture-icon,
+.benefit-card:nth-child(2) .benefit-icon {
+    animation-delay: 1s;
+}
+
+.culture-card:nth-child(3) .culture-icon,
+.benefit-card:nth-child(3) .benefit-icon {
+    animation-delay: 2s;
+}
+
+.culture-card:nth-child(4) .culture-icon {
+    animation-delay: 3s;
+}

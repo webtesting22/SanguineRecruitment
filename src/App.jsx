@@ -16,7 +16,7 @@ import WhatsappButton from './Components/CommonUsedComponents/WhatsappButton/Wha
 import Cookies from './Components/CommonUsedComponents/Cookies/Cookies';
 import NotFound from './Components/NotFound/NotFound';
 import SeparateServiceComponent from './Components/Services/SeparateServiceComponent';
-
+import SanguineLife from './Components/SanguineLife/SanguineLife';
 function App() {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem("email") && localStorage.getItem("password");
@@ -28,7 +28,7 @@ function App() {
     <>
       {!isAuthPage && <MegaNavigation />}
       <Routes>
-      <Route path='*' element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
         <Route path='/' element={<AllHomeComponents />} />
         <Route path='/about-us' element={<AboutUsSeparate />} />
         <Route path='/career' element={<Career />} />
@@ -37,6 +37,7 @@ function App() {
         <Route path='/services/:slug' element={<SeparateServiceComponent />} />
         <Route path='/sign-in' element={<PortalLogin />} />
         <Route path='/testimonials' element={<Testimonials />} />
+        <Route path='/sanguine-life' element={<SanguineLife />} />
         {/* <Route path='/dashboardIndex' element={<DashboardIndex />} /> */}
         <Route
           path='/dashboard'

@@ -118,3 +118,209 @@
         font-size: 1rem;
     }
 }
+
+/* Job Details Modal Styles */
+.job-details-modal .ant-modal-content {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.job-details-modal .ant-modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a365d 100%);
+    border-bottom: none;
+    padding: 24px 24px 20px;
+}
+
+.job-details-modal .ant-modal-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.job-details-modal .ant-modal-close {
+    color: white;
+}
+
+.job-details-modal .ant-modal-close:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.job-details-content {
+    padding: 0;
+}
+
+.job-details-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.job-details-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.job-meta-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.meta-item {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.meta-item strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.job-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.job-tags .ant-tag {
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.job-details-description,
+.job-details-requirements,
+.job-details-qualification,
+.job-details-responsibilities,
+.job-details-what-youll-do,
+.job-details-benefits {
+    margin-bottom: 25px;
+}
+
+.job-details-description h3,
+.job-details-requirements h3,
+.job-details-qualification h3,
+.job-details-responsibilities h3,
+.job-details-what-youll-do h3,
+.job-details-benefits h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.job-details-description p,
+.job-details-qualification p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.job-details-requirements ul,
+.job-details-responsibilities ul,
+.job-details-what-youll-do ul,
+.job-details-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-details-requirements li,
+.job-details-responsibilities li,
+.job-details-what-youll-do li,
+.job-details-benefits li {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.job-details-requirements li::before,
+.job-details-responsibilities li::before,
+.job-details-what-youll-do li::before,
+.job-details-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.job-details-actions {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.job-details-actions .slide-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.job-details-actions .slide-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 70, 117, 0.3);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .job-details-modal .ant-modal {
+        margin: 16px;
+        max-width: calc(100vw - 32px);
+    }
+    
+    .job-details-modal .ant-modal-content {
+        border-radius: 12px;
+    }
+    
+    .job-details-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .job-meta-info {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 12px;
+    }
+    
+    .meta-item {
+        font-size: 0.9rem;
+    }
+    
+    .job-details-description h3,
+    .job-details-requirements h3,
+    .job-details-qualification h3,
+    .job-details-responsibilities h3,
+    .job-details-what-youll-do h3,
+    .job-details-benefits h3 {
+        font-size: 1.1rem;
+    }
+    
+    .job-details-description p,
+    .job-details-qualification p,
+    .job-details-requirements li,
+    .job-details-responsibilities li,
+    .job-details-what-youll-do li,
+    .job-details-benefits li {
+        font-size: 0.95rem;
+    }
+}
