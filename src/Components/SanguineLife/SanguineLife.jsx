@@ -59,15 +59,16 @@ const SanguineLife = () => {
     ];
 
     const workLifeHighlights = [
-        {
-            image: "/images/SanguineLifeImages/5.jpeg",
-            title: "Modern Workspace",
-            description: "State-of-the-art office designed for comfort, productivity, and collaboration"
-        },
+        
         {
             image: "/images/SanguineLifeImages/2.jpeg",
             title: "Team Building",
             description: "Regular team activities and events that strengthen bonds and create lasting memories"
+        },
+        {
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/IMG-20220120-WA0036.jpg",
+            title: "Celebrating Together",
+            description: "Special moments and celebrations that make every team member feel valued and appreciated"
         },
         {
             image: "/images/SanguineLifeImages/3.jpeg",
@@ -75,15 +76,16 @@ const SanguineLife = () => {
             description: "Continuous learning opportunities, workshops, and skill enhancement programs"
         },
         {
+            image: "/images/SanguineLifeImages/5.jpeg",
+            title: "Modern Workspace",
+            description: "State-of-the-art office designed for comfort, productivity, and collaboration"
+        },
+        {
             image: "/images/SanguineLifeImages/4.jpeg",
             title: "Flexible Work Culture",
             description: "Hybrid work options and flexible schedules that support work-life balance"
         },
-        {
-            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/IMG-20220120-WA0036.jpg",
-            title: "Celebrating Together",
-            description: "Special moments and celebrations that make every team member feel valued and appreciated"
-        }
+        
     ];
 
     return (
