@@ -78,6 +78,11 @@ const SanguineLife = () => {
             image: "/images/SanguineLifeImages/4.jpeg",
             title: "Flexible Work Culture",
             description: "Hybrid work options and flexible schedules that support work-life balance"
+        },
+        {
+            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/IMG-20220120-WA0036.jpg",
+            title: "Celebrating Together",
+            description: "Special moments and celebrations that make every team member feel valued and appreciated"
         }
     ];
 
@@ -183,7 +188,13 @@ const SanguineLife = () => {
                     <div className="work-life-grid margin-100">
                         <Row gutter={[30, 30]}>
                             {workLifeHighlights.map((highlight, index) => (
-                                <Col lg={12} md={12} sm={24} xs={24} key={index}>
+                                <Col 
+                                    lg={index < 3 ? 8 : 12} 
+                                    md={index < 3 ? 8 : 12} 
+                                    sm={24} 
+                                    xs={24} 
+                                    key={index}
+                                >
                                     <div
                                         className="work-life-card"
                                         data-aos="blur-to-clear"
@@ -270,7 +281,7 @@ const SanguineLife = () => {
                         <h1 className="" data-aos="blur-to-clear" data-aos-delay="200">
                             Invest in Your <span className="black">Future</span> with Us
                         </h1>
-                        <p className="" data-aos="blur-to-clear" data-aos-delay="300">
+                        <p className=" text-center" data-aos="blur-to-clear" data-aos-delay="300">
                             We're committed to your professional development and well-being. Discover the comprehensive benefits and growth opportunities that make Sanguine Life the ideal place to build your career.
                         </p>
                     </div>

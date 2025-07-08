@@ -19,21 +19,21 @@ const AboutServicesCards = () => {
         const slug = service.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
         navigate(`/services/${slug}`);
     };
-   
+
     return (
         <section className="container paddingSection">
             <div className="about-services-content hero-home-content">
                 <div style={{ width: "100%" }}>
-                <div className="Common-header">
-    <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
-        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
-        <h2 className="text-center h2-gradient">Tailored Hiring for Every Industry</h2>
-    </div>
-    <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="100">Expertise That Understands Your Domain</h1>
-    <p className="about-p-Container text-center" data-aos="blur-to-clear" data-aos-delay="100">
-        From Manufacturing, Automotive, Construction to Fashion Retail and Luxury, we bring deep sector knowledge and a vast talent network. Our industry-aligned recruitment ensures every hire matches your technical needs and cultural goals.
-    </p>
-</div>
+                    <div className="Common-header">
+                        <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
+                            <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                            <h2 className="text-center h2-gradient">Tailored Hiring for Every Industry</h2>
+                        </div>
+                        <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="100">Expertise That Understands Your Domain</h1>
+                        <p className="about-p-Container text-center" data-aos="blur-to-clear" data-aos-delay="100">
+                            From Manufacturing, Automotive, Construction to Fashion Retail and Luxury, we bring deep sector knowledge and a vast talent network. Our industry-aligned recruitment ensures every hire matches your technical needs and cultural goals.
+                        </p>
+                    </div>
 
                     <div className="ServicesCardsContainer centerContainer margin-100">
                         <Swiper
@@ -73,7 +73,7 @@ const AboutServicesCards = () => {
                         >
                             {ServicesCardsContent.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div 
+                                    <div
                                         className="AnimatedCardsHoverAnimation"
                                         data-aos="blur-to-clear"
                                         data-aos-delay="100"
