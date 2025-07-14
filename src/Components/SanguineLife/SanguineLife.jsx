@@ -59,7 +59,7 @@ const SanguineLife = () => {
     ];
 
     const workLifeHighlights = [
-        
+
         {
             image: "/images/SanguineLifeImages/2.jpeg",
             title: "Team Building",
@@ -85,7 +85,7 @@ const SanguineLife = () => {
             title: "Flexible Work Culture",
             description: "Hybrid work options and flexible schedules that support work-life balance"
         },
-        
+
     ];
 
     return (
@@ -190,11 +190,11 @@ const SanguineLife = () => {
                     <div className="work-life-grid margin-100">
                         <Row gutter={[30, 30]}>
                             {workLifeHighlights.map((highlight, index) => (
-                                <Col 
-                                    lg={index < 3 ? 8 : 12} 
-                                    md={index < 3 ? 8 : 12} 
-                                    sm={24} 
-                                    xs={24} 
+                                <Col
+                                    lg={index < 3 ? 8 : 12}
+                                    md={index < 3 ? 8 : 12}
+                                    sm={24}
+                                    xs={24}
                                     key={index}
                                 >
                                     <div
@@ -240,16 +240,16 @@ const SanguineLife = () => {
                                     <p style={{ color: 'rgba(255, 255, 255, 0.8)' }}>
                                         With over a decade of industry expertise, our collaborative environment ensures every team member can contribute meaningfully to our client's success while building a rewarding career.
                                     </p> */}
-                                    <div className="Common-header" style={{alignItems:"unset"}}>
+                                    <div className="Common-header" style={{ alignItems: "unset" }}>
                                         <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
                                             <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
                                             <h2 className="h2-gradient">Team Environment</h2>
                                         </div>
                                         <h1 className="white" data-aos="blur-to-clear" data-aos-delay="200">
-                                        Where Innovation Meets Collaboration
+                                            Where Innovation Meets Collaboration
                                         </h1>
                                         <p className="white" data-aos="blur-to-clear" data-aos-delay="300">
-                                        Our leadership team drives innovation and inspires our people to deliver solutions that consistently exceed expectations. We embrace technological advancements while nurturing a culture of continuous learning and strategic thinking.
+                                            Our leadership team drives innovation and inspires our people to deliver solutions that consistently exceed expectations. We embrace technological advancements while nurturing a culture of continuous learning and strategic thinking.
                                         </p>
                                         <p className="white" data-aos="blur-to-clear" data-aos-delay="300">With over a decade of industry expertise, our collaborative environment ensures every team member can contribute meaningfully to our client's success while building a rewarding career.</p>
                                     </div>

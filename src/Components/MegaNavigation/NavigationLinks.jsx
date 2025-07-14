@@ -1,6 +1,6 @@
 const NavigationLinks = [
     {
-        link: "Home",
+        link: "Welcome",
         path: "/"
     },
 
@@ -25,7 +25,7 @@ const NavigationLinks = [
     //     ]
     // },
     {
-        link: "Career",
+        link: "Jobs We Hire For",
         path: "/career",
         sublink: [
 

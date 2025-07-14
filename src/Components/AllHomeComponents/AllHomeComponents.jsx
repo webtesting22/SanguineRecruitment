@@ -10,7 +10,9 @@ const AllHomeComponents = () => {
         <div>
             <HeroHome />
             <AboutServicesCards />
+            <SanguineClients/>
             <OurServices />
+       
             {/* <SanguineClients /> */}
             <Testimonials />
             {/* <ContactCommonSection /> */}

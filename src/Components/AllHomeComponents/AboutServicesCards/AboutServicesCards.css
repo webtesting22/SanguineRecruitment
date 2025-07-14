@@ -18,6 +18,7 @@
     /* background-color: red; */
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .AnimatedCardsHoverAnimation:hover img {
