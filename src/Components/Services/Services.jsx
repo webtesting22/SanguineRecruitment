@@ -26,7 +26,7 @@ const Services = () => {
                             Our Industry Expertise
                         </h1>
                         <p className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-                            At Sanguine Recruitment, we bring deep expertise across core industries such as Manufacturing, Logistics, Oil & Gas, and BFSI. Our team understands the specific skill demands and hiring dynamics of each sector — enabling us to deliver high-impact talent with precision and speed.
+                            At Sanguine Recruitment, we bring deep expertise across core industries such as Manufacturing, Logistics, and BFSI. Our team understands the specific skill demands and hiring dynamics of each sector — enabling us to deliver high-impact talent with precision and speed.
                         </p>
 
 
