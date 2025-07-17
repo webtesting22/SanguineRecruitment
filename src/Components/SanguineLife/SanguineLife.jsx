@@ -336,33 +336,6 @@ const SanguineLife = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Final CTA Section */}
-            {/* <div className="final-cta-section">
-                <div className="cta-background">
-                    <img src="/images/SanguineLifeImages/7.jpeg" alt="Join Our Team" />
-                    <div className="cta-overlay"></div>
-                </div>
-                <div className="cta-content">
-                    <div className="container">
-                        <div className="text-center" data-aos="blur-to-clear" data-aos-delay="200">
-                            <h1 style={{ color: 'white', marginBottom: '20px' }}>
-                                Ready to Start Your <span style={{ color: '#ffffff' }}>Sanguine Life</span> Journey?
-                            </h1>
-                            <p style={{ color: 'rgba(255, 255, 255, 0.9)', fontSize: '1.2rem', marginBottom: '40px' }}>
-                                Join a team where passion meets purpose, innovation drives success, and every day brings new opportunities to grow and make a meaningful impact.
-                            </p>
-                            <div className="cta-buttons">
-                                <AnimatedBtn
-                                    text="View Open Positions"
-                                    hoverText="Explore Careers"
-                                    icon={<RiUserSmileFill />}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
 };

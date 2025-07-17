@@ -12,6 +12,10 @@ const NavigationLinks = [
         link: "SanguineLife",
         path: "/sanguine-life",
     },
+    {
+        link: "Work With Sanguine",
+        path: "/work-with-sanguine",
+    },
     // {
     //     link: "Services",
     //     path: "",

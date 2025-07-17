@@ -1,7 +1,43 @@
+/* Career Section Styles */
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign {
+    height: 100%;
+    background-color: #f8f9fa;
+    transform: translateY(0px);
+    transition: all 0.2s ease;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign>div {
+    padding: 20px;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col .CareerCardDesign h2 {
+    margin-bottom: 20px;
+}
+
+/* Even numbered cards styling */
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign {
+    background-color: var(--primary-color);
+}
+
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign h2 {
+    color: white;
+}
+
+.CareerCardDesignContainer .ant-row .ant-col:nth-child(even) .CareerCardDesign .consultation {
+    background-color: white;
+    color: var(--primary-color);
+}
+
 /* SanguineLife Main Container */
 .sanguine-life-container {
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* Hero Section */

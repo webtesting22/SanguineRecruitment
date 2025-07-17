@@ -68,4 +68,8 @@
         padding-left: 10px;
         padding-right: 10px;
     }
+    .Common-header{
+        position: relative;
+        overflow: hidden !important;
+    }
 }
