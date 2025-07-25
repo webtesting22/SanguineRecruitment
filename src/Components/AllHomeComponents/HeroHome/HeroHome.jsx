@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -8,6 +8,14 @@ import 'swiper/css/effect-fade';
 import "./HeroHome.css";
 
 const HeroHome = () => {
+    // const videoRef = useRef(null);
+
+    // useEffect(() => {
+    //     if (videoRef.current) {
+    //         videoRef.current.playbackRate = 0.5; // Adjust speed here (0.5 = half speed, 2.0 = double speed)
+    //     }
+    // }, []);
+
     const slides = [
         {
             id: 1,
@@ -52,7 +60,13 @@ const HeroHome = () => {
                         <SwiperSlide key={slide.id}>
                             <div className="slide-container">
                                 <div className="slide-image">
-                                    <img src={slide.image} alt={slide.title} />
+                                    <video 
+                                        // ref={videoRef}
+                                        src="https://prepseed.s3.ap-south-1.amazonaws.com/prod/ldoc/chat/SanguineBackgroundVideo.mp4" 
+                                        muted 
+                                        autoPlay 
+                                        loop 
+                                    />
                                 </div>
                                 <div className="slide-overlay"></div>
                                 <div className="slide-content">

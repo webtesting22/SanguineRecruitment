@@ -246,10 +246,10 @@ const SanguineLife = () => {
                                             <h2 className="h2-gradient">Team Environment</h2>
                                         </div>
                                         <h1 className="white" data-aos="blur-to-clear" data-aos-delay="200">
-                                            Where Innovation Meets Collaboration
+                                        Where Innovation Meets Collaboration
                                         </h1>
                                         <p className="white" data-aos="blur-to-clear" data-aos-delay="300">
-                                            Our leadership team drives innovation and inspires our people to deliver solutions that consistently exceed expectations. We embrace technological advancements while nurturing a culture of continuous learning and strategic thinking.
+                                        Our leadership team drives innovation and inspires our people to deliver solutions that consistently exceed expectations. We embrace technological advancements while nurturing a culture of continuous learning and strategic thinking.
                                         </p>
                                         <p className="white" data-aos="blur-to-clear" data-aos-delay="300">With over a decade of industry expertise, our collaborative environment ensures every team member can contribute meaningfully to our client's success while building a rewarding career.</p>
                                     </div>
