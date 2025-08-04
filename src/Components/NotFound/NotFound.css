@@ -56,7 +56,8 @@
 }
 
 .not-found-button:hover {
-    background-color: #1a4a5a; /* Darker shade of primary color */
+    background-color: #1a4a5a;
+    /* Darker shade of primary color */
     transform: translateY(-2px);
 }
 
@@ -78,7 +79,7 @@
         flex-direction: column;
         text-align: center;
     }
-    
+
     .not-found-content {
         text-align: center;
     }

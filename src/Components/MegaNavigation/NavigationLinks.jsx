@@ -9,7 +9,7 @@ const NavigationLinks = [
         path: "/about-us",
     },
     {
-        link: "Sanguine@Life",
+        link: "Life@Sanguine",
         path: "/sanguine-life",
     },
     {
