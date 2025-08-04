@@ -7,10 +7,12 @@ const MegaNavigation = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
     const [navVisible, setNavVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isHomePage, setIsHomePage] = useState(window.location.pathname === '/');
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 992);
-        
+
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -19,16 +21,34 @@ const MegaNavigation = () => {
                 setNavVisible(true);
             }
             setLastScrollY(currentScrollY);
+            
+            // Add scroll detection for desktop navigation color change - only on home page
+            if (isHomePage) {
+                if (currentScrollY > 50) {
+                    setIsScrolled(true);
+                } else {
+                    setIsScrolled(false);
+                }
+            }
+        };
+
+        const handleRouteChange = () => {
+            const currentPath = window.location.pathname;
+            setIsHomePage(currentPath === '/');
+            // Reset scroll state when route changes
+            setIsScrolled(false);
         };
 
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
-        
+        window.addEventListener('popstate', handleRouteChange);
+
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('popstate', handleRouteChange);
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, isHomePage]);
 
     const showDrawer = () => {
         setDrawerVisible(true);
@@ -39,7 +59,7 @@ const MegaNavigation = () => {
     };
 
     return (
-        <div className={`mega-nav-container ${navVisible ? 'visible' : 'hidden'}`}>
+        <div className={`mega-nav-container ${navVisible ? 'visible' : 'hidden'} ${isHomePage ? 'home-page' : ''} ${isHomePage && isScrolled ? 'scrolled' : ''}`}>
             <div className="nav-logo">
                 <a href="/">
                     <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="Sanguine Logo" />
@@ -54,26 +74,26 @@ const MegaNavigation = () => {
                 </div>
             ) : (
                 <>
-                 <div className="desktop-nav">
-                     <div className="desktop-nav-links">
-                         {NavigationLinks.map((link, index) => (
-                             <a href={link.path} key={index} className="desktop-link">
-                                 {link.link}
-                             </a>
-                         ))}
-                     </div>
-                   
-                </div>
-                <div>
-                      <Button type="primary" className="lets-talk-btn">
-                         Let's Talk
-                     </Button>
-                 </div>
+                    <div className="desktop-nav">
+                        <div className="desktop-nav-links">
+                            {NavigationLinks.map((link, index) => (
+                                <a href={link.path} key={index} className="desktop-link">
+                                    {link.link}
+                                </a>
+                            ))}
+                        </div>
+
+                    </div>
+                    <div>
+                        <Button type="primary" className="lets-talk-btn">
+                            Let's Talk
+                        </Button>
+                    </div>
                 </>
-             )}
-            
+            )}
+
             {isMobile && (
-                 <Drawer
+                <Drawer
                     placement="right"
                     onClose={onClose}
                     visible={drawerVisible}
