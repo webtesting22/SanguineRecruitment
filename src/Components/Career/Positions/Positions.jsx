@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Tag, Row, Col, Modal } from "antd";
 import "./Positions.css";
 import CareerApplicationModal from "../../CommonUsedComponents/CareerApplicationModal/CareerApplicationModal";
+import CareerPositions from "./PositionsData";
 
 const Positions = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -30,74 +31,6 @@ const Positions = () => {
         setIsJobDetailsModalVisible(false);
         setSelectedPosition(null);
     };
-
-    const CareerPositions = [
-        {
-            positionTitle: "Warehouse Operations Manager",
-            positionDescription: "We are looking for a highly organized and proactive Warehouse Operations Manager to join our growing team in Noida. This is a critical role focused on ensuring smooth and efficient warehouse operations across B2C and B2B channels.",
-            positionTag: ["Full Time", "On-Site", "Noida"],
-            location: "Noida",
-            designation: "Manager – Warehouse Operations",
-            experience: "7+ Years",
-            industry: "Retail",
-            aboutRole: "We are looking for a highly organized and proactive Warehouse Operations Manager to join our growing team in Noida. This is a critical role focused on ensuring smooth and efficient warehouse operations across B2C and B2B channels. You will play a key role in driving performance, managing inventory health, and leading a warehouse team aligned with our business priorities.",
-            experienceSkills: [
-                "Strong leadership and problem-solving abilities",
-                "Ability to collaborate across departments and levels",
-                "Demonstrated integrity, adaptability, and time management",
-                "Team player with excellent interpersonal skills",
-                "Sound understanding of logistics processes, shipping policies, and 3PL management"
-            ],
-            qualification: "Graduate (Bachelor's degree in any discipline)",
-            rolesResponsibilities: [
-                "Monitor and ensure SLA compliance across all sales channels",
-                "Oversee complete B2C operations — order processing, fulfillment, and dispatch",
-                "Liaise with Increff and channel partners to resolve SLA breaches",
-                "Coordinate with admin for packing material stock and replenishment",
-                "Supervise daily cycle counts to maintain healthy inventory",
-                "Manage Flipkart B2B operations — from PI creation to dispatch and delivery tracking",
-                "Provide Shopify packing videos to CRM team on request",
-                "Compile and analyze warehouse performance data",
-                "Release internal warehouse POs and manage offline PO inventory blocks",
-                "Confirm daily returns and share OTC updates with the Ekart team",
-                "Schedule and supervise warehouse and delivery staff for efficient operations",
-                "Oversee stock control and reconcile physical vs system inventory",
-                "Ensure warehouse safety, SOP adherence, and regulatory compliance",
-                "Generate weekly performance reports and action plans",
-                "Coordinate all inbound and outbound shipments, ensuring timely dispatch and order priority management"
-            ],
-            whyJoinUs: [
-                "Fast-paced, entrepreneurial work culture",
-                "Opportunity to lead operations in a high-growth environment",
-                "Work directly with the founder and cross-functional teams",
-                "Make a direct impact on supply chain efficiency and customer satisfaction"
-            ]
-        },
-        {
-            positionTitle: "Google Ads Specialist",
-            positionDescription: "We're looking for a Google Ads Specialist to join our in-house performance marketing team. You'll manage and scale Google campaigns across Search, Display, Shopping, YouTube, and Performance Max, driving high-impact results for our fast-growing fashion brand.",
-            positionTag: ["Full Time", "Hybrid", "Noida"],
-            location: "Noida / Hybrid",
-            designation: "Sr. Executive / Assistant Manager – Performance Marketing (Google)",
-            experience: "2–4 years",
-            industry: "Retail",
-            aboutRole: "We're looking for a Google Ads Specialist to join our in-house performance marketing team. You'll manage and scale Google campaigns across Search, Display, Shopping, YouTube, and Performance Max, driving high-impact results for our fast-growing fashion brand.",
-            whatYoullDo: [
-                "Run and optimize Google Ads campaigns for ROAS, CTR & CAC",
-                "Manage full-funnel tracking (GTM, GA4, Conversion APIs)",
-                "Collaborate on creatives & landing pages with content/design teams",
-                "Monitor daily performance, report insights, and run A/B tests",
-                "Keep up with Google Ads trends & competitive benchmarks"
-            ],
-            whatWereLookingFor: [
-                "2–4 years of experience in Google Ads (fashion/eCommerce preferred)",
-                "Google Ads certified (Search, Display, Shopping, etc.)",
-                "Strong analytics & campaign strategy skills",
-                "Familiar with GA4, Tag Manager, and Data Studio",
-                "A data-driven thinker with a fashion-forward mindset"
-            ]
-        }
-    ];
 
     return (
         <div className="position-container margin-100">
@@ -228,7 +161,7 @@ const Positions = () => {
                                 ))}
                             </div>
                         </div>
-                        
+
                         <div className="job-details-description">
                             <h3>About the Role</h3>
                             <p>{selectedPosition.aboutRole}</p>
@@ -300,9 +233,9 @@ const Positions = () => {
                             <button
                                 className="slide-btn consultation"
                                 onClick={showApplicationModal}
-                                style={{ 
-                                    minWidth: "200px", 
-                                    padding: "12px 24px", 
+                                style={{
+                                    minWidth: "200px",
+                                    padding: "12px 24px",
                                     fontSize: "16px",
                                     marginTop: "20px"
                                 }}
