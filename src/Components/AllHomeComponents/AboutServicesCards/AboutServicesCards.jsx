@@ -85,12 +85,12 @@ const AboutServicesCards = () => {
                                         <img src={item.image} alt="" />
                                         <div className="ContentButtonContainer">
                                             <Row className="w-100">
-                                                <Col lg={20}>
+                                                <Col lg={20} md={20} sm={20} xs={20}>
                                                     <div style={{ height: "100%", display: "flex", alignItems: "center" }}>
                                                         <h2 className="white">{item.title}</h2>
                                                     </div>
                                                 </Col>
-                                                <Col lg={4}>
+                                                <Col lg={4} md={4} sm={4} xs={4}>
                                                     <div className="AnimatedArrowContainer">
                                                         <FaArrowRight />
                                                     </div>

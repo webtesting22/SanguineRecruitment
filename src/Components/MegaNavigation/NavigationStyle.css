@@ -110,12 +110,12 @@
 .drawer-nav-links {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .drawer-link {
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     text-decoration: none;
     margin: 1rem 0;
@@ -132,7 +132,7 @@
 /* Responsive */
 @media(max-width: 768px) {
     .drawer-link {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
