@@ -29,7 +29,7 @@ const NavigationLinks = [
     //     ]
     // },
     {
-        link: "Jobs We Hire For",
+        link: "Client Opportunities",
         path: "/career",
         sublink: [
 
