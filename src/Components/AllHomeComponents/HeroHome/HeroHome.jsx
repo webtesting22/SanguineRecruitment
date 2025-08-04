@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -8,25 +8,17 @@ import 'swiper/css/effect-fade';
 import "./HeroHome.css";
 
 const HeroHome = () => {
-    // const videoRef = useRef(null);
-
-    // useEffect(() => {
-    //     if (videoRef.current) {
-    //         videoRef.current.playbackRate = 0.5; // Adjust speed here (0.5 = half speed, 2.0 = double speed)
-    //     }
-    // }, []);
-
     const slides = [
         {
             id: 1,
-            image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/HomePageBanner.jpeg",
+            video: "https://prepseed.s3.ap-south-1.amazonaws.com/prod/ldoc/chat/SanguineBackgroundVideo.mp4",
             title: "Beyond Recruitment, We Build Partnerships",
             subtitle: "",
             description: "We dive deep into your culture, goals, and challenges. So every hire isn't just a fit — it's a long-term asset."
         },
         {
             id: 2,
-            image: "https://cdn.prod.website-files.com/680534957b5199127f2857e6/680ceae48021e647f307f1ee_image.avif",
+            video: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/WhatsApp Video 2025-08-04 at 10.35.53.mp4",
             title: "Hire Smarter. Grow Faster.",
             subtitle: "",
             description: "From startups to enterprises, we deliver aligned talent solutions. Spend less time screening, more time scaling."
@@ -43,7 +35,7 @@ const HeroHome = () => {
                     slidesPerView={1}
                     loop={true}
                     autoplay={{
-                        delay: 3000,
+                        delay: 5000,
                         disableOnInteraction: false,
                     }}
                     pagination={{
@@ -60,12 +52,12 @@ const HeroHome = () => {
                         <SwiperSlide key={slide.id}>
                             <div className="slide-container">
                                 <div className="slide-image">
-                                    <video 
-                                        // ref={videoRef}
-                                        src="https://prepseed.s3.ap-south-1.amazonaws.com/prod/ldoc/chat/SanguineBackgroundVideo.mp4" 
-                                        muted 
-                                        autoPlay 
-                                        loop 
+                                    <video
+                                        src={slide.video}
+                                        muted
+                                        autoPlay
+                                        loop
+                                        playsInline
                                     />
                                 </div>
                                 <div className="slide-overlay"></div>

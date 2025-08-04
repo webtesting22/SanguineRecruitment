@@ -7,19 +7,31 @@ const testimonialsRow1 = [
         name: "ASMITA GAUTAM",
         role: "HR Business Partner",
         Description: "Landmark Group, Dubai",
-        quote: "Sanguine Recruitment is a highly competent consulting firm led by an exceptional team of professionals. Their ability to deeply understand client requirements and deliver high-quality talent is truly impressive. During my time at Landmark Group, I had the pleasure of working with them and always appreciated their quick turnarounds, relationship-building skills, and the quality of candidates shared."
+        quote: "Sanguine Recruitment is a highly competent consulting firm led by an exceptional team of professionals. Their ability to deeply understand client requirements and deliver high-quality talent is truly impressive. During my time at Landmark Group, I always appreciated their quick turnarounds, relationship-building skills, and the quality of candidates shared."
     },
     {
         name: "Karthick Ravichandran",
         role: "HR Business Partner",
         Description: "Saint Gobain India Private Limited – Glass Business",
-        quote: "Working with Sanguine has always been a stress-free experience. Once a requirement is shared, you can trust them to deliver top-quality profiles on time. Ritu’s leadership stands out — her dedication and the team’s professionalism make Sanguine truly dependable. They have my highest recommendation."
+        quote: "Working with Sanguine has always been a stress-free experience. Once a requirement is shared, you can trust them to deliver top-quality profiles on time. Ritu's leadership stands out — her dedication and the team's professionalism make Sanguine truly dependable. They have my highest recommendation."
     },
     {
         name: "SWATI MAIR",
         role: "HR Business Partner & Talent Acquisition",
         Description: "Zaggle, Hyderabad",
-        quote: "Sanguine Recruitment brings together technical expertise and a strong client-first mindset. Their team has successfully closed several critical IT roles for us with precision and care. I’ve been particularly impressed by their proactive approach, timely communication, and attention to the candidate experience. They’re a valuable partner for any tech hiring needs."
+        quote: "Sanguine Recruitment brings together technical expertise and a strong client-first mindset. Their team has successfully closed several critical IT roles for us with precision and care. I've been particularly impressed by their proactive approach, timely communication, and attention to the candidate experience."
+    },
+    {
+        name: "NIKITA GOYAL",
+        role: "Assistant Manager HR",
+        Description: "Matellio India Pvt. Ltd.",
+        quote: "The foundation of one's career is shaped by the people who guide and inspire us in the earliest days—and for me, that person has been Ritu Ma'am. From day one of my professional journey, she has been nothing short of a guiding star. Her mentorship, wisdom, and unwavering support have played a vital role in shaping my approach to work and growth."
+    },
+    {
+        name: "SHUBHANGI SHARMA",
+        role: "Consultant",
+        Description: "Infosys",
+        quote: "Gaurav is an absolute gentleman, a great leader & mentor but the key element for me would be the responsibility that is entrusted to employees from day one. His vivacious energy meant that no task is impossible. Always ahead of the game and pre-empting the needs of business, you can count on Gaurav to exceed expectations."
     }
 ];
 
