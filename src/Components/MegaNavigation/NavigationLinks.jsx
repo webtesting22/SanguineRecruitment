@@ -9,11 +9,11 @@ const NavigationLinks = [
         path: "/about-us",
     },
     {
-        link: "SanguineLife",
+        link: "Sanguine@Life",
         path: "/sanguine-life",
     },
     {
-        link: "Work With Sanguine",
+        link: "Career With Sanguine",
         path: "/work-with-sanguine",
     },
     // {
