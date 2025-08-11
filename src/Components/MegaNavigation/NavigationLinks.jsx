@@ -3,7 +3,6 @@ const NavigationLinks = [
         link: "Welcome",
         path: "/"
     },
-
     {
         link: "About Us",
         path: "/about-us",
@@ -32,7 +31,6 @@ const NavigationLinks = [
         link: "Client Opportunities",
         path: "/career",
         sublink: [
-
         ]
     },
 

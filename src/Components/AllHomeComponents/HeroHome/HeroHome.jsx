@@ -18,7 +18,7 @@ const HeroHome = () => {
         },
         {
             id: 2,
-            video: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/WhatsApp Video 2025-08-04 at 10.35.53.mp4",
+            video: "https://s3.ap-south-1.amazonaws.com/prepseed/prod%2Fldoc%2Fu%2F6867cb5e6ce841090d9eba89%2Fx7vIqYYT3w3nJNBAd5MD%2FSanguineRecruitmementHomeVideo.mp4",
             title: "Hire Smarter. Grow Faster.",
             subtitle: "",
             description: "From startups to enterprises, we deliver aligned talent solutions. Spend less time screening, more time scaling."

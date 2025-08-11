@@ -15,7 +15,7 @@ const SanguineLife = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollY(window.scrollY);
+            setScrollY(window.screenY);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -264,7 +264,7 @@ const SanguineLife = () => {
                             </Col>
                             <Col lg={12} md={24} sm={24} xs={24}>
                                 <div className="environment-image" data-aos="blur-to-clear" data-aos-delay="400">
-                                    <img src="/images/SanguineLifeImages/6.jpeg" alt="Team Environment" />
+                                    <img src="/images/SanguineLifeImages/6.jpeg" alt="Team Enviroment" />
                                 </div>
                             </Col>
                         </Row>
