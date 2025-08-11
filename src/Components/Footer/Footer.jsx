@@ -2,19 +2,20 @@ import React from "react";
 import "./Footer.css";
 import { Row, Col } from "antd";
 import NavigationLinks from "../MegaNavigation/NavigationLinks";
+import { Link } from "react-router-dom";
 const Footer = () => {
     const BrandLinks = [
-        {
-            title: "Legal Informations",
-            path: ""
-        },
-        {
-            title: "Terms of Conditions",
-            path: ""
-        },
+        // {
+        //     title: "Legal Informations",
+        //     path: ""
+        // },
+        // {
+        //     title: "Terms of Conditions",
+        //     path: ""
+        // },
         {
             title: "Privacy Policy",
-            path: ""
+            path: "/privacy-policy"
         },
 
     ]
@@ -64,19 +65,19 @@ const Footer = () => {
                             <Row gutter={[16, 16]}>
                                 <Col lg={16} md={24} sm={24} xs={24}>
                                     <div className="FooterLeftContainer">
-                                        <div className="footer-logo">
+                                        {/* <div className="footer-logo">
                                             <h2 className="white">Sanguine Recruiters</h2>
                                         </div>
-                                        <br />
-                                        {/* <p>
-                                            Sanguine Recruiters connects businesses with top-tier talent by delivering strategic hiring solutions, industry expertise, and a partnership-driven approach to recruitment success.
-                                        </p> */}
+                                        <br /> */}
+                                        <p>
+                                            Sanguine connects businesses with top-tier talent by delivering strategic hiring solutions, industry expertise, and a partnership-driven approach to recruitment success.
+                                        </p>
                                         <br /><br />
                                         <div className="FooterRightContainerLinks" >
                                             <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                                                 {BrandLinks.map((link, index) => (
                                                     <li key={index}>
-                                                        <a href={link.title}>{link.title}</a>
+                                                        <Link to={link.path}>{link.title}</Link>
                                                     </li>
                                                 ))}
                                             </ul>

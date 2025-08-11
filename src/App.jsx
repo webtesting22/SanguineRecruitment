@@ -18,6 +18,7 @@ import NotFound from './Components/NotFound/NotFound';
 import SeparateServiceComponent from './Components/Services/SeparateServiceComponent';
 import SanguineLife from './Components/SanguineLife/SanguineLife';
 import WorkWithUs from './Components/WorkWithUs/WorkWithUs';
+import PrivacyPolicy from './Components/privacyPolicy';
 function App() {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem("email") && localStorage.getItem("password");
@@ -40,6 +41,7 @@ function App() {
         <Route path='/testimonials' element={<Testimonials />} />
         <Route path='/sanguine-life' element={<SanguineLife />} />
         <Route path='/work-with-sanguine' element={<WorkWithUs />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         {/* <Route path='/dashboardIndex' element={<DashboardIndex />} /> */}
         <Route
           path='/dashboard'

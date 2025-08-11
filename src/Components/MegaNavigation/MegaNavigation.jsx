@@ -85,7 +85,12 @@ const MegaNavigation = () => {
 
                     </div>
                     <div>
-                        <Button type="primary" className="lets-talk-btn">
+                        <Button type="primary" className="lets-talk-btn" onClick={()=>{
+                            const footer = document.querySelector('.footer-container');
+                            if (footer) {
+                                footer.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}>
                             Let's Talk
                         </Button>
                     </div>
