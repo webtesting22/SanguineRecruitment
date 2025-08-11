@@ -58,6 +58,10 @@
     font-size: 14px;
 }
 
+.footer-container .containerGap{
+    padding-bottom: 50px !important;
+}
+
 @media (max-width: 768px) {
     .FooterRightContainer {
         /* flex-direction: column; */

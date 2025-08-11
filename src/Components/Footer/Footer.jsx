@@ -68,18 +68,15 @@ const Footer = () => {
                                             <h2 className="white">Sanguine Recruiters</h2>
                                         </div>
                                         <br />
-                                        <p>
+                                        {/* <p>
                                             Sanguine Recruiters connects businesses with top-tier talent by delivering strategic hiring solutions, industry expertise, and a partnership-driven approach to recruitment success.
-                                        </p>
+                                        </p> */}
                                         <br /><br />
                                         <div className="FooterRightContainerLinks" >
-                                            {/* <h2>Quick Links</h2> */}
-                                            {/* <br /> */}
-                                            <ul style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
+                                            <ul style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                                                 {BrandLinks.map((link, index) => (
                                                     <li key={index}>
                                                         <a href={link.title}>{link.title}</a>
-                                                        {/* <hr style={{maxWidth:"30px",textAlign:"start"}}/> */}
                                                     </li>
                                                 ))}
                                             </ul>
@@ -118,12 +115,12 @@ const Footer = () => {
                             </Row>
                         </div>
                     </div>
-                    <div className="container">
+                    {/* <div className="container">
                         <div className="divider"></div>
-                    </div>
-                    <div className="CopyrightContainer container">
+                    </div> */}
+                    {/* <div className="CopyrightContainer container">
                         <p>Designed and Developed by <a href="https://outlead.in" target="_blank" rel="noopener noreferrer">Outlead Solutions</a></p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
