@@ -31,7 +31,7 @@ const OurServices = () => {
             <div className="container">
             <div className="Common-header">
     <div className='TaglineWithIcon' data-aos="blur-to-clear" data-aos-delay="100">
-        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
         <h2 className='text-center h2-gradient'>Why Choose Sanguine</h2>
     </div>
     <h1 className='text-center' data-aos="blur-to-clear" data-aos-delay="100">
@@ -69,7 +69,7 @@ const OurServices = () => {
                     </div>
                     <div className="OurServicesImageContainer">
                         <div>
-                            {/* <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" /> */}
+                            {/* <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Decorative stars icon" /> */}
                             <div className="ImageContentContainer">
                                 <div>
                                     {/* <h2 className="small-title" style={{ color: "white" }}>

@@ -43,7 +43,7 @@ const Footer = () => {
                         <div className="container">
                             <div className="Common-header">
                                 <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
-                                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon - Let's Talk section" />
                                     <h2 className="text-center h2-gradient">Let's Talk</h2>
                                 </div>
                                 <h1 className="text-center white" data-aos="blur-to-clear" data-aos-delay="100">

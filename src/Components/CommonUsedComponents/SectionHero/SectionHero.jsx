@@ -30,7 +30,7 @@ const SectionHero = ({
       </div>
       {imageUrl && (
         <div className="section-hero-image-wrapper">
-          <img src={imageUrl} alt="Section visual" className="section-hero-image" />
+          <img src={imageUrl} alt={title ? `${title} - Section visual` : "Section hero image"} className="section-hero-image" />
         </div>
       )}
     </section>

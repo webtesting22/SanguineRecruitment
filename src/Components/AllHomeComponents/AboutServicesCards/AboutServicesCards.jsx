@@ -26,7 +26,7 @@ const AboutServicesCards = () => {
                 <div style={{ width: "100%" }}>
                     <div className="Common-header">
                         <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="100">
-                            <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                            <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
                             <h2 className="text-center h2-gradient">Tailored Hiring for Every Industry</h2>
                         </div>
                         <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="100">Expertise That Understands Your Domain</h1>
@@ -82,7 +82,7 @@ const AboutServicesCards = () => {
                                         onClick={() => handleServiceClick(item)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        <img src={item.image} alt="" />
+                                        <img src={item.image} alt={`${item.title} - ${item.description}`} />
                                         <div className="ContentButtonContainer">
                                             <Row className="w-100">
                                                 <Col lg={20} md={20} sm={20} xs={20}>

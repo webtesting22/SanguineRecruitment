@@ -62,7 +62,7 @@ const MegaNavigation = () => {
         <div className={`mega-nav-container ${navVisible ? 'visible' : 'hidden'} ${isHomePage ? 'home-page' : ''} ${isHomePage && isScrolled ? 'scrolled' : ''}`}>
             <div className="nav-logo">
                 <a href="/">
-                    <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="Sanguine Logo" />
+                    <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="Sanguine Recruitment - Expert Talent Acquisition and Hiring Solutions" />
                 </a>
             </div>
 

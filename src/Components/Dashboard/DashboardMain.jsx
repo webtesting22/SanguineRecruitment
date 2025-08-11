@@ -220,7 +220,7 @@ const DashboardMain = () => {
                         <MdArrowBack size={20} />
                         Back
                     </button> */}
-                    <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="" style={{ width: "180px" }} />
+                                            <img src="/images/Logo/SanguineRecruitmentLogo.avif" alt="Sanguine Recruitment Logo - Dashboard Portal" style={{ width: "180px" }} />
 
                     <h1 className="sidebar-title">Filters</h1>
 

@@ -78,7 +78,7 @@ const Testimonials = () => {
                 />
                 <div className="Common-header">
                     <div className="TaglineWithIcon">
-                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
                         <h2 className="text-center h2-gradient">Customer Reviews</h2>
                     </div>
                     <h1 className="text-center">

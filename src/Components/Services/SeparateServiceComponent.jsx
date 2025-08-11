@@ -62,7 +62,7 @@ const SeparateServiceComponent = () => {
                     <div className="ServiceImageContainer">
                         <img
                             src={service.image}
-                            alt=""
+                            alt={`${service.title} - Professional recruitment services by Sanguine Recruitment`}
                             className="parallax-image-container"
                             style={{
                                 width: `${imageWidth}%`,
@@ -82,7 +82,7 @@ const SeparateServiceComponent = () => {
                             <div className="service-section" data-aos="blur-to-clear" data-aos-delay="100">
                                 <div className="Common-header">
                                     <div className="TaglineWithIcon">
-                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
                                         <h2 className="text-center h2-gradient">Overview</h2>
                                     </div>
                                     <p>{service.overview}</p>
@@ -97,7 +97,7 @@ const SeparateServiceComponent = () => {
                             <div className="service-section" data-aos="blur-to-clear" data-aos-delay="100">
                                  <div className="Common-header">
                                     <div className="TaglineWithIcon">
-                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                                        <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
                                         <h2 className="text-center h2-gradient">Our Expertise</h2>
                                     </div>
                                     {/* <p>{service.overview}</p> */}

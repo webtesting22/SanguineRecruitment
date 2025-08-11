@@ -115,7 +115,7 @@ const AboutUsSeparate = () => {
                 >
                     <img
                         src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68088cd9861c02a0f55415fc_senior-manager-is-sitting-boardroom-with-multiracial-colleagues-discussing-project.avif"
-                        alt=""
+                        alt="Senior manager sitting in boardroom with multiracial colleagues discussing recruitment project - Sanguine Recruitment team collaboration"
                         ref={parallaxRef}
                         style={{
                             width: "100%",
@@ -135,7 +135,7 @@ const AboutUsSeparate = () => {
         <div className="container">
             <div className="Common-header">
                 <div className="TaglineWithIcon" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1200" data-aos-easing="ease-out">
-                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="" />
+                    <img src="https://cdn.prod.website-files.com/680534957b5199127f2857e6/68078e632d70dec45f186fc4_stars.svg" alt="Decorative stars icon" />
                     <h2 className="text-center h2-gradient">About Us</h2>
                 </div>
                 <h1 className="text-center" data-aos="blur-to-clear" data-aos-delay="200" data-aos-duration="1500" data-aos-easing="ease-out">

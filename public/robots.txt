@@ -1,0 +1,46 @@
+# Robots.txt for Sanguine Recruitment
+# https://www.sanguinerecruitment.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /about
+Allow: /services
+Allow: /career
+Allow: /work-with-us
+Allow: /our-team
+Allow: /sanguine-life
+Allow: /blogs
+Allow: /privacy-policy
+
+# Allow all service pages
+Allow: /services/*
+
+# Allow all blog pages
+Allow: /blogs/*
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow access to CSS, JS, and image files
+Allow: /src/
+Allow: /images/
+Allow: /public/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.avif
+Allow: *.webp
+Allow: *.ico
+
+# Sitemap location
+Sitemap: https://www.sanguinerecruitment.com/sitemap.xml
+
+# Crawl-delay (optional, can be adjusted based on server capacity)
+Crawl-delay: 1
