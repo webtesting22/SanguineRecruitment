@@ -66,34 +66,34 @@ const ServicesCardsContent = [
         ]
     },
     {
-        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/BFSI.jpg",
-        title: "BFSI",
-        description: "We source top-tier talent for banking, financial services, and insurance, focusing on roles like financial analysts, investment bankers, and risk managers with deep market acumen.",
-        subtitle: "Sourcing top-tier talent for banking, financial services, and insurance with deep market acumen and regulatory knowledge.",
-        overview: "We source top-tier talent for banking, financial services, and insurance sectors, focusing on professionals with deep market acumen and regulatory knowledge. Our expertise spans across traditional banking, investment services, and emerging fintech solutions.",
+        image: "https://s3.ap-south-1.amazonaws.com/prepseed/prod/ldoc/media/BFSI.jpg", // Consider updating this image to better represent Fintech/FMCG
+        title: "Fintech or FMCG",
+        description: "We source exceptional talent for fintech innovation and FMCG growth, focusing on roles like product managers, data scientists, and business analysts with industry expertise.",
+        subtitle: "Sourcing top-tier talent for fintech innovation and FMCG market expansion with deep industry knowledge and growth mindset.",
+        overview: "We source exceptional talent for fintech innovation and FMCG market expansion, focusing on professionals with digital transformation expertise and consumer market insights. Our expertise spans across emerging fintech solutions, consumer goods, and retail technology.",
         mainPoints: [
             {
-                title: "Financial Expertise & Market Intelligence",
-                description: "We identify professionals with strong financial acumen, market knowledge, and analytical skills to drive business growth and risk management.",
+                title: "Digital Innovation & Technology Expertise",
+                description: "We identify professionals with strong technical skills, digital mindset, and innovation capabilities to drive fintech solutions and FMCG digital transformation.",
                 subPoints: [
-                    "Financial analysis and modeling",
-                    "Investment banking and capital markets",
-                    "Risk management and compliance",
-                    "Credit analysis and underwriting",
-                    "Portfolio management and optimization",
-                    "Market research and trend analysis"
+                    "Product management and development",
+                    "Data science and analytics",
+                    "Digital marketing and e-commerce",
+                    "Mobile app development",
+                    "AI/ML implementation",
+                    "Blockchain and fintech solutions"
                 ]
             },
             {
-                title: "Regulatory Compliance & Governance",
-                description: "Our recruitment process ensures candidates understand the complex regulatory environment and governance requirements in the financial services sector.",
+                title: "Consumer Market & Business Growth",
+                description: "Our recruitment process ensures candidates understand consumer behavior, market dynamics, and growth strategies in both fintech and FMCG sectors.",
                 subPoints: [
-                    "Regulatory compliance and reporting",
-                    "Anti-money laundering (AML) procedures",
-                    "Know Your Customer (KYC) processes",
-                    "Corporate governance and ethics",
-                    "Audit and internal controls",
-                    "Regulatory change management"
+                    "Consumer insights and market research",
+                    "Brand management and marketing",
+                    "Supply chain optimization",
+                    "Retail technology and operations",
+                    "Customer experience and engagement",
+                    "Business development and expansion"
                 ]
             }
         ]

@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
                             <ul className="privacy-list">
                                 <li>Manufacturing and Engineering</li>
                                 <li>Logistics and Supply Chain</li>
-                                <li>Banking, Financial Services, and Insurance (BFSI)</li>
+                                <li>Fintech and FMCG (Fast Moving Consumer Goods)</li>
                                 <li>Technology and IT</li>
                                 <li>Retail and Fashion</li>
                                 <li>Other specialized sectors</li>

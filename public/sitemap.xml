@@ -32,13 +32,13 @@
 
   <!-- Individual Service Pages -->
   <url>
-    <loc>https://www.sanguinerecruitment.com/services/bfsi-recruitment</loc>
+    <loc>https://www.sanguinerecruitment.com/services/fintech-fmcg-recruitment</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://www.sanguinerecruitment.com/images/icons/IndustryIcons/BFSI.png</image:loc>
-      <image:caption>BFSI Recruitment Services</image:caption>
+              <image:loc>https://www.sanguinerecruitment.com/images/icons/IndustryIcons/BFSI.png</image:loc>
+        <image:caption>Fintech or FMCG Recruitment Services</image:caption>
     </image:image>
   </url>
 

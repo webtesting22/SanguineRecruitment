@@ -126,7 +126,8 @@ Primary Keywords:
 - Staffing solutions
 
 Industry-Specific Keywords:
-- BFSI recruitment
+- Fintech recruitment
+- FMCG recruitment
 - Manufacturing recruitment
 - Oil gas recruitment
 - Retail recruitment

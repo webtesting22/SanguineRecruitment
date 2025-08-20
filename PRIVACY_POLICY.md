@@ -14,7 +14,7 @@ By accessing our Website or using our services, you agree to the collection and 
 Sanguine Recruitment is a professional recruitment consulting firm specializing in talent acquisition across various industries including:
 - Manufacturing and Engineering
 - Logistics and Supply Chain
-- Banking, Financial Services, and Insurance (BFSI)
+- Fintech and FMCG (Fast Moving Consumer Goods)
 - Technology and IT
 - Retail and Fashion
 - Other specialized sectors
